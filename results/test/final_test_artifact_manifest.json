@@ -1,0 +1,48 @@
+{
+  "status": "FROZEN_BEFORE_TEST_EVALUATION",
+  "stage": "final_test_generation_complete",
+  "questions": 500,
+  "systems": [
+    "baseline_llm",
+    "basic_rag",
+    "advanced_rag",
+    "gold_context_control"
+  ],
+  "expected_generation_responses": 2000,
+  "completed_generation_responses": 2000,
+  "responses_per_system": {
+    "baseline_llm": 500,
+    "basic_rag": 500,
+    "advanced_rag": 500,
+    "gold_context_control": 500
+  },
+  "test_gold_decisions_used_for_scoring": false,
+  "test_reference_answers_used_for_scoring": false,
+  "retrieval_metrics_calculated": false,
+  "decision_metrics_calculated": false,
+  "hallucination_metrics_calculated": false,
+  "rules_after_freeze": [
+    "Do not modify retrieval outputs.",
+    "Do not modify generation inputs.",
+    "Do not regenerate individual answers based on their content.",
+    "Do not change the generator model, prompt, retrieval configuration, judge, or metric definitions.",
+    "All subsequent test analysis must use these frozen artifacts."
+  ],
+  "sha256": {
+    "results/test/retrieval/basic_dense_test_results.json": "b0f134cc8d2bd51a1ab05124cb2afafdb8d322df3e116d226061b4fdadf77105",
+    "results/test/retrieval/advanced_reranked_test_results.json": "74b97511cc8a2bd6a4930d1ac0adb36e214b7a5dbd8ebf592833a4b60c86d7dd",
+    "results/test/retrieval/basic_rag_test_contexts.json": "bd4149999d186f51f67e53281e4bbfbe26e8678e6f806bb89c11273143daf824",
+    "results/test/retrieval/advanced_rag_test_contexts.json": "69ec84a701b4e2289997602e7c786ea979a942fe0a1721d8561a9e3e26806dec",
+    "results/test/retrieval/test_retrieval_summary.json": "ea272dc78dd529de3f5104f0871525359485d31f1b8d3ac4fa86c37ae6b9e679",
+    "results/test/generation/baseline_test_inputs.json": "1321644384cacbd1f7a098504cbe76a65be02edcb7658b56a236490f2f168b57",
+    "results/test/generation/basic_rag_test_inputs.json": "5495ba3a3ae6bc7030cf9b813664f0fc4e6e8aa7d93252713983e46cb6ecf6be",
+    "results/test/generation/advanced_rag_test_inputs.json": "15e36d5565d667eec90a136be55c4b3a0495f8635a15c09e922f43da65e532a6",
+    "results/test/generation/gold_context_test_inputs.json": "eafc89b9f23a5b5c1dcebc11adc120a4f9c9d4cb1d68c2af2165f0d0a74d6bbc",
+    "results/test/generation/test_generation_input_summary.json": "d3a08a0ee06cdb37b9e63ef60971ed67433b7924725a73e9c54c8f23dd5ca2ac",
+    "results/test/generation/final_test_generation_results.json": "e1e8e30d6bc20ab93107ecf6e47cd464a2be8dfa64202a6b6d8939f71ebe5659",
+    "results/test/generation/final_test_generation_summary.json": "6c2e03bcbaac6cef1f91153b398b86e56599598387a1797ee6d20bf8f7fda99f",
+    "src/34_final_test_retrieval.py": "ccc4f09eacd30f3c90a2a72e598ce8f3c181a4a9de339be57597f873c1d6f2e8",
+    "src/35_prepare_final_test_llm_inputs.py": "ce881abb50d3f863342ebd695e29bbc32757e0680aaed70f2586a3d1b87d8a6d",
+    "src/36_final_test_generation.py": "ac917854873af7cd840f159e955f327fc7385e53ba2f11c46eb729273ca9eac5"
+  }
+}

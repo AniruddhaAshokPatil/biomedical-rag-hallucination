@@ -1,0 +1,16 @@
+{
+  "total_claims": 120,
+  "automatic_label_sampling": {
+    "supported": 40,
+    "unsupported": 40,
+    "contradicted": 40
+  },
+  "unique_questions": 107,
+  "system_distribution_hidden_from_annotator": {
+    "baseline_llm": 53,
+    "gold_context_control": 17,
+    "basic_rag": 30,
+    "advanced_rag": 20
+  },
+  "pilot_questions_excluded": 24
+}

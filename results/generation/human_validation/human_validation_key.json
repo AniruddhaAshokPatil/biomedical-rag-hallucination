@@ -1,0 +1,1171 @@
+{
+  "random_seed": 42,
+  "claims_per_label": 40,
+  "total_claims": 120,
+  "excluded_v3_pilot_questions": [
+    "10605400",
+    "11334578",
+    "11340218",
+    "11566686",
+    "14655021",
+    "15879722",
+    "16432652",
+    "16991071",
+    "17076590",
+    "17453263",
+    "18439500",
+    "18799291",
+    "19664156",
+    "20497146",
+    "21745056",
+    "22706226",
+    "22849512",
+    "23228527",
+    "23360491",
+    "24160268",
+    "24939676",
+    "24946973",
+    "25480629",
+    "26784147"
+  ],
+  "key": {
+    "HV001": {
+      "question_id": "17489316",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence states that the study aimed to evaluate the relationship with renal vein/vena cava invasion, but it does not report a finding that VEGF expression was associated with venous invasion."
+    },
+    "HV002": {
+      "question_id": "17429333",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 reports that menopausal transition did not influence the eight SF-36 domains in the multivariate model."
+    },
+    "HV003": {
+      "question_id": "25156467",
+      "system": "gold_context_control",
+      "claim_index": 5,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 reports short hospital stays with median 4 days after implementation of an early extubation strategy."
+    },
+    "HV004": {
+      "question_id": "18955431",
+      "system": "baseline_llm",
+      "claim_index": 4,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence does not report walking speed improvement as a secondary benefit."
+    },
+    "HV005": {
+      "question_id": "24599411",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence does not report incidence in either country."
+    },
+    "HV006": {
+      "question_id": "23389866",
+      "system": "basic_rag",
+      "claim_index": 4,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 explicitly provides outcomes including response rates, OS, DFS, survival probability, recurrence probability, and locoregional recurrence."
+    },
+    "HV007": {
+      "question_id": "28027677",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The gold evidence reports high attendance with VODcasts available and does not support a reduction in attendance."
+    },
+    "HV008": {
+      "question_id": "10811329",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 shows that 99mTc-WBC scans were positive in nearly all children with newly diagnosed inflammatory disease and correctly predicted inflammation in equivocal UGI-SBFT cases, which conflicts with the claim of general lack of usefulness."
+    },
+    "HV009": {
+      "question_id": "22521460",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence reports a trial comparing cesarean versus vaginal delivery, but it does not establish that route of delivery affects outcomes overall; maternal outcomes were similar and the lower neonatal event rate with cesarean was not statistically significant."
+    },
+    "HV010": {
+      "question_id": "17704864",
+      "system": "gold_context_control",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "automatic_rationale": "The study evaluated and performed laparoscopic adrenalectomy in 18 patients with lesions larger than 7 cm, supporting feasibility."
+    },
+    "HV011": {
+      "question_id": "17323047",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence states that off-hours diagnosis did not delay treatment and that lavage-to-antibiotic administration time was shorter during off-hours. A broader claim that off-hours invasive procedures can delay treatment is not established by the supplied evidence."
+    },
+    "HV012": {
+      "question_id": "19504993",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1",
+        "G4"
+      ],
+      "automatic_rationale": "The evidence states that Fournier's gangrene has morbidity impact and that mortality remains high; in the reported series, 5 of 14 patients died, supporting that it is still dangerous."
+    },
+    "HV013": {
+      "question_id": "24851767",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 reports the highest atrophy at 13–24 months, similar lower atrophy in both <13 months and >24 months groups, and states that after adjustment age was not statistically significant. This conflicts with a general conclusion that earlier repair is associated with better survival than delayed repair."
+    },
+    "HV014": {
+      "question_id": "9191526",
+      "system": "advanced_rag",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "None of the gold evidence states that multidisciplinary breast cancer clinics or teams are the gold standard."
+    },
+    "HV015": {
+      "question_id": "18269157",
+      "system": "advanced_rag",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 describes different wound-healing characteristics for ASA versus SBK and suggests PRK/ASA, and secondarily SBK, are biomechanically safer than conventional LASIK."
+    },
+    "HV016": {
+      "question_id": "23072266",
+      "system": "advanced_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G6"
+      ],
+      "automatic_rationale": "G6 states that overall CAM use was higher in 2007 than in 2002."
+    },
+    "HV017": {
+      "question_id": "18388848",
+      "system": "gold_context_control",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence reports associations, not a causal improvement effect."
+    },
+    "HV018": {
+      "question_id": "26237424",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 states that overall 5-year survival was not influenced by PPM (P = NS)."
+    },
+    "HV019": {
+      "question_id": "9745063",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1",
+        "G2"
+      ],
+      "automatic_rationale": "G1 discusses intraoperative staging during laparoscopic procedures, and G2 states that laparoscopy and LUS were performed in all colorectal cancer cases as part of staging evaluation."
+    },
+    "HV020": {
+      "question_id": "28177278",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The evidence says spontaneous remission is largely unknown, but does not establish how typical or atypical it is."
+    },
+    "HV021": {
+      "question_id": "26044262",
+      "system": "gold_context_control",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 reports variation in the income-related gradient by physical environmental deprivation."
+    },
+    "HV022": {
+      "question_id": "21402341",
+      "system": "gold_context_control",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1",
+        "G3"
+      ],
+      "automatic_rationale": "The evidence questions the relevance of non-selective screening and shows that important findings were concentrated in the high-risk group, supporting that routine screening is not always necessary."
+    },
+    "HV023": {
+      "question_id": "25304452",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "Although fiber was assessed per G1, the results do not report fiber deficiency."
+    },
+    "HV024": {
+      "question_id": "11978239",
+      "system": "gold_context_control",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence reports prescribing frequency but does not establish that this frequency constitutes underprescribing."
+    },
+    "HV025": {
+      "question_id": "15588538",
+      "system": "baseline_llm",
+      "claim_index": 4,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The supplied passages do not explicitly address whether the study established or failed to establish a single-syndrome conclusion."
+    },
+    "HV026": {
+      "question_id": "18575014",
+      "system": "gold_context_control",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence does not explicitly discuss or rule in/out a specific inheritance pattern."
+    },
+    "HV027": {
+      "question_id": "19648304",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G1",
+        "G3"
+      ],
+      "automatic_rationale": "The gold evidence presents a randomized controlled study showing improved clinical outcomes with sonographic guidance."
+    },
+    "HV028": {
+      "question_id": "24434052",
+      "system": "basic_rag",
+      "claim_index": 2,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 provides results showing significant trends toward thinner melanomas over time, directly bearing on whether an effect is being seen in the study population."
+    },
+    "HV029": {
+      "question_id": "17403428",
+      "system": "advanced_rag",
+      "claim_index": 2,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 explicitly states the recurrent spontaneous abortion group differed from the primiparous group, so it was not true that it was not statistically different from the other groups across the board."
+    },
+    "HV030": {
+      "question_id": "26452334",
+      "system": "basic_rag",
+      "claim_index": 4,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G5"
+      ],
+      "automatic_rationale": "For carotid body tumours, linear measurement had a smaller detectable difference than manual tracing (11% vs 17%), but for vagal body tumours manual tracing was better (20% vs 27%), so the claim is incompatible with the evidence."
+    },
+    "HV031": {
+      "question_id": "25859857",
+      "system": "gold_context_control",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 reports that in NACT-responsive patients, the incidence of lymph node metastasis and metastatic rates for nearly every lymph node group declined, supporting a cautious statement that NACT may influence metastasis patterns."
+    },
+    "HV032": {
+      "question_id": "26363639",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 reports significant positive relations: higher relative aerobic workload was associated with increases, not decreases, in systolic and diastolic ABP."
+    },
+    "HV033": {
+      "question_id": "27884344",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G2",
+        "G3"
+      ],
+      "automatic_rationale": "The gold evidence reports analyses of the relationship between directional instructions to the assistant (a leadership-related measure) and self-efficacy measures related to technical skill and task difficulty, with significant correlations described in the results."
+    },
+    "HV034": {
+      "question_id": "15939071",
+      "system": "gold_context_control",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The results directly report a positive and significant relation between cumulative regular insulin dose and CIMT."
+    },
+    "HV035": {
+      "question_id": "23002947",
+      "system": "baseline_llm",
+      "claim_index": 3,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence states that timing of PEG insertion was not associated with survival in the studied population, but it does not discuss 'optimal timing' generally or dependence on specific clinical context."
+    },
+    "HV036": {
+      "question_id": "15141797",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence does not establish that proper handling can make arterial line sampling reliable for APTT after cardiac surgery; rather, it shows significant differences and confirmed heparin contamination despite the common assumption that discard clears contamination."
+    },
+    "HV037": {
+      "question_id": "21550158",
+      "system": "advanced_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G2"
+      ],
+      "automatic_rationale": "G2 describes a prospective randomized comparative clinical study in which PRP gel was applied to the third molar socket in the test group."
+    },
+    "HV038": {
+      "question_id": "24901580",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence does not state what is usually used in general practice; it only reports that in this study amputation level was determined by scintigraphy, Doppler ultrasound, and intraoperative inspection."
+    },
+    "HV039": {
+      "question_id": "11413427",
+      "system": "basic_rag",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G4"
+      ],
+      "automatic_rationale": "G4 refers to the regional and global apex levels as the coronal apexes of the corresponding curves."
+    },
+    "HV040": {
+      "question_id": "11776681",
+      "system": "gold_context_control",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 says preterm fetuses were limited in number, making it difficult to draw adequate conclusions."
+    },
+    "HV041": {
+      "question_id": "23506394",
+      "system": "advanced_rag",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 directly states MQSGA score showed a positive relationship with calcification score."
+    },
+    "HV042": {
+      "question_id": "23002947",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G6"
+      ],
+      "automatic_rationale": "G6 states that after multivariate analysis correcting for selection bias, no difference was found in survival between residents with and without feeding tube insertion."
+    },
+    "HV043": {
+      "question_id": "16647887",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The gold evidence states that treated hypothyroidism was not associated with any increase in maternal, fetal, or neonatal complications."
+    },
+    "HV044": {
+      "question_id": "12068831",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G1",
+        "G3"
+      ],
+      "automatic_rationale": "The study investigated putative nontriploid partial moles and found that all reviewed cases were reclassified as other diagnoses, not true nontriploid partial moles."
+    },
+    "HV045": {
+      "question_id": "23088164",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G4"
+      ],
+      "automatic_rationale": "G4 states that there was not a statistically significant relationship between speech recognition and cognition for the frequency-compressed conditions."
+    },
+    "HV046": {
+      "question_id": "19648304",
+      "system": "basic_rag",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The results report better 2-week absolute pain scores and related pain outcome measures with sonographic guidance."
+    },
+    "HV047": {
+      "question_id": "16253970",
+      "system": "basic_rag",
+      "claim_index": 4,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The evidence states the study objective and outcomes, but does not say its purpose was to guide acceptable use."
+    },
+    "HV048": {
+      "question_id": "21618245",
+      "system": "baseline_llm",
+      "claim_index": 3,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 provides substantive results showing significantly improved survival with surgery and/or radiation overall for EPSCC and identifies both as independent predictors of survival."
+    },
+    "HV049": {
+      "question_id": "15483019",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The evidence shows the protocol-eligible group had better survival and lower progression and cancer-related death, supporting prognostic favorability rather than no prognostic role."
+    },
+    "HV050": {
+      "question_id": "17335331",
+      "system": "advanced_rag",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G2",
+        "G3"
+      ],
+      "automatic_rationale": "G2 identifies the comparison group as the consecutively ascertained Phenomenology sample, and G3 states many mania symptoms were significantly more prevalent in the RCT sample."
+    },
+    "HV051": {
+      "question_id": "23222920",
+      "system": "gold_context_control",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1",
+        "G3"
+      ],
+      "automatic_rationale": "The study evaluates retransplantation after primary graft loss and reports favorable second-graft and patient outcomes."
+    },
+    "HV052": {
+      "question_id": "16249670",
+      "system": "advanced_rag",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The evidence mentions the concept of an investing cervical fascia but does not establish its existence as a continuous anatomical layer; G3 instead reports findings against such a sheet."
+    },
+    "HV053": {
+      "question_id": "20304513",
+      "system": "basic_rag",
+      "claim_index": 2,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1"
+      ],
+      "automatic_rationale": "G1 states that several studies have addressed this issue, some with conflicting results."
+    },
+    "HV054": {
+      "question_id": "27581329",
+      "system": "advanced_rag",
+      "claim_index": 4,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 reports 78% accuracy for the new equation, higher than Owen (70%), Henry (67%), Mifflin (67%), Liu (58%), Harris-Benedict (45%), and Yang (37%) for the whole BMI range."
+    },
+    "HV055": {
+      "question_id": "9446993",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The results showed performance similar to a random distribution, which conflicts with a general claim that they could recognize them."
+    },
+    "HV056": {
+      "question_id": "20082356",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G1"
+      ],
+      "automatic_rationale": "G1 states that the UICC does not mention the mesocolon as an adjacent structure involved in gastric cancer, which conflicts with claiming it is included as a T4 adjacent structure."
+    },
+    "HV057": {
+      "question_id": "25304452",
+      "system": "baseline_llm",
+      "claim_index": 5,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The evidence does not report calcium deficiency."
+    },
+    "HV058": {
+      "question_id": "24783217",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The evidence shows the study assessed predictive value and found no overall significant difference across response groups, with significance only within a luminal subgroup. A general claim that it can help predict response in breast cancer overall is not established by the supplied evidence."
+    },
+    "HV059": {
+      "question_id": "10577397",
+      "system": "gold_context_control",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 states that 7 of 8 animals in the epinephrine group had return of spontaneous circulation versus 2 of 7 in the placebo group."
+    },
+    "HV060": {
+      "question_id": "25819796",
+      "system": "baseline_llm",
+      "claim_index": 3,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 states that about 60% of participants developed both word and paragraph reading in the average range, which conflicts with the claim that performance is typically restricted and not equivalent to normal reading."
+    },
+    "HV061": {
+      "question_id": "9767546",
+      "system": "basic_rag",
+      "claim_index": 2,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G2",
+        "G3"
+      ],
+      "automatic_rationale": "G2 identifies MDA-lysine as lipid-derived, and G3 states that all three adducts were elevated in uremic plasma."
+    },
+    "HV062": {
+      "question_id": "21558951",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The evidence states that having 3 or more delinquent behaviors was not significantly associated with level of intrauterine cocaine exposure in the final multivariate model."
+    },
+    "HV063": {
+      "question_id": "16195477",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G2"
+      ],
+      "automatic_rationale": "G2 states that pWAT produces these chemokines and identifies IL-8 and MCP-1 in the migration assays."
+    },
+    "HV064": {
+      "question_id": "12920330",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "G3 supports prediction of later depressive symptoms only in women, not as a general unqualified statement."
+    },
+    "HV065": {
+      "question_id": "23252468",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G4"
+      ],
+      "automatic_rationale": "G4 found no within-group or between-group differences for headache-related stimuli; the evidence does not support selective attention, including any enhanced effect for headache-relevant or threatening stimuli."
+    },
+    "HV066": {
+      "question_id": "25070942",
+      "system": "baseline_llm",
+      "claim_index": 5,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "While the evidence shows lack of sustainable control in a program that included MDA, it does not directly establish insufficiency of MDA by itself."
+    },
+    "HV067": {
+      "question_id": "24172579",
+      "system": "advanced_rag",
+      "claim_index": 3,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence shows no adjusted difference in functional outcome, but it reports sex differences in mortality at 3 months; thus no overall 3-month clinical outcome difference is not established."
+    },
+    "HV068": {
+      "question_id": "19198736",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 does not identify SGA as a significant risk factor; ROP rates were not significantly higher in SGA infants, and other factors were identified as significant risk factors."
+    },
+    "HV069": {
+      "question_id": "25156467",
+      "system": "basic_rag",
+      "claim_index": 5,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 reports short hospital stay (median 4 days) with the early extubation strategy."
+    },
+    "HV070": {
+      "question_id": "18843057",
+      "system": "baseline_llm",
+      "claim_index": 3,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence contains no comparison between manual resuscitators and mechanical ventilators."
+    },
+    "HV071": {
+      "question_id": "12607120",
+      "system": "gold_context_control",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 reports no significant difference in continence score or sphincter function, and only slight non-significant worsening in maximum tolerable volume and rectal compliance, supporting the cautious summary that functional outcome was not clearly affected."
+    },
+    "HV072": {
+      "question_id": "19608436",
+      "system": "gold_context_control",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1"
+      ],
+      "automatic_rationale": "G1 states the assessment benefited from India ink artifact."
+    },
+    "HV073": {
+      "question_id": "24827404",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 states there were no significant differences in %EBWL among the resected stomach volume groups, which is incompatible with claiming an association in this study context."
+    },
+    "HV074": {
+      "question_id": "21550158",
+      "system": "advanced_rag",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1"
+      ],
+      "automatic_rationale": "G1 states that the investigation assesses healing and bone regeneration potential on mandibular third molar extraction sockets."
+    },
+    "HV075": {
+      "question_id": "12607120",
+      "system": "baseline_llm",
+      "claim_index": 3,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence does not discuss delayed recovery."
+    },
+    "HV076": {
+      "question_id": "9444542",
+      "system": "baseline_llm",
+      "claim_index": 3,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G4",
+        "G6"
+      ],
+      "automatic_rationale": "The study included subjects with probable Alzheimer's disease, and G6 reports no significant difference in cognitive decline between AD subjects with and without HCA."
+    },
+    "HV077": {
+      "question_id": "16498158",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "automatic_rationale": "The trial directly compared atropine versus placebo as an adjunct to ketamine sedation in children, and the reported results do not show a clear overall need for routine atropine use: atropine reduced hypersalivation but increased rash, placebo trended toward better tolerance, and no serious side effects occurred."
+    },
+    "HV078": {
+      "question_id": "26452334",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence evaluates reproducibility, smallest detectable difference, speed, and technical failure, but does not state that volumetric analysis is more accurate overall."
+    },
+    "HV079": {
+      "question_id": "17462393",
+      "system": "basic_rag",
+      "claim_index": 2,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The results do not show improvement: at 100% LAD flow both were normal, at 50% LAD flow NNSP caused small but significant worsening while NNAP did not, and at 20% LAD flow deterioration was significantly greater during NNSP than NNAP."
+    },
+    "HV080": {
+      "question_id": "11296674",
+      "system": "basic_rag",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "This definitional claim is not stated in the gold evidence."
+    },
+    "HV081": {
+      "question_id": "20871246",
+      "system": "advanced_rag",
+      "claim_index": 4,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G7"
+      ],
+      "automatic_rationale": "G7 states that dividing fractures into stable and unstable types allowed the system to predict mortality rates."
+    },
+    "HV082": {
+      "question_id": "17578985",
+      "system": "basic_rag",
+      "claim_index": 2,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The results state that complete block success was significantly higher in the tibial group than in the peroneal group (11/14 vs 2/12; P = 0.002), supporting an association between elicited motor response type and success rate."
+    },
+    "HV083": {
+      "question_id": "11888773",
+      "system": "advanced_rag",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The supplied evidence identifies Stage I disease but does not explicitly state that it is classified as early stage."
+    },
+    "HV084": {
+      "question_id": "24446763",
+      "system": "baseline_llm",
+      "claim_index": 3,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 states there were no statistically significant differences in the examined fetal biometric parameters, which conflicts with claiming evidence of accelerated fetal growth in this study context."
+    },
+    "HV085": {
+      "question_id": "16097998",
+      "system": "advanced_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G2",
+        "G3"
+      ],
+      "automatic_rationale": "The study followed screen-detected patients long term and found high dietary adherence and outcomes comparable to controls or other coeliac patients."
+    },
+    "HV086": {
+      "question_id": "28011794",
+      "system": "gold_context_control",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 reports that in the infant model the Neopuff could not reach set peak inflation pressures and had seriously elevated PEEP, so the evidence does not support a blanket 'yes' for both devices."
+    },
+    "HV087": {
+      "question_id": "20304513",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G1"
+      ],
+      "automatic_rationale": "G1 explicitly states that FDG has been reported as a surrogate tracer to measure tumor hypoxia."
+    },
+    "HV088": {
+      "question_id": "11776681",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 states there was an excellent association between negative VAS response and fetal acidosis, supporting effectiveness rather than lack of effectiveness."
+    },
+    "HV089": {
+      "question_id": "11380492",
+      "system": "gold_context_control",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G5"
+      ],
+      "automatic_rationale": "G5 states that when both radiological and histological findings were positive, the likelihood of achieving remission was significantly higher than when both were negative."
+    },
+    "HV090": {
+      "question_id": "18575014",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence does not explicitly state that a clear inheritance pattern was not established."
+    },
+    "HV091": {
+      "question_id": "15800018",
+      "system": "basic_rag",
+      "claim_index": 2,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G2"
+      ],
+      "automatic_rationale": "Directly stated in G2."
+    },
+    "HV092": {
+      "question_id": "20401819",
+      "system": "baseline_llm",
+      "claim_index": 3,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The supplied evidence does not make this general practice statement about specific settings."
+    },
+    "HV093": {
+      "question_id": "17429333",
+      "system": "baseline_llm",
+      "claim_index": 5,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "Sexual symptoms are not mentioned in the gold evidence."
+    },
+    "HV094": {
+      "question_id": "27288618",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G4"
+      ],
+      "automatic_rationale": "The results reported no difference between groups in VAP development and no improvement in reported secretion outcomes, so usefulness was not demonstrated."
+    },
+    "HV095": {
+      "question_id": "24153338",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence reports better outcomes with repair versus conservative treatment, but does not directly state whether repair is or is not clearly justified in all cases."
+    },
+    "HV096": {
+      "question_id": "9363529",
+      "system": "baseline_llm",
+      "claim_index": 4,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence includes only one study population and does not compare predictive strength across populations."
+    },
+    "HV097": {
+      "question_id": "15670262",
+      "system": "basic_rag",
+      "claim_index": 4,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G7"
+      ],
+      "automatic_rationale": "G7 states significantly reduced hospital days were seen within both patient groups."
+    },
+    "HV098": {
+      "question_id": "17279467",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence reports a single case with BMD decline after stopping therapy, but does not directly make a general routine-treatment recommendation."
+    },
+    "HV099": {
+      "question_id": "15703931",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The study results in G3 report no significant differences in PET diagnostic power between diabetic and non-diabetic groups."
+    },
+    "HV100": {
+      "question_id": "16100194",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G5"
+      ],
+      "automatic_rationale": "The study found low correct-answer percentages across physician groups, indicating limited rather than general awareness of ACE-I side effects."
+    },
+    "HV101": {
+      "question_id": "19615731",
+      "system": "advanced_rag",
+      "claim_index": 2,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G4"
+      ],
+      "automatic_rationale": "G4 states the finding persisted after adjusting for FEV1, smoking status, race, sex, selected comorbid illnesses, and long-term asthma controller use."
+    },
+    "HV102": {
+      "question_id": "12142826",
+      "system": "advanced_rag",
+      "claim_index": 2,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G7"
+      ],
+      "automatic_rationale": "The gold evidence includes a results section stating that no statistically significant differences were found between groups."
+    },
+    "HV103": {
+      "question_id": "25070942",
+      "system": "advanced_rag",
+      "claim_index": 2,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 directly states that despite >30 years of control including MDA in the last 5 years, mean prevalence was 27.1%."
+    },
+    "HV104": {
+      "question_id": "19925761",
+      "system": "basic_rag",
+      "claim_index": 2,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "The results state there were peroperative and postoperative complications with no statistically significant differences between the groups."
+    },
+    "HV105": {
+      "question_id": "16195477",
+      "system": "basic_rag",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G2"
+      ],
+      "automatic_rationale": "G2 states that macrophage and T-cell accumulation at the interface between pWAT and human atherosclerotic aortas may reflect pWAT's prochemotactic activity."
+    },
+    "HV106": {
+      "question_id": "19444061",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G5"
+      ],
+      "automatic_rationale": "The results state that there was no significant difference in neurologic outcomes between OPLL+ and OPLL- groups."
+    },
+    "HV107": {
+      "question_id": "11713724",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1"
+      ],
+      "automatic_rationale": "G1 states the group provided an opportunity to assess the relationship between margin status and local recurrence for both small (T1-T2) and large (T3-T4) tumors treated with surgery alone."
+    },
+    "HV108": {
+      "question_id": "9550200",
+      "system": "advanced_rag",
+      "claim_index": 4,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence describes one retrospective analysis, but it does not establish that the total evidence on this question is limited to one retrospective study."
+    },
+    "HV109": {
+      "question_id": "19155657",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The evidence shows only one significant between-group difference by MetS status: greater left atrial diameter. A general claim of greater cardiac remodeling goes beyond the reported findings."
+    },
+    "HV110": {
+      "question_id": "19131405",
+      "system": "basic_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G1",
+        "G3"
+      ],
+      "automatic_rationale": "The study aim was to determine the value of epiDWI in differentiating primary parotid gland tumors, and the results report significant ADC differences between some tumor entities."
+    },
+    "HV111": {
+      "question_id": "17606778",
+      "system": "advanced_rag",
+      "claim_index": 1,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G2",
+        "G3"
+      ],
+      "automatic_rationale": "The study was randomized in patients with wrist fractures, and CRPS prevalence was 2.4% in the vitamin C group versus 10.1% in the placebo group."
+    },
+    "HV112": {
+      "question_id": "28127977",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The evidence studies lung cancer patients and measures leptin, but does not specifically state the study population was advanced lung cancer or that the study specifically evaluated advanced lung cancer as such."
+    },
+    "HV113": {
+      "question_id": "23356465",
+      "system": "advanced_rag",
+      "claim_index": 5,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence does not provide outcome comparisons across settings."
+    },
+    "HV114": {
+      "question_id": "18005142",
+      "system": "baseline_llm",
+      "claim_index": 3,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G4"
+      ],
+      "automatic_rationale": "G4 explicitly states that early intervention was not associated with reduced headache severity at peak."
+    },
+    "HV115": {
+      "question_id": "21198823",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G3"
+      ],
+      "automatic_rationale": "G3 explicitly states that none of the patients had elevated cTnI 18–24 hours after DSE, contradicting the claim that some patients had a troponin elevation."
+    },
+    "HV116": {
+      "question_id": "11838307",
+      "system": "basic_rag",
+      "claim_index": 3,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The supplied evidence names 'cold knife conization' but does not further describe it as a surgical cone excision with a knife."
+    },
+    "HV117": {
+      "question_id": "15962678",
+      "system": "baseline_llm",
+      "claim_index": 1,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The gold evidence reports significantly maintained systolic blood pressure and CVP in the study group at several time points, so the evidence does not support a blanket negative conclusion."
+    },
+    "HV118": {
+      "question_id": "25443385",
+      "system": "gold_context_control",
+      "claim_index": 3,
+      "automatic_label": "contradicted",
+      "automatic_evidence_labels": [
+        "G1",
+        "G3"
+      ],
+      "automatic_rationale": "G1 states the study aimed to assess self-funding, and G3 shows residual added costs remained in both reported scenarios, so self-funding was not achieved in the reported results."
+    },
+    "HV119": {
+      "question_id": "24142776",
+      "system": "basic_rag",
+      "claim_index": 3,
+      "automatic_label": "supported",
+      "automatic_evidence_labels": [
+        "G4"
+      ],
+      "automatic_rationale": "G4 states GM-treated ears had significantly greater hearing loss than untreated ears."
+    },
+    "HV120": {
+      "question_id": "24267613",
+      "system": "baseline_llm",
+      "claim_index": 2,
+      "automatic_label": "unsupported",
+      "automatic_evidence_labels": [],
+      "automatic_rationale": "The supplied evidence does not discuss comorbidities, individualized risk assessment, or this recommendation."
+    }
+  }
+}

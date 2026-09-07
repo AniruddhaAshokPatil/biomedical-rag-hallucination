@@ -1,0 +1,24 @@
+{
+  "total_claims": 160,
+  "unique_questions": 130,
+  "claims_per_system_binary_stratum": 20,
+  "balance_hidden_from_annotator": {
+    "baseline_llm": {
+      "grounded": 20,
+      "hallucinated": 20
+    },
+    "basic_rag": {
+      "grounded": 20,
+      "hallucinated": 20
+    },
+    "advanced_rag": {
+      "grounded": 20,
+      "hallucinated": 20
+    },
+    "gold_context_control": {
+      "grounded": 20,
+      "hallucinated": 20
+    }
+  },
+  "excluded_previous_questions": 131
+}

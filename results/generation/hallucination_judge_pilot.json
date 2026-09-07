@@ -1,0 +1,4367 @@
+{
+  "judge_model": "gpt-5.4-2026-03-05",
+  "reasoning_effort": "low",
+  "random_seed": 42,
+  "questions_per_label": 8,
+  "selected_question_ids": [
+    "16991071",
+    "11566686",
+    "21745056",
+    "20497146",
+    "19664156",
+    "17453263",
+    "16432652",
+    "15879722",
+    "26784147",
+    "23228527",
+    "11340218",
+    "11334578",
+    "14655021",
+    "18439500",
+    "18799291",
+    "24939676",
+    "23360491",
+    "10605400",
+    "22849512",
+    "17076590",
+    "25480629",
+    "24160268",
+    "24946973",
+    "22706226"
+  ],
+  "system_summaries": {
+    "baseline_llm": {
+      "answers": 23,
+      "total_claims": 62,
+      "supported_claims": 25,
+      "unsupported_claims": 29,
+      "contradicted_claims": 8,
+      "mean_answer_hallucination_rate": 0.572463768115942,
+      "mean_answer_groundedness": 0.427536231884058,
+      "micro_claim_hallucination_rate": 0.5967741935483871,
+      "micro_claim_groundedness": 0.4032258064516129
+    },
+    "basic_rag": {
+      "answers": 24,
+      "total_claims": 80,
+      "supported_claims": 65,
+      "unsupported_claims": 6,
+      "contradicted_claims": 9,
+      "mean_answer_hallucination_rate": 0.16805555555555554,
+      "mean_answer_groundedness": 0.8319444444444444,
+      "micro_claim_hallucination_rate": 0.1875,
+      "micro_claim_groundedness": 0.8125
+    },
+    "advanced_rag": {
+      "answers": 24,
+      "total_claims": 75,
+      "supported_claims": 65,
+      "unsupported_claims": 7,
+      "contradicted_claims": 3,
+      "mean_answer_hallucination_rate": 0.15208333333333332,
+      "mean_answer_groundedness": 0.8479166666666668,
+      "micro_claim_hallucination_rate": 0.13333333333333333,
+      "micro_claim_groundedness": 0.8666666666666667
+    },
+    "gold_context_control": {
+      "answers": 24,
+      "total_claims": 80,
+      "supported_claims": 74,
+      "unsupported_claims": 6,
+      "contradicted_claims": 0,
+      "mean_answer_hallucination_rate": 0.05109126984126985,
+      "mean_answer_groundedness": 0.9489087301587302,
+      "micro_claim_hallucination_rate": 0.075,
+      "micro_claim_groundedness": 0.925
+    }
+  },
+  "judgments": [
+    {
+      "question_id": "16991071",
+      "system": "baseline_llm",
+      "gold_decision": "yes",
+      "generated_answer": "Rotator cuff tears can be related to work in some cases, especially with repetitive overhead activity or heavy manual labor, but they are not universally considered an occupational disease. Whether a specific tear is occupational depends on the job exposure and the individual case.",
+      "claims": [
+        {
+          "claim": "Rotator cuff tears can be related to work in some cases.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "The article investigates occupational influence on rotator cuff disease and found significantly higher proportions of affected patients in certain occupations, supporting that some cases are work-related."
+        },
+        {
+          "claim": "Rotator cuff tears are especially related to repetitive overhead activity.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not mention repetitive overhead activity."
+        },
+        {
+          "claim": "Rotator cuff tears are especially related to heavy manual labor.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not specifically mention heavy manual labor as a risk factor."
+        },
+        {
+          "claim": "Rotator cuff tears are not universally considered an occupational disease.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not address whether rotator cuff tears are universally considered an occupational disease."
+        },
+        {
+          "claim": "Whether a specific rotator cuff tear is occupational depends on the job exposure.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The study relates repairs to profession and occupational load, but it does not state this case-level conclusion."
+        },
+        {
+          "claim": "Whether a specific rotator cuff tear is occupational depends on the individual case.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not discuss individual case determination."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 5,
+        "contradicted": 0,
+        "total": 6
+      },
+      "hallucination_rate": 0.8333333333333334,
+      "groundedness": 0.16666666666666666,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 586,
+      "output_tokens": 306
+    },
+    {
+      "question_id": "16991071",
+      "system": "basic_rag",
+      "gold_decision": "yes",
+      "generated_answer": "The evidence suggests rotator cuff tear/disease can be occupationally related, with significantly more non-traumatic rotator cuff repairs seen in agriculture/forestry and building industry workers than expected in the regional workforce.",
+      "claims": [
+        {
+          "claim": "The evidence suggests rotator cuff tear/disease can be occupationally related.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 states the study concerns the influence of occupation on rotator cuff disease, and G3 reports significantly higher proportions of affected patients in certain occupations, supporting an occupational relationship."
+        },
+        {
+          "claim": "Significantly more non-traumatic rotator cuff repairs were seen in agriculture/forestry workers than expected in the regional workforce.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G3"
+          ],
+          "rationale": "G2 states traumatic tears were excluded, and G3 reports significantly more patients working in agriculture and forestry (6.38% vs 1.07% in Bavaria, p<0.001)."
+        },
+        {
+          "claim": "Significantly more non-traumatic rotator cuff repairs were seen in building industry workers than expected in the regional workforce.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G3"
+          ],
+          "rationale": "G2 states traumatic tears were excluded, and G3 reports significantly more patients working in the building industry (35.11% vs 13.40% in Bavaria, p<0.001)."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 579,
+      "output_tokens": 277
+    },
+    {
+      "question_id": "16991071",
+      "system": "advanced_rag",
+      "gold_decision": "yes",
+      "generated_answer": "The evidence suggests rotator cuff tears/repairs may be associated with certain occupations and occupational load, but it does not establish rotator cuff tear as a recognized occupational disease.",
+      "claims": [
+        {
+          "claim": "The evidence suggests rotator cuff tears/repairs may be associated with certain occupations.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The results report significantly more rotator cuff repairs among males working in agriculture/forestry and the building industry compared with regional occupational patterns, supporting an association with certain occupations."
+        },
+        {
+          "claim": "The evidence suggests rotator cuff tears/repairs may be associated with occupational load.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The methods state that repairs were related to occupational load, but the provided results do not report any finding about occupational load."
+        },
+        {
+          "claim": "The evidence does not establish rotator cuff tear as a recognized occupational disease.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The provided evidence discusses limited data on occupational influence and reports associations with some occupations, but it does not address whether rotator cuff tear is or is not a recognized occupational disease."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 2,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.6666666666666666,
+      "groundedness": 0.3333333333333333,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 572,
+      "output_tokens": 353
+    },
+    {
+      "question_id": "16991071",
+      "system": "gold_context_control",
+      "gold_decision": "yes",
+      "generated_answer": "The evidence suggests rotator cuff tear can be related to occupation, with higher rates in agriculture/forestry and building work among nontraumatic cases.",
+      "claims": [
+        {
+          "claim": "The evidence suggests rotator cuff tear can be related to occupation.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 states the literature describes the influence of occupation on development of rotator cuff disease, and G3 reports significant occupational differences among nontraumatic rotator cuff repair cases."
+        },
+        {
+          "claim": "Among nontraumatic cases, higher rates were found in agriculture and forestry workers.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G3"
+          ],
+          "rationale": "G2 states traumatic tears were excluded, and G3 reports significantly more patients working in agriculture and forestry among males with no evidence of traumatic origin."
+        },
+        {
+          "claim": "Among nontraumatic cases, higher rates were found in building industry workers.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G3"
+          ],
+          "rationale": "G2 states traumatic tears were excluded, and G3 reports significantly more patients working in the building industry among males with no evidence of traumatic origin."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 567,
+      "output_tokens": 322
+    },
+    {
+      "question_id": "11566686",
+      "system": "baseline_llm",
+      "gold_decision": "yes",
+      "generated_answer": "The question asks whether pyloric mucosal hypertrophy seen in vivo has an etiologic role in infant hypertrophic pyloric stenosis. Without the article text or evidence, this cannot be determined confidently; in general, mucosal hypertrophy is more likely an associated finding than a proven primary cause.",
+      "claims": [
+        {
+          "claim": "The question asks whether pyloric mucosal hypertrophy seen in vivo has an etiologic role in infant hypertrophic pyloric stenosis.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states the study aimed to explore the hypothesis of a relationship between pyloric mucosal redundancy and the development of IHPS."
+        },
+        {
+          "claim": "Pyloric mucosal hypertrophy is more likely an associated finding than a proven primary cause of infant hypertrophic pyloric stenosis.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence shows pyloric mucosal redundancy is a constant finding in IHPS and that the study explores a possible relationship, but it does not establish that it is merely an associated finding or rule out a primary causal role."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.5,
+      "groundedness": 0.5,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 700,
+      "output_tokens": 448
+    },
+    {
+      "question_id": "11566686",
+      "system": "basic_rag",
+      "gold_decision": "yes",
+      "generated_answer": "The evidence shows that pyloric mucosal redundancy is a consistent finding in infants with IHPS and may contribute to pyloric canal obstruction, but it does not establish a definite etiologic role in causing IHPS.",
+      "claims": [
+        {
+          "claim": "Pyloric mucosal redundancy is a consistent finding in infants with IHPS.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states the study's purpose was to show that pyloric mucosal redundancy is a constant finding in infants with IHPS."
+        },
+        {
+          "claim": "Pyloric mucosal redundancy may contribute to pyloric canal obstruction.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that in infants with IHPS, the pyloric mucosa fills and obstructs the pyloric canal, which supports a possible contributory role in obstruction."
+        },
+        {
+          "claim": "The evidence does not establish a definite etiologic role for pyloric mucosal redundancy in causing IHPS.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 says the cause of IHPS remains obscure and that the study aimed to explore the hypothesis of a relationship between mucosal redundancy and IHPS development, which supports that a definite etiologic role was not established."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 683,
+      "output_tokens": 378
+    },
+    {
+      "question_id": "11566686",
+      "system": "advanced_rag",
+      "gold_decision": "yes",
+      "generated_answer": "The study suggests pyloric mucosal redundancy/hypertrophy is a constant finding in infants with IHPS and may contribute to obstruction, but it does not establish a definite etiologic role.",
+      "claims": [
+        {
+          "claim": "The study suggests pyloric mucosal redundancy/hypertrophy is a constant finding in infants with IHPS.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "The objective states the study's purpose was 'to show that pyloric mucosal redundancy is a constant finding in infants with IHPS.'"
+        },
+        {
+          "claim": "Pyloric mucosal redundancy/hypertrophy may contribute to obstruction.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The results state that in infants with IHPS, the pyloric mucosa 'fills and obstructs the pyloric canal,' supporting a contributory role in obstruction."
+        },
+        {
+          "claim": "The study does not establish a definite etiologic role for pyloric mucosal redundancy/hypertrophy.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "The evidence says the cause of IHPS 'remains obscure' and that the study aimed only 'to explore the hypothesis of a relationship' between mucosal redundancy and IHPS, which supports that a definite etiologic role was not established."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 679,
+      "output_tokens": 524
+    },
+    {
+      "question_id": "11566686",
+      "system": "gold_context_control",
+      "gold_decision": "yes",
+      "generated_answer": "The study suggests pyloric mucosal redundancy/thickening is a constant finding in infants with IHPS and may contribute to canal obstruction, but the evidence does not establish a definite etiologic role.",
+      "claims": [
+        {
+          "claim": "The study suggests pyloric mucosal redundancy/thickening is a constant finding in infants with IHPS.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states the study's purpose was to show that pyloric mucosal redundancy is a constant finding in infants with IHPS."
+        },
+        {
+          "claim": "Pyloric mucosal redundancy/thickening may contribute to pyloric canal obstruction in infants with IHPS.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that in infants with IHPS, the pyloric mucosa fills and obstructs the pyloric canal, supporting a contributory role in obstruction."
+        },
+        {
+          "claim": "The evidence does not establish a definite etiologic role for pyloric mucosal redundancy/thickening in IHPS.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 says the cause of IHPS remains obscure and that the study aimed only to explore the hypothesis of a relationship between mucosal redundancy and IHPS, which is consistent with not establishing a definite etiologic role."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 680,
+      "output_tokens": 537
+    },
+    {
+      "question_id": "21745056",
+      "system": "baseline_llm",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. Medical education curriculum can influence medical students' skills and attitudes toward culturally diverse populations.",
+      "claims": [
+        {
+          "claim": "Medical education curriculum can influence medical students' skills toward culturally diverse populations.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence states that the study investigated skills and attitudes and found statistically significant differences in student confidence ratings, but it does not directly state that curriculum influenced students' skills."
+        },
+        {
+          "claim": "Medical education curriculum can influence medical students' attitudes toward culturally diverse populations.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence says the study investigated attitudes, but the provided results only mention significant differences in confidence ratings and do not directly report attitudinal changes toward culturally diverse populations."
+        }
+      ],
+      "claim_counts": {
+        "supported": 0,
+        "unsupported": 2,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 1.0,
+      "groundedness": 0.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 581,
+      "output_tokens": 476
+    },
+    {
+      "question_id": "21745056",
+      "system": "basic_rag",
+      "gold_decision": "yes",
+      "generated_answer": "The evidence indicates the study was designed to assess whether the Pathway curriculum influenced students’ skills and attitudes toward culturally diverse populations, but it does not provide the results. So it is unclear from the supplied evidence whether it did influence them.",
+      "claims": [
+        {
+          "claim": "The study was designed to assess whether the Pathway curriculum influenced students’ skills and attitudes toward culturally diverse populations.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states the purpose was to investigate and differentiate the skills and attitudes of Pathway and non-Pathway students in working with culturally diverse populations."
+        },
+        {
+          "claim": "The supplied evidence does not provide the results.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "G4 explicitly provides results, including statistically significant differences in student confidence ratings and similar qualitative findings."
+        },
+        {
+          "claim": "It is unclear from the supplied evidence whether the Pathway curriculum did influence students’ skills and attitudes toward culturally diverse populations.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "G4 indicates statistically significant differences in confidence ratings and similar qualitative findings, so the evidence does provide results indicating an influence on at least some measured outcomes."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 0,
+        "contradicted": 2,
+        "total": 3
+      },
+      "hallucination_rate": 0.6666666666666666,
+      "groundedness": 0.3333333333333333,
+      "contradiction_rate": 0.6666666666666666,
+      "invalid_evidence_labels": [],
+      "input_tokens": 610,
+      "output_tokens": 222
+    },
+    {
+      "question_id": "21745056",
+      "system": "advanced_rag",
+      "gold_decision": "yes",
+      "generated_answer": "The evidence suggests the curriculum was studied for its impact on students’ skills and attitudes toward culturally diverse populations, but it does not provide a clear result showing whether it did influence them.",
+      "claims": [
+        {
+          "claim": "The curriculum was studied for its impact on students’ skills and attitudes toward culturally diverse populations.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that the purpose of the study was to investigate and differentiate the skills and attitudes of Pathway and non-Pathway students in working with culturally diverse populations."
+        },
+        {
+          "claim": "The evidence does not provide a clear result showing whether the curriculum did influence students’ skills and attitudes toward culturally diverse populations.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "G4 reports statistically significant differences at the end of Years 2, 3, and 4 in student confidence ratings, with qualitative results showing similar findings, indicating that the study did report results rather than lacking a clear outcome."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 0,
+        "contradicted": 1,
+        "total": 2
+      },
+      "hallucination_rate": 0.5,
+      "groundedness": 0.5,
+      "contradiction_rate": 0.5,
+      "invalid_evidence_labels": [],
+      "input_tokens": 599,
+      "output_tokens": 341
+    },
+    {
+      "question_id": "21745056",
+      "system": "gold_context_control",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. The longitudinal Pathway curriculum was associated with improved student confidence ratings and similar qualitative findings regarding skills and attitudes toward culturally diverse populations.",
+      "claims": [
+        {
+          "claim": "The longitudinal Pathway curriculum was associated with improved student confidence ratings.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "G4 states that a statistically significant difference was found regarding student confidence ratings at the end of Years 2, 3, and 4, supporting an association with improved confidence ratings."
+        },
+        {
+          "claim": "Qualitative results showed similar findings regarding students' skills in working with culturally diverse populations.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G4"
+          ],
+          "rationale": "G2 states the study investigated skills and attitudes in working with culturally diverse populations, and G4 states that qualitative results had similar findings."
+        },
+        {
+          "claim": "Qualitative results showed similar findings regarding students' attitudes toward culturally diverse populations.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G4"
+          ],
+          "rationale": "G2 identifies attitudes toward working with culturally diverse populations as a study focus, and G4 reports that qualitative results had similar findings."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 590,
+      "output_tokens": 618
+    },
+    {
+      "question_id": "20497146",
+      "system": "baseline_llm",
+      "gold_decision": "yes",
+      "generated_answer": "The optimal duration of acid suppression for maximal healing in Los Angeles grade C/D reflux oesophagitis cannot be determined from the provided information.",
+      "claims": [
+        {
+          "claim": "The optimal duration of acid suppression for maximal healing in Los Angeles grade C/D reflux oesophagitis cannot be determined from the provided information.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The gold evidence states that maximal healing rates were achieved when intragastric pH >4 was maintained for approximately 50–70% (12–17 h) of the 24-h period, indicating an apparent optimal duration/threshold was identified."
+        }
+      ],
+      "claim_counts": {
+        "supported": 0,
+        "unsupported": 0,
+        "contradicted": 1,
+        "total": 1
+      },
+      "hallucination_rate": 1.0,
+      "groundedness": 0.0,
+      "contradiction_rate": 1.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 645,
+      "output_tokens": 157
+    },
+    {
+      "question_id": "20497146",
+      "system": "basic_rag",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. The model suggests maximal healing of LA grade C/D reflux oesophagitis occurs when intragastric pH is >4 for about 50–70% of the 24-hour period (about 12–17 hours), and additional acid suppression beyond this did not further increase healing.",
+      "claims": [
+        {
+          "claim": "The model suggests maximal healing of LA grade C/D reflux oesophagitis occurs when intragastric pH is >4 for about 50–70% of the 24-hour period (about 12–17 hours).",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that maximal reflux oesophagitis healing rates were achieved when intragastric pH>4 was achieved for approximately 50–70% (12–17 h) of the 24-h period."
+        },
+        {
+          "claim": "Additional acid suppression beyond this did not further increase healing.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that acid suppression above this threshold did not yield further increases in healing rates."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 678,
+      "output_tokens": 232
+    },
+    {
+      "question_id": "20497146",
+      "system": "advanced_rag",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. Maximal healing of LA grade C/D reflux oesophagitis was seen when intragastric pH was >4 for about 50–70% of the day (12–17 hours); greater acid suppression did not further improve healing.",
+      "claims": [
+        {
+          "claim": "Maximal healing of LA grade C/D reflux oesophagitis was seen when intragastric pH was >4 for about 50–70% of the day (12–17 hours).",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that maximal reflux oesophagitis healing rates were achieved when intragastric pH>4 was achieved for approximately 50–70% (12–17 h) of the 24-h period."
+        },
+        {
+          "claim": "Greater acid suppression did not further improve healing.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that acid suppression above this threshold did not yield further increases in healing rates."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 669,
+      "output_tokens": 247
+    },
+    {
+      "question_id": "20497146",
+      "system": "gold_context_control",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. Maximal healing of LA grade C/D reflux oesophagitis was achieved when intragastric pH was >4 for about 50–70% of the 24-hour period (roughly 12–17 hours); more acid suppression beyond that did not improve healing further.",
+      "claims": [
+        {
+          "claim": "Maximal healing of LA grade C/D reflux oesophagitis was achieved when intragastric pH was >4 for about 50–70% of the 24-hour period.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that maximal reflux oesophagitis healing rates were achieved when intragastric pH >4 was achieved for approximately 50–70% of the 24-hour period."
+        },
+        {
+          "claim": "About 50–70% of the 24-hour period corresponds to roughly 12–17 hours.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 explicitly gives the equivalence 50–70% (12–17 h) of the 24-hour period."
+        },
+        {
+          "claim": "More acid suppression beyond that did not improve healing further.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that acid suppression above this threshold did not yield further increases in healing rates."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 677,
+      "output_tokens": 237
+    },
+    {
+      "question_id": "19664156",
+      "system": "baseline_llm",
+      "gold_decision": "yes",
+      "generated_answer": "Google may be useful as a supplementary search tool in difficult immunological and allergologic cases, but it is not a diagnostic tool and its reliability for diagnosis is limited.",
+      "claims": [
+        {
+          "claim": "Google may be useful as a supplementary search tool in difficult immunological and allergologic cases.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "The study aimed to evaluate Google for identifying and diagnosing complex immunological and allergic cases, and the results showed correct diagnoses in many cases, supporting that it may be useful in this context."
+        },
+        {
+          "claim": "Google is not a diagnostic tool.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "The gold evidence describes evaluating Google as a diagnostic guide and reports that investigators used Google searches to provide final diagnoses, which is incompatible with the claim that it is not a diagnostic tool."
+        },
+        {
+          "claim": "Google's reliability for diagnosis is limited.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The reported correct-diagnosis rates were 64% to 86%, with all investigators failing in some cases, supporting that diagnostic reliability is limited rather than perfect."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 1,
+        "total": 3
+      },
+      "hallucination_rate": 0.3333333333333333,
+      "groundedness": 0.6666666666666666,
+      "contradiction_rate": 0.3333333333333333,
+      "invalid_evidence_labels": [],
+      "input_tokens": 716,
+      "output_tokens": 575
+    },
+    {
+      "question_id": "19664156",
+      "system": "basic_rag",
+      "gold_decision": "yes",
+      "generated_answer": "The study was designed to test whether Google search could help identify complex immunological and allergic cases, but the provided evidence does not include the results, so usefulness cannot be determined from these passages alone.",
+      "claims": [
+        {
+          "claim": "The study was designed to test whether Google search could help identify complex immunological and allergic cases.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that the aim of the study was to evaluate whether searching Google with disease-related terms was effective in the identification and diagnosis of complex immunological and allergic cases."
+        },
+        {
+          "claim": "The provided evidence does not include the results.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 explicitly provides the study results, including the numbers of correct diagnoses made by each investigator."
+        },
+        {
+          "claim": "The usefulness of Google for these cases cannot be determined from these passages alone.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 provides outcome data on diagnostic success rates using Google, so the passages do allow assessment of usefulness."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 0,
+        "contradicted": 2,
+        "total": 3
+      },
+      "hallucination_rate": 0.6666666666666666,
+      "groundedness": 0.3333333333333333,
+      "contradiction_rate": 0.6666666666666666,
+      "invalid_evidence_labels": [],
+      "input_tokens": 722,
+      "output_tokens": 250
+    },
+    {
+      "question_id": "19664156",
+      "system": "advanced_rag",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. The study aimed to test whether Google searches with disease-related terms could help identify and diagnose complex immunological and allergic cases, using 45 published case reports compared against published diagnoses.",
+      "claims": [
+        {
+          "claim": "The study aimed to test whether Google searches with disease-related terms could help identify and diagnose complex immunological and allergic cases.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that the aim of the study was to evaluate whether searching Google with disease-related terms was effective in the identification and diagnosis of complex immunological and allergic cases."
+        },
+        {
+          "claim": "The study used 45 published case reports.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that forty-five case reports were randomly selected from peer-reviewed medical journals."
+        },
+        {
+          "claim": "The investigators' results were compared against published diagnoses.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that each investigator provided a final diagnosis using Google and that their results were then compared with the published diagnoses."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 720,
+      "output_tokens": 263
+    },
+    {
+      "question_id": "19664156",
+      "system": "gold_context_control",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. In this study, Google helped identify the correct diagnosis in many difficult immunological and allergic cases, with correct diagnoses in 64% to 86% of cases depending on the investigator.",
+      "claims": [
+        {
+          "claim": "In this study, Google helped identify the correct diagnosis in many difficult immunological and allergic cases.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "The study evaluated Google for identifying diagnoses in complex immunological and allergic cases, and the results showed substantial numbers of correct diagnoses by all three investigators."
+        },
+        {
+          "claim": "Correct diagnoses were achieved in 64% to 86% of cases depending on the investigator.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 reports correct diagnosis rates of 66% for investigator A, 86% for investigator B, and 64% for investigator C."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 722,
+      "output_tokens": 267
+    },
+    {
+      "question_id": "17453263",
+      "system": "baseline_llm",
+      "gold_decision": "yes",
+      "generated_answer": "Possibly, but I can’t confirm from the provided information alone.",
+      "claims": [
+        {
+          "claim": "From the provided information alone, it cannot be confirmed that physician estimates of asthma severity are less accurate in black than in white patients.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G5"
+          ],
+          "rationale": "The gold evidence reports that black patients were significantly more likely than white patients to have their asthma severity underestimated (OR = 1.39, 95% CI 1.08-1.79), which directly supports that physician estimates were less accurate in black patients."
+        }
+      ],
+      "claim_counts": {
+        "supported": 0,
+        "unsupported": 0,
+        "contradicted": 1,
+        "total": 1
+      },
+      "hallucination_rate": 1.0,
+      "groundedness": 0.0,
+      "contradiction_rate": 1.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 722,
+      "output_tokens": 368
+    },
+    {
+      "question_id": "17453263",
+      "system": "basic_rag",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. In the study, black patients were significantly more likely than white patients to have their asthma severity underestimated by physicians (OR 1.39, 95% CI 1.08-1.79).",
+      "claims": [
+        {
+          "claim": "In the study, black patients were significantly more likely than white patients to have their asthma severity underestimated by physicians.",
+          "label": "supported",
+          "evidence_labels": [
+            "G5"
+          ],
+          "rationale": "G5 states that blacks were significantly more likely than white patients to have their asthma severity underestimated by physicians."
+        },
+        {
+          "claim": "The odds ratio for black patients versus white patients having their asthma severity underestimated was 1.39 (95% CI 1.08-1.79).",
+          "label": "supported",
+          "evidence_labels": [
+            "G5"
+          ],
+          "rationale": "G5 reports OR = 1.39 with 95% CI 1.08-1.79 for underestimation in black versus white patients."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 751,
+      "output_tokens": 318
+    },
+    {
+      "question_id": "17453263",
+      "system": "advanced_rag",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. The evidence indicates that physicians underestimated asthma severity more often in black than in white patients, suggesting less accurate estimates in black patients.",
+      "claims": [
+        {
+          "claim": "Physicians underestimated asthma severity more often in black than in white patients.",
+          "label": "supported",
+          "evidence_labels": [
+            "G5"
+          ],
+          "rationale": "G5 states that black patients were significantly more likely than white patients to have their asthma severity underestimated (OR = 1.39, 95% CI 1.08-1.79)."
+        },
+        {
+          "claim": "This suggests physician estimates were less accurate in black patients.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence shows more frequent underestimation among black patients, but it does not directly establish overall accuracy of physician estimates by race."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.5,
+      "groundedness": 0.5,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 735,
+      "output_tokens": 284
+    },
+    {
+      "question_id": "17453263",
+      "system": "gold_context_control",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. In this study, black patients were significantly more likely than white patients to have physician severity estimates underestimate their asthma severity (OR 1.39, 95% CI 1.08-1.79).",
+      "claims": [
+        {
+          "claim": "Physician estimates of asthma severity were less accurate in black patients than in white patients in this study.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G5"
+          ],
+          "rationale": "The study hypothesized more frequent physician underestimation among black patients, and the results showed blacks were significantly more likely than whites to have asthma severity underestimated, indicating lower accuracy."
+        },
+        {
+          "claim": "In this study, black patients were significantly more likely than white patients to have physician severity estimates underestimate their asthma severity.",
+          "label": "supported",
+          "evidence_labels": [
+            "G5"
+          ],
+          "rationale": "G5 directly states that blacks were significantly more likely than white patients to have their asthma severity underestimated."
+        },
+        {
+          "claim": "The odds ratio for black versus white patients having asthma severity underestimated was 1.39 with a 95% CI of 1.08-1.79.",
+          "label": "supported",
+          "evidence_labels": [
+            "G5"
+          ],
+          "rationale": "G5 reports OR = 1.39 with 95% CI 1.08-1.79."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 752,
+      "output_tokens": 356
+    },
+    {
+      "question_id": "16432652",
+      "system": "baseline_llm",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. Transgastric endoscopic splenectomy has been reported as feasible, but it is not a standard approach and would be highly specialized/experimental.",
+      "claims": [
+        {
+          "claim": "Transgastric endoscopic splenectomy has been reported as feasible.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "The evidence states that the study aimed to determine the technical feasibility of per-oral transgastric splenectomy and reports that endoscopic splenectomy was successfully performed on six pigs."
+        },
+        {
+          "claim": "Transgastric endoscopic splenectomy is not a standard approach.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not discuss whether this approach is standard or nonstandard."
+        },
+        {
+          "claim": "Transgastric endoscopic splenectomy would be highly specialized.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not characterize the approach as highly specialized."
+        },
+        {
+          "claim": "Transgastric endoscopic splenectomy is experimental.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "The evidence describes an animal study in pigs performed to assess technical feasibility, which supports that the approach was being investigated experimentally."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 2,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.5,
+      "groundedness": 0.5,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 725,
+      "output_tokens": 323
+    },
+    {
+      "question_id": "16432652",
+      "system": "basic_rag",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. The evidence describes per-oral transgastric splenectomy as technically feasible in a porcine model, with successful visualization, vessel ligation, and spleen mobilization/removal using endoscopic tools.",
+      "claims": [
+        {
+          "claim": "Transgastric endoscopic splenectomy is possible.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "The study goal was to determine technical feasibility of per-oral transgastric splenectomy, and results state endoscopic splenectomy was performed on six pigs."
+        },
+        {
+          "claim": "Per-oral transgastric splenectomy was technically feasible in a porcine model.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 explicitly states the study in a porcine model aimed to determine technical feasibility of per-oral transgastric splenectomy."
+        },
+        {
+          "claim": "The spleen was successfully visualized during the procedure.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G3"
+          ],
+          "rationale": "G2 states the spleen was visualized, and G3 states visualization of the spleen was very good."
+        },
+        {
+          "claim": "The splenic vessels were successfully ligated during the procedure.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G3"
+          ],
+          "rationale": "G2 describes ligation of the splenic vessels with loops and clips, and G3 states ligation was achieved."
+        },
+        {
+          "claim": "The spleen was successfully mobilized during the procedure.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 explicitly states mobilization of the spleen was achieved."
+        },
+        {
+          "claim": "The spleen was removed using endoscopic tools.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The evidence states that endoscopic splenectomy was performed and that visualization, vessel ligation, and mobilization were achieved using endoscopic accessories, but it does not explicitly state removal of the spleen using endoscopic tools."
+        }
+      ],
+      "claim_counts": {
+        "supported": 5,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 6
+      },
+      "hallucination_rate": 0.16666666666666666,
+      "groundedness": 0.8333333333333334,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 737,
+      "output_tokens": 697
+    },
+    {
+      "question_id": "16432652",
+      "system": "advanced_rag",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. The evidence reports that per-oral transgastric splenectomy was technically feasible in a porcine model, with successful spleen visualization, vessel ligation, and mobilization using flexible endoscopic tools.",
+      "claims": [
+        {
+          "claim": "Per-oral transgastric splenectomy was technically feasible in a porcine model.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states the goal was to determine the technical feasibility of per-oral transgastric splenectomy using a flexible endoscope in a porcine model context."
+        },
+        {
+          "claim": "The spleen was successfully visualized during the procedure.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G3"
+          ],
+          "rationale": "G2 states 'The spleen was visualized,' and G3 states visualization of the spleen was very good."
+        },
+        {
+          "claim": "The splenic vessels were successfully ligated during the procedure.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G3"
+          ],
+          "rationale": "G2 says the splenic vessels were ligated with endoscopic loops and clips, and G3 says ligation of the splenic vessels was achieved."
+        },
+        {
+          "claim": "Mobilization of the spleen was achieved using flexible endoscopic tools.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G3 states mobilization of the spleen was achieved using commercially available devices and endoscopic accessories, and G1 identifies the procedure as using a flexible endoscope."
+        }
+      ],
+      "claim_counts": {
+        "supported": 4,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 737,
+      "output_tokens": 402
+    },
+    {
+      "question_id": "16432652",
+      "system": "gold_context_control",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. In this porcine study, per-oral transgastric splenectomy was technically feasible and was successfully performed in six pigs.",
+      "claims": [
+        {
+          "claim": "In this porcine study, per-oral transgastric splenectomy was technically feasible.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that the goal was to determine the technical feasibility of per-oral transgastric splenectomy in a porcine model, and the study presents results on this procedure."
+        },
+        {
+          "claim": "Per-oral transgastric splenectomy was successfully performed in six pigs.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that endoscopic splenectomy was performed on six pigs."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 722,
+      "output_tokens": 223
+    },
+    {
+      "question_id": "15879722",
+      "system": "baseline_llm",
+      "gold_decision": "yes",
+      "generated_answer": "I’m not aware of evidence that cytokeratin immunoreactivity is useful for diagnosing short-segment Barrett’s oesophagus in Korea.",
+      "claims": [
+        {
+          "claim": "There is no evidence that cytokeratin immunoreactivity is useful for diagnosing short-segment Barrett's oesophagus in Korea.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G2",
+            "G4"
+          ],
+          "rationale": "The gold evidence explicitly investigates the diagnostic usefulness of cytokeratin 7/20 immunostaining for short-segment Barrett's oesophagus in Korea and reports sensitivity and specificity (77.8% and 77.5%), indicating evidence of usefulness."
+        }
+      ],
+      "claim_counts": {
+        "supported": 0,
+        "unsupported": 0,
+        "contradicted": 1,
+        "total": 1
+      },
+      "hallucination_rate": 1.0,
+      "groundedness": 0.0,
+      "contradiction_rate": 1.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 744,
+      "output_tokens": 233
+    },
+    {
+      "question_id": "15879722",
+      "system": "basic_rag",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. In this Korean study, cytokeratin 7/20 immunostaining showed moderate diagnostic performance for short-segment Barrett's oesophagus, with a reported sensitivity of 77.8% and specificity of 77.5%.",
+      "claims": [
+        {
+          "claim": "The study was conducted in Korea.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The objective states the study aimed to determine diagnostic usefulness for short-segment Barrett's oesophagus in Korea."
+        },
+        {
+          "claim": "Cytokeratin 7/20 immunostaining is useful in the diagnosis of short-segment Barrett's oesophagus in Korea.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence gives the study objective and reports sensitivity/specificity, but does not explicitly conclude that the test is useful."
+        },
+        {
+          "claim": "Cytokeratin 7/20 immunostaining showed moderate diagnostic performance for short-segment Barrett's oesophagus.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence reports numerical sensitivity and specificity, but does not characterize the performance as 'moderate'."
+        },
+        {
+          "claim": "The reported sensitivity was 77.8%.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "The results state that the sensitivity of Barrett's cytokeratin 7/20 pattern was 77.8%."
+        },
+        {
+          "claim": "The reported specificity was 77.5%.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "The results state that the specificity of Barrett's cytokeratin 7/20 pattern was 77.5%."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 2,
+        "contradicted": 0,
+        "total": 5
+      },
+      "hallucination_rate": 0.4,
+      "groundedness": 0.6,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 765,
+      "output_tokens": 567
+    },
+    {
+      "question_id": "15879722",
+      "system": "advanced_rag",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. In this Korean study, cytokeratin 7/20 immunostaining showed a Barrett’s pattern in 77.8% of short-segment Barrett’s oesophagus cases, with reported sensitivity and specificity of 77.8% and 77.5%, suggesting it is useful for diagnosis.",
+      "claims": [
+        {
+          "claim": "This study was conducted in Korea.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The objective explicitly states the study was to determine diagnostic usefulness of cytokeratin 7/20 immunostaining for short-segment Barrett's oesophagus in Korea."
+        },
+        {
+          "claim": "Cytokeratin 7/20 immunostaining showed a Barrett's pattern in 77.8% of short-segment Barrett's oesophagus cases.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "The results state that Barrett's cytokeratin 7/20 pattern was observed in 28 out of 36 cases (77.8%) with short-segment Barrett's oesophagus."
+        },
+        {
+          "claim": "The reported sensitivity of the Barrett's cytokeratin 7/20 pattern was 77.8%.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "The results explicitly report sensitivity of 77.8%."
+        },
+        {
+          "claim": "The reported specificity of the Barrett's cytokeratin 7/20 pattern was 77.5%.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "The results explicitly report specificity of 77.5%."
+        },
+        {
+          "claim": "These findings suggest cytokeratin 7/20 immunostaining is useful for diagnosing short-segment Barrett's oesophagus.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G4"
+          ],
+          "rationale": "The evidence states cytokeratin 7/20 staining has been reported to be helpful in diagnosing Barrett's oesophagus, and the study specifically evaluated its diagnostic usefulness in Korea, with reported sensitivity and specificity supporting that suggestion."
+        }
+      ],
+      "claim_counts": {
+        "supported": 5,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 5
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 779,
+      "output_tokens": 671
+    },
+    {
+      "question_id": "15879722",
+      "system": "gold_context_control",
+      "gold_decision": "yes",
+      "generated_answer": "Yes. In this Korean study, the Barrett’s cytokeratin 7/20 pattern showed moderate diagnostic usefulness for short-segment Barrett’s oesophagus, with 77.8% sensitivity and 77.5% specificity.",
+      "claims": [
+        {
+          "claim": "The study was conducted in Korea.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The objective states the study was to determine diagnostic usefulness for short-segment Barrett's oesophagus in Korea."
+        },
+        {
+          "claim": "The Barrett’s cytokeratin 7/20 pattern showed moderate diagnostic usefulness for short-segment Barrett’s oesophagus.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence reports sensitivity and specificity values but does not characterize the usefulness as 'moderate' or explicitly conclude this level of usefulness."
+        },
+        {
+          "claim": "The sensitivity of the Barrett’s cytokeratin 7/20 pattern for short-segment Barrett’s oesophagus was 77.8%.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "The results explicitly state that the sensitivity was 77.8%."
+        },
+        {
+          "claim": "The specificity of the Barrett’s cytokeratin 7/20 pattern for short-segment Barrett’s oesophagus was 77.5%.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "The results explicitly state that the specificity was 77.5%."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.25,
+      "groundedness": 0.75,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 763,
+      "output_tokens": 484
+    },
+    {
+      "question_id": "26784147",
+      "system": "baseline_llm",
+      "gold_decision": "no",
+      "generated_answer": "Without evidence provided, I can’t determine whether gout patients know their target serum urate goal. In general, gout management includes a serum urate target, but patient awareness varies.",
+      "claims": [
+        {
+          "claim": "Gout management includes a serum urate target.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 refers to the central role of achieving and maintaining the serum urate goal with urate-lowering therapy."
+        },
+        {
+          "claim": "Patient awareness of the serum urate target varies.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence states that only 14% of patients knew their serum urate goal, but it does not directly state the general claim that patient awareness varies."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.5,
+      "groundedness": 0.5,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 725,
+      "output_tokens": 334
+    },
+    {
+      "question_id": "26784147",
+      "system": "basic_rag",
+      "gold_decision": "no",
+      "generated_answer": "Yes. In this study, only 14% of gout patients knew their serum urate goal, so most did not know it.",
+      "claims": [
+        {
+          "claim": "In this study, only 14% of gout patients knew their serum urate goal.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states, 'Only 14% of patients knew their SU goal.'"
+        },
+        {
+          "claim": "Most gout patients in this study did not know their serum urate goal.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that only 14% knew their SU goal, which entails that the majority did not know it."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 716,
+      "output_tokens": 180
+    },
+    {
+      "question_id": "26784147",
+      "system": "advanced_rag",
+      "gold_decision": "no",
+      "generated_answer": "Most gout patients in this study did not know their serum urate goal; only 14% knew it, although they generally knew other gout-specific facts.",
+      "claims": [
+        {
+          "claim": "Most gout patients in this study did not know their serum urate goal.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that only 14% of patients knew their SU goal, which entails that most did not know it."
+        },
+        {
+          "claim": "Only 14% of gout patients in this study knew their serum urate goal.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 explicitly states that only 14% of patients knew their SU goal."
+        },
+        {
+          "claim": "Gout patients in this study generally knew other gout-specific facts.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that the majority answered correctly for the other 5 gout-specific knowledge questions, supporting that they generally knew other gout-specific facts."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 720,
+      "output_tokens": 233
+    },
+    {
+      "question_id": "26784147",
+      "system": "gold_context_control",
+      "gold_decision": "no",
+      "generated_answer": "Most gout patients did not know their serum urate goal; only 14% correctly identified it.",
+      "claims": [
+        {
+          "claim": "Most gout patients did not know their serum urate goal.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that only 14% of patients knew their serum urate goal, which entails that most did not know it."
+        },
+        {
+          "claim": "Only 14% of gout patients correctly identified their serum urate goal.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 directly states that only 14% of patients knew their serum urate goal."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 709,
+      "output_tokens": 171
+    },
+    {
+      "question_id": "23228527",
+      "system": "baseline_llm",
+      "gold_decision": "no",
+      "generated_answer": "Yes. Music is generally associated with reduced stress/anxiety in mechanically ventilated patients, though the magnitude and consistency of benefit can vary.",
+      "claims": [
+        {
+          "claim": "Music is generally associated with reduced stress in mechanically ventilated patients.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G4",
+            "G5"
+          ],
+          "rationale": "The study measured stress using urinary free cortisol, and found no significant differences among groups over the course of ventilatory support."
+        },
+        {
+          "claim": "Music is generally associated with reduced anxiety in mechanically ventilated patients.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The supplied evidence addresses stress via urinary free cortisol, not anxiety outcomes."
+        },
+        {
+          "claim": "The magnitude of benefit from music in mechanically ventilated patients can vary.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The supplied evidence does not discuss variation in the magnitude of benefit."
+        },
+        {
+          "claim": "The consistency of benefit from music in mechanically ventilated patients can vary.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The supplied evidence does not discuss variation in consistency of benefit."
+        }
+      ],
+      "claim_counts": {
+        "supported": 0,
+        "unsupported": 3,
+        "contradicted": 1,
+        "total": 4
+      },
+      "hallucination_rate": 1.0,
+      "groundedness": 0.0,
+      "contradiction_rate": 0.25,
+      "invalid_evidence_labels": [],
+      "input_tokens": 670,
+      "output_tokens": 423
+    },
+    {
+      "question_id": "23228527",
+      "system": "basic_rag",
+      "gold_decision": "no",
+      "generated_answer": "Yes. The evidence describes a randomized controlled trial designed to explore the influence of music on stress in mechanically ventilated patients, with stress assessed using 24-hour urinary cortisol in a subset of patients.",
+      "claims": [
+        {
+          "claim": "Music influences stress in mechanically ventilated patients.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G5"
+          ],
+          "rationale": "The study found no significant differences among groups in urinary free cortisol over the course of ventilatory support, which is incompatible with a claimed demonstrated influence on stress."
+        },
+        {
+          "claim": "The evidence describes a randomized controlled trial designed to explore the influence of music on stress in mechanically ventilated patients.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "The objectives state the purpose was to explore the influence of music on stress in mechanically ventilated patients, and the design is a randomized controlled trial."
+        },
+        {
+          "claim": "Stress was assessed using 24-hour urinary cortisol in a subset of patients.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G4"
+          ],
+          "rationale": "The trial collected 24-hour urinary cortisol samples from a subset of subjects, and urinary free cortisol is identified as the stress biomarker."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 1,
+        "total": 3
+      },
+      "hallucination_rate": 0.3333333333333333,
+      "groundedness": 0.6666666666666666,
+      "contradiction_rate": 0.3333333333333333,
+      "invalid_evidence_labels": [],
+      "input_tokens": 682,
+      "output_tokens": 379
+    },
+    {
+      "question_id": "23228527",
+      "system": "advanced_rag",
+      "gold_decision": "no",
+      "generated_answer": "Yes. The cited study was designed to explore the influence of music on stress in mechanically ventilated patients, indicating music can influence stress in this setting.",
+      "claims": [
+        {
+          "claim": "The cited study was designed to explore the influence of music on stress in mechanically ventilated patients.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that the purpose of the study was to explore the influence of music on stress in patients over the duration of ventilatory support."
+        },
+        {
+          "claim": "Music can influence stress in mechanically ventilated patients.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G5"
+          ],
+          "rationale": "G5 reports no significant differences among groups in urinary free cortisol, a stress biomarker, over the course of ventilatory support, which is incompatible with the answer's conclusion that music can influence stress in this setting."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 0,
+        "contradicted": 1,
+        "total": 2
+      },
+      "hallucination_rate": 0.5,
+      "groundedness": 0.5,
+      "contradiction_rate": 0.5,
+      "invalid_evidence_labels": [],
+      "input_tokens": 673,
+      "output_tokens": 298
+    },
+    {
+      "question_id": "23228527",
+      "system": "gold_context_control",
+      "gold_decision": "no",
+      "generated_answer": "In this trial, music did not significantly change urinary free cortisol (a stress biomarker) in mechanically ventilated patients compared with headphones only or usual care.",
+      "claims": [
+        {
+          "claim": "In this trial, music did not significantly change urinary free cortisol in mechanically ventilated patients compared with headphones only or usual care.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G5"
+          ],
+          "rationale": "The trial randomized mechanically ventilated patients to patient-directed music, headphones only, or usual care, and results showed no significant differences among groups in urinary free cortisol over the course of ventilatory support."
+        },
+        {
+          "claim": "Urinary free cortisol is a stress biomarker.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "The evidence explicitly states that urinary free cortisol is an integrative biomarker of stress."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 674,
+      "output_tokens": 220
+    },
+    {
+      "question_id": "11340218",
+      "system": "baseline_llm",
+      "gold_decision": "no",
+      "generated_answer": "Observational studies suggest pretreatment with statins may be associated with better stroke outcomes, but evidence is not definitive enough to conclude it improves clinical outcome after stroke.",
+      "claims": [
+        {
+          "claim": "Observational studies suggest pretreatment with statins may be associated with better stroke outcomes.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "The study is described as a preliminary observational study exploring whether outcome is improved in patients on statins at stroke onset, and the results show odds ratios above 1 for discharge to home, suggesting a possible better outcome."
+        },
+        {
+          "claim": "The evidence is not definitive enough to conclude that pretreatment with statins improves clinical outcome after stroke.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "Although statin use was associated with a moderately stronger odds of discharge to home after adjustment, this predictor was statistically nonsignificant (95% CI includes 1), so the evidence is not definitive."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 695,
+      "output_tokens": 328
+    },
+    {
+      "question_id": "11340218",
+      "system": "basic_rag",
+      "gold_decision": "no",
+      "generated_answer": "Pretreatment with statins showed a trend toward better short-term outcome after stroke (higher odds of discharge to home), but the adjusted association was not statistically significant, so the evidence is inconclusive.",
+      "claims": [
+        {
+          "claim": "Pretreatment with statins showed a trend toward better short-term outcome after stroke, reflected by higher odds of discharge to home.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 reports an unadjusted odds ratio of 1.41 for early discharge to home and an adjusted odds ratio of 1.42, both >1, indicating a trend toward better short-term outcome/higher odds of discharge to home among statin-treated patients."
+        },
+        {
+          "claim": "The adjusted association between pretreatment with statins and discharge to home after stroke was not statistically significant.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that in the logistic regression model, statin use was a 'statistically nonsignificant predictor' of discharge to home, with adjusted OR 1.42 (95% CI 0.90 to 2.22)."
+        },
+        {
+          "claim": "Therefore, the evidence is inconclusive.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence reports a statistically nonsignificant adjusted association but does not explicitly characterize the overall evidence as 'inconclusive.'"
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.3333333333333333,
+      "groundedness": 0.6666666666666666,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 702,
+      "output_tokens": 382
+    },
+    {
+      "question_id": "11340218",
+      "system": "advanced_rag",
+      "gold_decision": "no",
+      "generated_answer": "Pretreatment with statins was associated with a non-significant trend toward better short-term outcome after stroke, but this study did not show a clear clinical benefit.",
+      "claims": [
+        {
+          "claim": "Pretreatment with statins was associated with a non-significant trend toward better short-term outcome after stroke.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The results report higher odds of early discharge to home for patients on statins, with adjusted OR 1.42, but this association was statistically nonsignificant (95% CI 0.90 to 2.22), consistent with a nonsignificant trend toward better short-term outcome."
+        },
+        {
+          "claim": "This study did not show a clear clinical benefit.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The reported association between statin use and discharge to home was statistically nonsignificant, so the study did not clearly demonstrate a clinical benefit."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 695,
+      "output_tokens": 323
+    },
+    {
+      "question_id": "11340218",
+      "system": "gold_context_control",
+      "gold_decision": "no",
+      "generated_answer": "This study did not show a statistically significant improvement in clinical outcome after stroke with pretreatment statin use; the adjusted association with early discharge home was nonsignificant.",
+      "claims": [
+        {
+          "claim": "The study did not show a statistically significant improvement in clinical outcome after stroke with pretreatment statin use.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that after adjustment, statin use was a statistically nonsignificant predictor of discharge to home, which supports that no statistically significant improvement in clinical outcome was shown."
+        },
+        {
+          "claim": "The adjusted association between pretreatment statin use and early discharge home was nonsignificant.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 reports a multiple-adjusted odds ratio of 1.42 (95% CI 0.90 to 2.22) for discharge to home and explicitly describes this as statistically nonsignificant."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 696,
+      "output_tokens": 180
+    },
+    {
+      "question_id": "11334578",
+      "system": "baseline_llm",
+      "gold_decision": "no",
+      "generated_answer": "I’m not sure from the information provided whether pharmaceutical expenditure awareness exists in the reformed primary care system.",
+      "claims": [],
+      "claim_counts": {
+        "supported": 0,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 0
+      },
+      "hallucination_rate": null,
+      "groundedness": null,
+      "contradiction_rate": null,
+      "invalid_evidence_labels": [],
+      "input_tokens": 630,
+      "output_tokens": 235
+    },
+    {
+      "question_id": "11334578",
+      "system": "basic_rag",
+      "gold_decision": "no",
+      "generated_answer": "Yes. The evidence indicates that feeding pharmacy information back to primary care doctors was intended to create awareness of pharmaceutical expenditure in the reformed primary care system.",
+      "claims": [
+        {
+          "claim": "Feeding information on pharmacy back to primary care doctors was intended to create awareness (knowledge) of pharmaceutical expenditure.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states the objective was to evaluate the effectiveness of feeding information on pharmacy back to primary care doctors in order to create awareness (knowledge) of pharmaceutical expenditure."
+        },
+        {
+          "claim": "This was studied in a reformed primary care system.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 identifies the setting as reformed primary care in Sabadell, Barcelona."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 639,
+      "output_tokens": 278
+    },
+    {
+      "question_id": "11334578",
+      "system": "advanced_rag",
+      "gold_decision": "no",
+      "generated_answer": "Yes. The objective states that feeding pharmacy information back to primary care doctors was intended to create awareness of pharmaceutical expenditure in the reformed primary care setting.",
+      "claims": [
+        {
+          "claim": "The objective states that feeding information on pharmacy back to primary care doctors was intended to create awareness of pharmaceutical expenditure.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states the objective was to evaluate feeding information on pharmacy back to primary care doctors 'in order to create awareness (knowledge) of pharmaceutical expenditure.'"
+        },
+        {
+          "claim": "This objective was in the reformed primary care setting.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 identifies the setting as 'Reformed PC, Sabadell, Barcelona.'"
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 639,
+      "output_tokens": 263
+    },
+    {
+      "question_id": "11334578",
+      "system": "gold_context_control",
+      "gold_decision": "no",
+      "generated_answer": "Yes. The study in reformed primary care found that doctors’ estimates of pharmaceutical expenditure differed significantly from the real expenditure, indicating awareness was being assessed and that actual awareness was limited/inaccurate.",
+      "claims": [
+        {
+          "claim": "The study in reformed primary care found that doctors’ estimates of pharmaceutical expenditure differed significantly from the real expenditure.",
+          "label": "supported",
+          "evidence_labels": [
+            "G6"
+          ],
+          "rationale": "G6 states that significant differences were found between the annual pharmaceutical expenditure in reality and doctors' estimates, and also for mean prescription costs."
+        },
+        {
+          "claim": "The study assessed awareness of pharmaceutical expenditure.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G5"
+          ],
+          "rationale": "G1 states the objective was to create awareness (knowledge) of pharmaceutical expenditure, and G5 describes asking each doctor for their expenditure estimates as the feedback/assessment method."
+        },
+        {
+          "claim": "Actual awareness of pharmaceutical expenditure was limited or inaccurate.",
+          "label": "supported",
+          "evidence_labels": [
+            "G6"
+          ],
+          "rationale": "G6 reports significant differences between real expenditure and doctors' estimates, which supports that doctors' knowledge/awareness was inaccurate."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 648,
+      "output_tokens": 213
+    },
+    {
+      "question_id": "14655021",
+      "system": "baseline_llm",
+      "gold_decision": "no",
+      "generated_answer": "Juvenile and adult ankylosing spondylitis are generally considered part of the same disease spectrum, but juvenile-onset disease can have different early features and presentation. So they are not always clinically identical.",
+      "claims": [
+        {
+          "claim": "Juvenile and adult ankylosing spondylitis are generally considered part of the same disease spectrum.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence compares juvenile and adult forms of ankylosing spondylitis but does not state that they are part of the same disease spectrum."
+        },
+        {
+          "claim": "Juvenile-onset ankylosing spondylitis can have different early features and presentation than adult ankylosing spondylitis.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 states that juvenile and adult forms have different clinical presentation, and G3 specifies differences such as more frequent onset with peripheral arthritis and greater hip and knee involvement in juvenile cases."
+        },
+        {
+          "claim": "Juvenile and adult ankylosing spondylitis are not always clinically identical.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 explicitly says juvenile and adult forms have different clinical presentation and outcome, and G3 provides specific differing clinical features."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.3333333333333333,
+      "groundedness": 0.6666666666666666,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 619,
+      "output_tokens": 250
+    },
+    {
+      "question_id": "14655021",
+      "system": "basic_rag",
+      "gold_decision": "no",
+      "generated_answer": "No. Juvenile and adult ankylosing spondylitis are related but not the same in clinical presentation and outcome; the evidence describes them as distinct juvenile and adult forms.",
+      "claims": [
+        {
+          "claim": "Juvenile ankylosing spondylitis is not the same disease as adult ankylosing spondylitis.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence states that juvenile and adult forms of AS differ in clinical presentation and outcome, but it does not directly establish that they are different diseases."
+        },
+        {
+          "claim": "Juvenile and adult ankylosing spondylitis are related.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "Both groups are described as patients diagnosed with ankylosing spondylitis, classified by age of onset into juvenile AS and adult AS."
+        },
+        {
+          "claim": "Juvenile and adult ankylosing spondylitis are not the same in clinical presentation.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 explicitly states juvenile and adult forms have different clinical presentation, and G3 provides examples of differing clinical features."
+        },
+        {
+          "claim": "Juvenile and adult ankylosing spondylitis are not the same in outcome.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 explicitly states juvenile and adult forms have different outcome."
+        },
+        {
+          "claim": "The evidence describes juvenile and adult ankylosing spondylitis as distinct juvenile and adult forms.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "G1 refers to juvenile and adult forms of AS, and G2 classifies patients into juvenile AS and adult AS based on age of onset."
+        }
+      ],
+      "claim_counts": {
+        "supported": 4,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 5
+      },
+      "hallucination_rate": 0.2,
+      "groundedness": 0.8,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 612,
+      "output_tokens": 561
+    },
+    {
+      "question_id": "14655021",
+      "system": "advanced_rag",
+      "gold_decision": "no",
+      "generated_answer": "No. Juvenile and adult ankylosing spondylitis are described as having different clinical presentation and outcome, so they are not simply the same disease in the same form.",
+      "claims": [
+        {
+          "claim": "Juvenile and adult ankylosing spondylitis have different clinical presentation.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that juvenile and adult forms of ankylosing spondylitis 'have been shown to have different clinical presentation.'"
+        },
+        {
+          "claim": "Juvenile and adult ankylosing spondylitis have different outcome.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that juvenile and adult forms of ankylosing spondylitis 'have been shown to have different ... outcome.'"
+        },
+        {
+          "claim": "Juvenile and adult ankylosing spondylitis are not simply the same disease in the same form.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence shows differences in presentation and outcome between juvenile and adult forms, but it does not explicitly state that they are not the same disease."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.3333333333333333,
+      "groundedness": 0.6666666666666666,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 612,
+      "output_tokens": 350
+    },
+    {
+      "question_id": "14655021",
+      "system": "gold_context_control",
+      "gold_decision": "no",
+      "generated_answer": "No. The evidence suggests juvenile and adult ankylosing spondylitis have different clinical presentations and outcomes, with juvenile cases showing more peripheral arthritis, hip/knee involvement, and valvular dysfunction.",
+      "claims": [
+        {
+          "claim": "Juvenile and adult ankylosing spondylitis are not the same disease.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence states that juvenile and adult forms have different clinical presentation and outcome, but it does not directly address whether they are the same disease or different diseases."
+        },
+        {
+          "claim": "The evidence suggests juvenile and adult ankylosing spondylitis have different clinical presentations.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that juvenile and adult forms of ankylosing spondylitis have been shown to have different clinical presentation."
+        },
+        {
+          "claim": "The evidence suggests juvenile and adult ankylosing spondylitis have different outcomes.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that juvenile and adult forms of ankylosing spondylitis have been shown to have different outcome."
+        },
+        {
+          "claim": "Juvenile cases show more peripheral arthritis.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that juvenile AS had more frequent onset with peripheral arthritis."
+        },
+        {
+          "claim": "Juvenile cases show more hip involvement.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that juvenile AS had greater involvement of hip joints."
+        },
+        {
+          "claim": "Juvenile cases show more knee involvement.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that juvenile AS had greater involvement of knee joints."
+        },
+        {
+          "claim": "Juvenile cases show valvular dysfunction.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that valvular dysfunction was seen only in patients with juvenile AS."
+        }
+      ],
+      "claim_counts": {
+        "supported": 6,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 7
+      },
+      "hallucination_rate": 0.14285714285714285,
+      "groundedness": 0.8571428571428571,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 617,
+      "output_tokens": 594
+    },
+    {
+      "question_id": "18439500",
+      "system": "baseline_llm",
+      "gold_decision": "no",
+      "generated_answer": "Yes. In practice, the size, number, and location of myomas can limit the feasibility of laparoscopic myomectomy, although the exact limits depend on surgeon experience and case complexity.",
+      "claims": [
+        {
+          "claim": "The size, number, and location of myomas can limit the feasibility of laparoscopic myomectomy.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G1",
+            "G4"
+          ],
+          "rationale": "The gold evidence states the study assessed whether an experienced laparoscopic surgeon could perform laparoscopic myomectomy regardless of myoma size, number, and location, and specifically notes that no exclusion criteria were based on these factors."
+        },
+        {
+          "claim": "The exact limits depend on surgeon experience.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence mentions assessment in the context of an experienced laparoscopic surgeon, but it does not state that exact limits depend on surgeon experience."
+        },
+        {
+          "claim": "The exact limits depend on case complexity.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not discuss case complexity as determining exact limits."
+        }
+      ],
+      "claim_counts": {
+        "supported": 0,
+        "unsupported": 2,
+        "contradicted": 1,
+        "total": 3
+      },
+      "hallucination_rate": 1.0,
+      "groundedness": 0.0,
+      "contradiction_rate": 0.3333333333333333,
+      "invalid_evidence_labels": [],
+      "input_tokens": 1010,
+      "output_tokens": 423
+    },
+    {
+      "question_id": "18439500",
+      "system": "basic_rag",
+      "gold_decision": "no",
+      "generated_answer": "The evidence suggests that, in experienced hands, myoma size, number, and location were not absolute limiting factors for laparoscopic myomectomy; no exclusion criteria were based on these factors, and the study assessed performance regardless of them.",
+      "claims": [
+        {
+          "claim": "The evidence suggests that, in experienced hands, myoma size, number, and location were not absolute limiting factors for laparoscopic myomectomy.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G4"
+          ],
+          "rationale": "G1 states the study objective was to assess whether an experienced laparoscopic surgeon could perform efficient laparoscopic myomectomy regardless of myoma size, number, and location, and G4 states there were no exclusion criteria based on these factors."
+        },
+        {
+          "claim": "No exclusion criteria were based on myoma size, number, or location.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "G4 directly states that no exclusion criteria were based on the size, number, or location of myomas."
+        },
+        {
+          "claim": "The study assessed performance regardless of myoma size, number, and location.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 directly states the study objective was to assess whether efficient laparoscopic myomectomy was possible regardless of the size, number, and location of the myomas."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 1019,
+      "output_tokens": 367
+    },
+    {
+      "question_id": "18439500",
+      "system": "advanced_rag",
+      "gold_decision": "no",
+      "generated_answer": "Yes. The evidence suggests that, in experienced hands, myoma size, number, and location were not exclusion criteria and did not form absolute limiting factors for laparoscopic myomectomy, although larger/more numerous myomas were associated with greater operative time, blood loss, and hospital stay.",
+      "claims": [
+        {
+          "claim": "In experienced hands, myoma size, number, and location were not exclusion criteria for laparoscopic myomectomy.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G4"
+          ],
+          "rationale": "G1 states the objective was to assess laparoscopic myomectomy by an experienced surgeon regardless of size, number, and location of myomas, and G4 states there were no exclusion criteria based on size, number, or location."
+        },
+        {
+          "claim": "In experienced hands, myoma size, number, and location did not form absolute limiting factors for laparoscopic myomectomy.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G4"
+          ],
+          "rationale": "G1 frames feasibility regardless of size, number, and location, and G4 reports no exclusion criteria based on these factors, supporting that they were not absolute limiting factors in this study context."
+        },
+        {
+          "claim": "Larger or more numerous myomas were associated with greater operative time.",
+          "label": "supported",
+          "evidence_labels": [
+            "G6"
+          ],
+          "rationale": "G6 states that duration of surgery was greater in groups in which larger myomas or more myomas were removed."
+        },
+        {
+          "claim": "Larger or more numerous myomas were associated with greater blood loss.",
+          "label": "supported",
+          "evidence_labels": [
+            "G6"
+          ],
+          "rationale": "G6 states that mean blood loss was greater in groups in which larger myomas or more myomas were removed."
+        },
+        {
+          "claim": "Larger or more numerous myomas were associated with greater hospital stay.",
+          "label": "supported",
+          "evidence_labels": [
+            "G6"
+          ],
+          "rationale": "G6 states that hospital stay was greater in groups in which larger myomas or more myomas were removed."
+        }
+      ],
+      "claim_counts": {
+        "supported": 5,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 5
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 1030,
+      "output_tokens": 567
+    },
+    {
+      "question_id": "18439500",
+      "system": "gold_context_control",
+      "gold_decision": "no",
+      "generated_answer": "No. In this study, size, number, and location were not limiting factors for laparoscopic myomectomy in an experienced surgeon’s hands; there were no exclusion criteria based on these factors.",
+      "claims": [
+        {
+          "claim": "In this study, size of the myomas was not a limiting factor for laparoscopic myomectomy in an experienced surgeon’s hands.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence states the study objective was to assess feasibility regardless of size and that there were no exclusion criteria based on size, but it does not directly conclude that size was not a limiting factor."
+        },
+        {
+          "claim": "In this study, number of the myomas was not a limiting factor for laparoscopic myomectomy in an experienced surgeon’s hands.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence states the study objective was to assess feasibility regardless of number and that there were no exclusion criteria based on number, but it does not directly conclude that number was not a limiting factor."
+        },
+        {
+          "claim": "In this study, location of the myomas was not a limiting factor for laparoscopic myomectomy in an experienced surgeon’s hands.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence states the study objective was to assess feasibility regardless of location and that there were no exclusion criteria based on location, but it does not directly conclude that location was not a limiting factor."
+        },
+        {
+          "claim": "There were no exclusion criteria based on the size of myomas.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "G4 explicitly states that no exclusion criteria were based on the size of myomas."
+        },
+        {
+          "claim": "There were no exclusion criteria based on the number of myomas.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "G4 explicitly states that no exclusion criteria were based on the number of myomas."
+        },
+        {
+          "claim": "There were no exclusion criteria based on the location of myomas.",
+          "label": "supported",
+          "evidence_labels": [
+            "G4"
+          ],
+          "rationale": "G4 explicitly states that no exclusion criteria were based on the location of myomas."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 3,
+        "contradicted": 0,
+        "total": 6
+      },
+      "hallucination_rate": 0.5,
+      "groundedness": 0.5,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 1011,
+      "output_tokens": 755
+    },
+    {
+      "question_id": "18799291",
+      "system": "baseline_llm",
+      "gold_decision": "no",
+      "generated_answer": "Yes. HINT1 has been proposed as a candidate gene for schizophrenia in genetic studies, though the strength of evidence may vary.",
+      "claims": [
+        {
+          "claim": "HINT1 has been proposed as a candidate gene for schizophrenia in genetic studies.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "The evidence states that HINT1 lies in a chromosomal region implicated in schizophrenia linkage studies, had previously shown differential expression in schizophrenia brains, and was investigated here with schizophrenia family and case-control genetic samples, with some nominally significant SNP findings."
+        },
+        {
+          "claim": "The strength of evidence for HINT1 as a candidate gene for schizophrenia may vary.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The results are mixed: some SNPs showed nominal significance, the sex effect differed between samples, and no overall significant expression difference was observed between patients and controls."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 717,
+      "output_tokens": 367
+    },
+    {
+      "question_id": "18799291",
+      "system": "basic_rag",
+      "gold_decision": "no",
+      "generated_answer": "Yes. The evidence describes HINT1 as located in a schizophrenia-linked chromosomal region, showing altered expression in schizophrenia brains, and being studied for association in schizophrenia families and case-control samples, indicating it is a candidate gene for schizophrenia.",
+      "claims": [
+        {
+          "claim": "HINT1 is located in a schizophrenia-linked chromosomal region.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that the human HINT1 gene is located on chromosome 5q31.2, a region implicated in linkage studies of schizophrenia."
+        },
+        {
+          "claim": "HINT1 shows altered expression in schizophrenia brains.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that HINT1 had been shown to have different expression in postmortem brains between schizophrenia patients and unaffected controls."
+        },
+        {
+          "claim": "HINT1 was studied for association in schizophrenia families and case-control samples.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that 8 SNPs around the HINT1 gene region were studied in the Irish high density schizophrenia families and the Irish case control study of schizophrenia."
+        },
+        {
+          "claim": "HINT1 is a candidate gene for schizophrenia.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 describes HINT1 as lying in a schizophrenia-implicated linkage region and having differential expression in schizophrenia brains, which supports its consideration as a potential candidate gene for schizophrenia."
+        }
+      ],
+      "claim_counts": {
+        "supported": 4,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 738,
+      "output_tokens": 273
+    },
+    {
+      "question_id": "18799291",
+      "system": "advanced_rag",
+      "gold_decision": "no",
+      "generated_answer": "Yes. The evidence describes HINT1 as located in a schizophrenia-linked chromosomal region, with altered expression in schizophrenia brains and a proposed role in neuropsychiatric disease, making it a candidate gene for schizophrenia.",
+      "claims": [
+        {
+          "claim": "HINT1 is a candidate gene for schizophrenia.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that HINT1 is located in a schizophrenia-linked region, had shown differential expression in schizophrenia postmortem brains, and suggests a potential role in neuropsychiatric diseases, which supports considering it a candidate gene for schizophrenia."
+        },
+        {
+          "claim": "HINT1 is located in a chromosomal region linked to schizophrenia.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that the human HINT1 gene is located on chromosome 5q31.2, a region implicated in linkage studies of schizophrenia."
+        },
+        {
+          "claim": "HINT1 has altered expression in schizophrenia brains.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that HINT1 had been shown to have different expression in postmortem brains between schizophrenia patients and unaffected controls."
+        },
+        {
+          "claim": "HINT1 has a proposed role in neuropsychiatric disease.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that HINT1 was associated with dysregulation of postsynaptic dopamine transmission, suggesting a potential role in several neuropsychiatric diseases."
+        }
+      ],
+      "claim_counts": {
+        "supported": 4,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 734,
+      "output_tokens": 562
+    },
+    {
+      "question_id": "18799291",
+      "system": "gold_context_control",
+      "gold_decision": "no",
+      "generated_answer": "HINT1 is a plausible schizophrenia candidate gene, since it lies in a schizophrenia-linked region and showed some association signals in genetic analyses, but the evidence is not definitive.",
+      "claims": [
+        {
+          "claim": "HINT1 is a plausible schizophrenia candidate gene.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that HINT1 is located in a region implicated in schizophrenia linkage studies and suggests a potential role in neuropsychiatric diseases."
+        },
+        {
+          "claim": "HINT1 lies in a schizophrenia-linked region.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that the human HINT1 gene is located on chromosome 5q31.2, a region implicated in linkage studies of schizophrenia."
+        },
+        {
+          "claim": "HINT1 showed some association signals in genetic analyses.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 reports nominally significant differences in allele frequencies in several SNPs in both samples in sex-stratified analyses."
+        },
+        {
+          "claim": "The evidence is not definitive.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 describes only nominally significant allele-frequency differences, notes inconsistent sex effects between the two samples, and reports no significant overall expression difference between patients and controls, supporting that the evidence is not conclusive."
+        }
+      ],
+      "claim_counts": {
+        "supported": 4,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 725,
+      "output_tokens": 414
+    },
+    {
+      "question_id": "24939676",
+      "system": "baseline_llm",
+      "gold_decision": "no",
+      "generated_answer": "I’m not aware of strong evidence that ultrasound-scored synovitis depends on the pharmacokinetics of subcutaneous anti-TNF agents in rheumatoid arthritis; this relationship may exist but is not established from the information provided.",
+      "claims": [
+        {
+          "claim": "There is not strong evidence that ultrasound-scored synovitis depends on the pharmacokinetics of subcutaneous anti-TNF agents in rheumatoid arthritis.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The study found no significant differences in B-mode or Doppler US parameters between peak and trough plasma drug concentration time points, which supports the statement that strong evidence of such dependence is lacking in the provided information."
+        },
+        {
+          "claim": "This relationship may exist.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not state that such a relationship may exist; it only reports that no significant differences were found."
+        },
+        {
+          "claim": "The relationship is not established from the information provided.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The reported results show no significant differences in ultrasound synovitis measures between peak and trough pharmacokinetic time points, supporting that the relationship was not established by the provided evidence."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.3333333333333333,
+      "groundedness": 0.6666666666666666,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 785,
+      "output_tokens": 430
+    },
+    {
+      "question_id": "24939676",
+      "system": "basic_rag",
+      "gold_decision": "no",
+      "generated_answer": "The evidence does not show that ultrasound-scored synovitis depends on anti-TNF pharmacokinetics; it only states the study aimed to investigate that relationship and assessed synovitis at peak versus trough drug concentrations.",
+      "claims": [
+        {
+          "claim": "The evidence does not show that ultrasound-scored synovitis depends on anti-TNF pharmacokinetics.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The results report no significant differences in B-mode and Doppler US parameters between peak and trough drug concentration time points, which supports that the study did not show dependence of US-scored synovitis on anti-TNF pharmacokinetics."
+        },
+        {
+          "claim": "The study only states that it aimed to investigate the relationship between anti-TNF pharmacokinetics and ultrasound-scored synovitis.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "While the objective states the study aimed to investigate this relationship, the evidence also includes results addressing it, so it is incorrect to say it only states the aim."
+        },
+        {
+          "claim": "The study assessed synovitis at peak versus trough drug concentrations.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The methods state that patients underwent US assessment at peak plasma drug concentration and at trough plasma drug concentration."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 1,
+        "total": 3
+      },
+      "hallucination_rate": 0.3333333333333333,
+      "groundedness": 0.6666666666666666,
+      "contradiction_rate": 0.3333333333333333,
+      "invalid_evidence_labels": [],
+      "input_tokens": 784,
+      "output_tokens": 248
+    },
+    {
+      "question_id": "24939676",
+      "system": "advanced_rag",
+      "gold_decision": "no",
+      "generated_answer": "The study investigated whether pharmacokinetics of subcutaneous anti-TNF agents influence ultrasound-detected synovitis, but the provided evidence does not show that ultrasound-scored synovitis depends on pharmacokinetics.",
+      "claims": [
+        {
+          "claim": "The study investigated whether the pharmacokinetics of subcutaneous anti-TNF agents influence ultrasound-detected synovitis in patients with rheumatoid arthritis.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states that the aim was to investigate the influence of the pharmacokinetics of s.c. anti-TNF agents on the grade of US-detected synovitis in RA patients."
+        },
+        {
+          "claim": "The provided evidence does not show that ultrasound-scored synovitis depends on pharmacokinetics.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 reports no significant differences in B-mode and Doppler US parameters between peak and trough plasma drug concentration time points, so the evidence does not demonstrate dependence of ultrasound-scored synovitis on pharmacokinetics."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 784,
+      "output_tokens": 325
+    },
+    {
+      "question_id": "24939676",
+      "system": "gold_context_control",
+      "gold_decision": "no",
+      "generated_answer": "No. In this study, ultrasound B-mode and Doppler synovitis did not differ significantly between peak and trough plasma concentrations of subcutaneous anti-TNF agents in rheumatoid arthritis patients.",
+      "claims": [
+        {
+          "claim": "In this study, ultrasound B-mode synovitis did not differ significantly between peak and trough plasma concentrations of subcutaneous anti-TNF agents in rheumatoid arthritis patients.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states there were no significant differences between B-mode US parameters at peak time and trough time."
+        },
+        {
+          "claim": "In this study, ultrasound Doppler synovitis did not differ significantly between peak and trough plasma concentrations of subcutaneous anti-TNF agents in rheumatoid arthritis patients.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states there were no significant differences between Doppler US parameters at peak time and trough time."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 777,
+      "output_tokens": 170
+    },
+    {
+      "question_id": "23360491",
+      "system": "baseline_llm",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. Affective prosody processing is influenced by spatial attention.",
+      "claims": [
+        {
+          "claim": "Affective prosody processing is influenced by spatial attention.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that emotional prosody effects interacted with effects of spatial attention at early processing levels, indicating that processing of affective prosody is influenced by spatial attention."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 1
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 537,
+      "output_tokens": 142
+    },
+    {
+      "question_id": "23360491",
+      "system": "basic_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. The evidence indicates that affective prosody processing is modulated by spatial attention: emotional prosody effects were present for both attended and unattended լսened stimuli, but they interacted with spatial attention early (<200 ms) and were additive later (>200 ms).",
+      "claims": [
+        {
+          "claim": "Affective prosody processing is modulated by spatial attention.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that emotional prosody effects interacted with spatial attention at early processing levels and were additive at later stages, indicating modulation by spatial attention."
+        },
+        {
+          "claim": "Emotional prosody effects were present for attended stimuli.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that ERPs differed as a function of emotional prosody when attended."
+        },
+        {
+          "claim": "Emotional prosody effects were present for unattended stimuli.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that ERPs differed as a function of emotional prosody when unattended."
+        },
+        {
+          "claim": "Emotional prosody effects interacted with spatial attention early (<200 ms).",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 explicitly states that emotional prosody effects interacted with effects of spatial attention at early processing levels (<200 ms)."
+        },
+        {
+          "claim": "Emotional prosody effects were additive with spatial attention later (>200 ms).",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 explicitly states that these effects were additive at later processing stages (>200 ms)."
+        }
+      ],
+      "claim_counts": {
+        "supported": 5,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 5
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 576,
+      "output_tokens": 288
+    },
+    {
+      "question_id": "23360491",
+      "system": "advanced_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. The evidence indicates that affective prosody is modulated by spatial attention: ERP effects were present for both attended and unattended speech, with an interaction at early stages (<200 ms).",
+      "claims": [
+        {
+          "claim": "The processing of affective prosody is modulated by spatial attention.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that emotional prosody effects interacted with effects of spatial attention at early processing levels, indicating modulation by spatial attention."
+        },
+        {
+          "claim": "Event-related potential effects of emotional prosody were present for both attended and unattended speech.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that ERPs differed as a function of emotional prosody both when attended and when unattended."
+        },
+        {
+          "claim": "Emotional prosody effects interacted with spatial attention at early processing stages (<200 ms).",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 directly states that emotional prosody effects interacted with effects of spatial attention at early processing levels (<200 ms)."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 562,
+      "output_tokens": 277
+    },
+    {
+      "question_id": "23360491",
+      "system": "gold_context_control",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. The evidence says emotional prosody processing was affected by spatial attention, with early ERP effects interacting with attention and later effects being additive.",
+      "claims": [
+        {
+          "claim": "Emotional prosody processing was affected by spatial attention.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "G1 states the study asked whether affective prosody processing is modulated by spatial attention, and G2 reports emotional prosody effects interacted with spatial attention at early stages and were additive at later stages, indicating influence by spatial attention."
+        },
+        {
+          "claim": "Early ERP effects of emotional prosody interacted with spatial attention.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that emotional prosody effects interacted with effects of spatial attention at early processing levels (<200 ms)."
+        },
+        {
+          "claim": "Later ERP effects were additive with spatial attention.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that these effects were additive at later processing stages (>200 ms)."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 552,
+      "output_tokens": 257
+    },
+    {
+      "question_id": "10605400",
+      "system": "baseline_llm",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes—INR is generally considered a reliable standardized measure of blood clotting used to monitor warfarin therapy, though it can be affected by factors such as lab variability, certain medications, and underlying illness.",
+      "claims": [
+        {
+          "claim": "INR is generally considered a reliable measure of blood clotting.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "Although correlations were high, the evidence states that up to 53% of tests would have led to clinically significant differences in warfarin dose depending on site and method of testing, and practice results showed positive bias. This is incompatible with a simple claim that INR is generally reliable in this context."
+        },
+        {
+          "claim": "INR is standardized.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not directly state that INR is a standardized measure."
+        },
+        {
+          "claim": "INR is used to monitor warfarin therapy.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "The study involved anticoagulant clinics and notes that INR test differences could lead to changes in warfarin dose, supporting use of INR in monitoring warfarin therapy."
+        },
+        {
+          "claim": "INR can be affected by lab variability.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "The evidence compares INR values across general practices and hospital laboratories and reports differences depending on site and method of testing, supporting that laboratory variability can affect INR results."
+        },
+        {
+          "claim": "INR can be affected by certain medications.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not mention medications affecting INR."
+        },
+        {
+          "claim": "INR can be affected by underlying illness.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not mention underlying illness affecting INR."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 3,
+        "contradicted": 1,
+        "total": 6
+      },
+      "hallucination_rate": 0.6666666666666666,
+      "groundedness": 0.3333333333333333,
+      "contradiction_rate": 0.16666666666666666,
+      "invalid_evidence_labels": [],
+      "input_tokens": 629,
+      "output_tokens": 758
+    },
+    {
+      "question_id": "10605400",
+      "system": "basic_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "INR can correlate well with reference laboratory testing, but the evidence also shows potentially clinically significant differences between sites and methods, so its reliability appears method- and setting-dependent rather than absolute.",
+      "claims": [
+        {
+          "claim": "INR can correlate well with reference laboratory testing.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The gold evidence reports high correlation coefficients between practice and laboratory INR results, including 0.96 against the reference hospital laboratory and 0.86 to 0.92 against various standard laboratory techniques."
+        },
+        {
+          "claim": "The evidence shows potentially clinically significant differences between sites and methods.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The gold evidence states that up to 53% of tests would have resulted in clinically significant differences depending upon the site and method of testing."
+        },
+        {
+          "claim": "Its reliability appears method- and setting-dependent rather than absolute.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The gold evidence indicates that agreement and bias varied by site and method of testing, supporting the characterization that reliability depends on method and setting rather than being uniform."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 624,
+      "output_tokens": 335
+    },
+    {
+      "question_id": "10605400",
+      "system": "advanced_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "INR appears reasonably consistent in the cited studies, but not universally reliable. One study found INR values were statistically similar between arterial and peripheral samples, while another found high correlation with laboratory testing yet noted that up to 53% of tests could lead to clinically significant differences depending on site and method.",
+      "claims": [
+        {
+          "claim": "INR appears reasonably consistent in the cited studies.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence reports results from a validation study, including high correlations, but does not make a broader claim about INR being reasonably consistent across the cited studies."
+        },
+        {
+          "claim": "INR is not universally reliable.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 states that although correlations were high, up to 53% of tests could have resulted in clinically significant differences depending on site and method of testing, supporting limited reliability."
+        },
+        {
+          "claim": "One study found INR values were statistically similar between arterial and peripheral samples.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence contains no information about arterial versus peripheral samples."
+        },
+        {
+          "claim": "Another study found high correlation with laboratory testing.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 reports a correlation coefficient of 0.96 versus the reference hospital laboratory and 0.86 to 0.92 versus various standard laboratory techniques."
+        },
+        {
+          "claim": "That study noted that up to 53% of tests could lead to clinically significant differences depending on site and method.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 explicitly states that up to 53% of tests would have resulted in clinically significant differences depending upon the site and method of testing."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 2,
+        "contradicted": 0,
+        "total": 5
+      },
+      "hallucination_rate": 0.4,
+      "groundedness": 0.6,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 646,
+      "output_tokens": 511
+    },
+    {
+      "question_id": "10605400",
+      "system": "gold_context_control",
+      "gold_decision": "maybe",
+      "generated_answer": "INR appears correlated across settings, but the evidence also shows substantial bias and potential clinically significant differences depending on site and method. So it is not fully reliable in all settings.",
+      "claims": [
+        {
+          "claim": "INR appears correlated across settings.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The evidence reports high correlation coefficients between practice and hospital laboratory INR results (0.96 with the reference laboratory and 0.86 to 0.92 with various standard laboratory techniques)."
+        },
+        {
+          "claim": "The evidence shows substantial bias.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The evidence states that practice-derived results showed a positive bias ranging from 0.28 to 1.55 depending on site and method of testing."
+        },
+        {
+          "claim": "The evidence shows potential clinically significant differences depending on site and method.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The evidence states that up to 53% of tests would have resulted in clinically significant differences in warfarin dose depending on the site and method of testing."
+        },
+        {
+          "claim": "INR is not fully reliable in all settings.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "The evidence shows that although correlations were high, results varied by site and method, with positive bias and up to 53% clinically significant differences, supporting the conclusion that INR measurement was not fully reliable across all settings tested."
+        }
+      ],
+      "claim_counts": {
+        "supported": 4,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 622,
+      "output_tokens": 580
+    },
+    {
+      "question_id": "22849512",
+      "system": "baseline_llm",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. In general, neighbourhood social capital and the availability of sports facilities are associated with sports participation among Dutch adolescents, though the strength and direction can vary by study.",
+      "claims": [
+        {
+          "claim": "Neighbourhood social capital is associated with sports participation among Dutch adolescents.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The results state that neighbourhood social capital (NSC) was significantly associated with sports participation after adjustment for confounders."
+        },
+        {
+          "claim": "Availability of sports facilities is associated with sports participation among Dutch adolescents.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "The results state that availability of sports facilities was not associated with sports participation."
+        },
+        {
+          "claim": "The strength and direction of the association can vary by study.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The provided evidence reports results from this study only and does not discuss variation across studies."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 1,
+        "contradicted": 1,
+        "total": 3
+      },
+      "hallucination_rate": 0.6666666666666666,
+      "groundedness": 0.3333333333333333,
+      "contradiction_rate": 0.3333333333333333,
+      "invalid_evidence_labels": [],
+      "input_tokens": 711,
+      "output_tokens": 292
+    },
+    {
+      "question_id": "22849512",
+      "system": "basic_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "Neighbourhood social capital was associated with sports participation among Dutch adolescents, but availability of sports facilities was not. The evidence does not support a direct association for sports facilities, though an interaction with parks and social capital was found.",
+      "claims": [
+        {
+          "claim": "Neighbourhood social capital was associated with sports participation among Dutch adolescents.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that NSC was significantly associated with sports participation after adjustment for potential confounders."
+        },
+        {
+          "claim": "Availability of sports facilities was not associated with sports participation among Dutch adolescents.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that availability of sports facilities was not associated with sports participation."
+        },
+        {
+          "claim": "The evidence does not support a direct association between sports facilities and sports participation.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 reports no association between availability of sports facilities and sports participation, which supports the statement that there is no direct association supported by the evidence."
+        },
+        {
+          "claim": "An interaction with parks and social capital was found.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 reports a significant interaction between NSC and density of parks within the neighbourhood area."
+        }
+      ],
+      "claim_counts": {
+        "supported": 4,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 722,
+      "output_tokens": 242
+    },
+    {
+      "question_id": "22849512",
+      "system": "advanced_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "Neighbourhood social capital was associated with sports participation among Dutch adolescents, but availability of sports facilities was not. The evidence also suggests an interaction with parks, not sports facilities.",
+      "claims": [
+        {
+          "claim": "Neighbourhood social capital was associated with sports participation among Dutch adolescents.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that NSC was significantly associated with sports participation after adjustment for potential confounders."
+        },
+        {
+          "claim": "Availability of sports facilities was not associated with sports participation among Dutch adolescents.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that availability of sports facilities was not associated with sports participation."
+        },
+        {
+          "claim": "The evidence suggests an interaction with parks.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 reports a significant interaction between NSC and density of parks within the neighbourhood area."
+        },
+        {
+          "claim": "The evidence suggests there was not an interaction with sports facilities.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence reports a significant interaction with parks, but it does not explicitly state whether an interaction with sports facilities was absent."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.25,
+      "groundedness": 0.75,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 712,
+      "output_tokens": 338
+    },
+    {
+      "question_id": "22849512",
+      "system": "gold_context_control",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. Neighbourhood social capital was significantly associated with sports participation among Dutch adolescents, while availability of sports facilities was not associated with sports participation in this study.",
+      "claims": [
+        {
+          "claim": "Neighbourhood social capital was significantly associated with sports participation among Dutch adolescents.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that NSC was significantly associated with sports participation after adjustment for potential confounders."
+        },
+        {
+          "claim": "Availability of sports facilities was not associated with sports participation in this study.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that availability of sports facilities was not associated with sports participation."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 710,
+      "output_tokens": 132
+    },
+    {
+      "question_id": "17076590",
+      "system": "baseline_llm",
+      "gold_decision": "maybe",
+      "generated_answer": "Possibly, but the effect is not certain without specific evidence. Interventions like counter sampling plus provider education can change prescribing behavior in some settings, but I cannot confirm that here.",
+      "claims": [
+        {
+          "claim": "Interventions like counter sampling plus provider education can change prescribing behavior in some settings.",
+          "label": "supported",
+          "evidence_labels": [
+            "G5",
+            "G7"
+          ],
+          "rationale": "The study intervention consisted of provider education plus counter samples, and prescribing patterns changed over time in the intervention group, including a significant decrease in COX-2 NSAID prescribing."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 1
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 958,
+      "output_tokens": 290
+    },
+    {
+      "question_id": "17076590",
+      "system": "basic_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. In the intervention group, education plus counter sampling was associated with a significant decrease in COX-2 NSAID prescribing, though it did not reduce prescribing for all medication categories.",
+      "claims": [
+        {
+          "claim": "In the intervention group, education plus counter sampling was associated with a significant decrease in COX-2 NSAID prescribing.",
+          "label": "supported",
+          "evidence_labels": [
+            "G5",
+            "G7"
+          ],
+          "rationale": "G5 describes the intervention as education plus counter sampling, and G7 states that the intervention group significantly decreased COX-2 NSAID prescriptions relative to total NSAID prescriptions after the intervention."
+        },
+        {
+          "claim": "Education plus counter sampling did not reduce prescribing for all medication categories.",
+          "label": "supported",
+          "evidence_labels": [
+            "G5",
+            "G7"
+          ],
+          "rationale": "G7 states that education and counter sampling did not stop significant increases in focus-nonsedating antihistamine and PPI prescribing, so the intervention did not reduce prescribing across all categories."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 959,
+      "output_tokens": 182
+    },
+    {
+      "question_id": "17076590",
+      "system": "advanced_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. Counter sampling plus pharmacist education altered prescribing behavior: COX-2 NSAID prescribing decreased significantly in the intervention group, though prescribing of antihistamines and PPIs still increased.",
+      "claims": [
+        {
+          "claim": "Counter sampling plus pharmacist education altered prescribing behavior.",
+          "label": "supported",
+          "evidence_labels": [
+            "G5",
+            "G7"
+          ],
+          "rationale": "The intervention consisted of counter samples plus pharmacist education, and the results showed changes in prescribing patterns, including a significant decrease in COX-2 NSAID prescribing in the intervention group."
+        },
+        {
+          "claim": "COX-2 NSAID prescribing decreased significantly in the intervention group.",
+          "label": "supported",
+          "evidence_labels": [
+            "G7"
+          ],
+          "rationale": "G7 states that the intervention group significantly decreased COX-2 NSAID prescriptions relative to total NSAID prescriptions from 38.9% to 23.7% (P<0.05)."
+        },
+        {
+          "claim": "Prescribing of antihistamines increased significantly in the intervention group.",
+          "label": "supported",
+          "evidence_labels": [
+            "G7"
+          ],
+          "rationale": "G7 states that in the intervention group, focus-nonsedating antihistamine prescribing increased significantly from 86.7% to 93.1% (P<0.05)."
+        },
+        {
+          "claim": "Prescribing of PPIs increased significantly in the intervention group.",
+          "label": "supported",
+          "evidence_labels": [
+            "G7"
+          ],
+          "rationale": "G7 states that in the intervention group, PPI prescribing increased significantly from 68.9% to 86.2% (P<0.05)."
+        }
+      ],
+      "claim_counts": {
+        "supported": 4,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 959,
+      "output_tokens": 303
+    },
+    {
+      "question_id": "17076590",
+      "system": "gold_context_control",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. In this study, education plus counter samples changed prescribing behavior: COX-2 NSAID prescribing decreased significantly, while prescribing of nonsedating antihistamines and PPIs increased significantly.",
+      "claims": [
+        {
+          "claim": "In this study, education plus counter samples changed prescribing behavior.",
+          "label": "supported",
+          "evidence_labels": [
+            "G5",
+            "G7"
+          ],
+          "rationale": "The intervention consisted of education plus counter samples, and the results report significant changes in prescribing patterns within the intervention group."
+        },
+        {
+          "claim": "COX-2 NSAID prescribing decreased significantly.",
+          "label": "supported",
+          "evidence_labels": [
+            "G7"
+          ],
+          "rationale": "G7 states that the intervention group significantly decreased the use of COX-2 NSAID prescriptions relative to total NSAID prescriptions (38.9% vs 23.7%, P<0.05)."
+        },
+        {
+          "claim": "Prescribing of nonsedating antihistamines increased significantly.",
+          "label": "supported",
+          "evidence_labels": [
+            "G7"
+          ],
+          "rationale": "G7 states that focus-nonsedating antihistamines significantly increased in the intervention group (86.7% vs 93.1%, P<0.05)."
+        },
+        {
+          "claim": "Prescribing of PPIs increased significantly.",
+          "label": "supported",
+          "evidence_labels": [
+            "G7"
+          ],
+          "rationale": "G7 states that PPIs significantly increased in the intervention group (68.9% vs 86.2%, P<0.05)."
+        }
+      ],
+      "claim_counts": {
+        "supported": 4,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 961,
+      "output_tokens": 273
+    },
+    {
+      "question_id": "25480629",
+      "system": "baseline_llm",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. Revision fundectomy after laparoscopic sleeve gastrectomy is generally considered feasible and can be safe and effective in selected patients with residual fundus/neofundus, though outcomes depend on patient anatomy and surgical expertise.",
+      "claims": [
+        {
+          "claim": "Revision fundectomy after laparoscopic sleeve gastrectomy is feasible.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "The study specifically evaluated laparoscopic fundectomy after sleeve gastrectomy in 19 patients with residual fundus/neofundus, indicating that this revision procedure was performed in practice."
+        },
+        {
+          "claim": "Revision fundectomy after laparoscopic sleeve gastrectomy can be safe in selected patients with residual fundus/neofundus.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G3"
+          ],
+          "rationale": "The evidence describes a defined patient group with residual fundus/neofundus undergoing fundectomy, with no mortality or intra-operative complications reported, supporting that it can be safe in such selected patients."
+        },
+        {
+          "claim": "Revision fundectomy after laparoscopic sleeve gastrectomy can be effective in selected patients with residual fundus/neofundus.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "The study aimed to assess efficacy, and results showed all patients had improvement in GERD symptoms, stopped PPI treatment, and Group B had additional excess weight loss at 24 months."
+        },
+        {
+          "claim": "Outcomes depend on patient anatomy and surgical expertise.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The supplied evidence does not state that outcomes depend on patient anatomy or surgical expertise."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.25,
+      "groundedness": 0.75,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 733,
+      "output_tokens": 580
+    },
+    {
+      "question_id": "25480629",
+      "system": "basic_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "The evidence suggests laparoscopic fundectomy has been studied as a revision option for residual fundus/neofundus after sleeve gastrectomy, specifically for GERD symptoms, but the provided passages do not report the outcomes. So safety and effectiveness cannot be confirmed from this evidence alone.",
+      "claims": [
+        {
+          "claim": "Laparoscopic fundectomy has been studied as a revision option for residual fundus/neofundus after sleeve gastrectomy.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "G1 states the retrospective study aimed to evaluate laparoscopic fundectomy in cases of residual fundus/neofundus development, and G2 describes the study group and indications for fundectomy."
+        },
+        {
+          "claim": "Laparoscopic fundectomy was studied specifically for GERD symptoms in patients with residual fundus/neofundus after sleeve gastrectomy.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "G1 says the study evaluated safety and efficacy regarding GERD symptoms, and G2 states fundectomy was indicated when residual fundus/neofundus was associated with severe GERD symptoms."
+        },
+        {
+          "claim": "The provided passages do not report the outcomes of laparoscopic fundectomy.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 explicitly reports outcomes, including no mortality or intra-operative complications, postoperative complications, improvement in GERD symptoms, cessation of PPI treatment, and additional %EWL in Group B."
+        },
+        {
+          "claim": "Safety of laparoscopic fundectomy cannot be confirmed from this evidence alone.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 provides direct safety outcome data: no mortality or intra-operative complications and five postoperative complications."
+        },
+        {
+          "claim": "Effectiveness of laparoscopic fundectomy cannot be confirmed from this evidence alone.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 provides direct efficacy outcome data: all patients improved in GERD symptoms, stopped PPI treatment, and Group B had additional %EWL at 24 months."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 3,
+        "total": 5
+      },
+      "hallucination_rate": 0.6,
+      "groundedness": 0.4,
+      "contradiction_rate": 0.6,
+      "invalid_evidence_labels": [],
+      "input_tokens": 745,
+      "output_tokens": 399
+    },
+    {
+      "question_id": "25480629",
+      "system": "advanced_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "The evidence suggests laparoscopic fundectomy was evaluated as revision surgery for residual fundus/neofundus after sleeve gastrectomy, but the provided passages do not report the outcomes needed to confirm that it was safe and effective.",
+      "claims": [
+        {
+          "claim": "Laparoscopic fundectomy was evaluated as revision surgery for residual fundus/neofundus after sleeve gastrectomy.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "G1 states the retrospective study aimed to evaluate the safety and efficacy of laparoscopic fundectomy in cases of residual fundus/neofundus development after laparoscopic sleeve gastrectomy, and G2 describes the patient groups undergoing this revision context."
+        },
+        {
+          "claim": "The provided passages do not report the outcomes needed to confirm that laparoscopic fundectomy was safe and effective.",
+          "label": "contradicted",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 reports safety and efficacy outcomes: no mortality or intra-operative complications, five postoperative complications including leaks, improvement of GERD symptoms with cessation of PPI treatment in all patients, and additional %EWL in Group B at 24 months."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 0,
+        "contradicted": 1,
+        "total": 2
+      },
+      "hallucination_rate": 0.5,
+      "groundedness": 0.5,
+      "contradiction_rate": 0.5,
+      "invalid_evidence_labels": [],
+      "input_tokens": 734,
+      "output_tokens": 301
+    },
+    {
+      "question_id": "25480629",
+      "system": "gold_context_control",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. In this small retrospective series, laparoscopic fundectomy for residual fundus/neofundus after sleeve gastrectomy was reported as safe and effective for severe GERD, with no mortality or intra-operative complications, improved GERD symptoms in all patients, and additional weight loss in the subgroup with inadequate weight loss/weight regain. However, postoperative complications occurred in 10.5%.",
+      "claims": [
+        {
+          "claim": "This was a small retrospective series.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "G1 states it was a retrospective study, and G2 shows the study group comprised 19 patients, indicating a small series."
+        },
+        {
+          "claim": "Laparoscopic fundectomy for residual fundus/neofundus after sleeve gastrectomy was reported as safe for severe GERD.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "G1 states the aim was to evaluate safety and efficacy regarding GERD symptoms; G2 specifies fundectomy was indicated when residual fundus/neofundus was associated with severe GERD; G3 reports no mortality or intra-operative complications."
+        },
+        {
+          "claim": "Laparoscopic fundectomy for residual fundus/neofundus after sleeve gastrectomy was reported as effective for severe GERD.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "G1 states efficacy regarding GERD symptoms was evaluated; G2 defines the severe GERD population; G3 reports all patients experienced improvements in GERD symptoms and stopped PPI treatment."
+        },
+        {
+          "claim": "No mortality occurred.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 explicitly states that no mortality occurred."
+        },
+        {
+          "claim": "No intra-operative complications occurred.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 explicitly states that no intra-operative complications occurred."
+        },
+        {
+          "claim": "GERD symptoms improved in all patients.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 explicitly states that all patients experienced improvements in their GERD symptoms."
+        },
+        {
+          "claim": "Additional weight loss occurred in the subgroup with inadequate weight loss/weight regain.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2",
+            "G3"
+          ],
+          "rationale": "G2 identifies Group B as patients with inadequate weight loss or weight regain, and G3 states Group B exhibited an additional %EWL of 53.4% at 24 months."
+        },
+        {
+          "claim": "Postoperative complications occurred in 10.5% of patients.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 explicitly reports five postoperative complications and gives the rate as 10.5%."
+        }
+      ],
+      "claim_counts": {
+        "supported": 8,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 8
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 767,
+      "output_tokens": 498
+    },
+    {
+      "question_id": "24160268",
+      "system": "baseline_llm",
+      "gold_decision": "maybe",
+      "generated_answer": "Possibly, but it depends on the person and context; there is no general biomedical basis to say a man would or would not do that.",
+      "claims": [
+        {
+          "claim": "Whether a man would smell a rose and then throw it away depends on the person and context.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence is about Jordanian men's perspectives on women's breast cancer and contains nothing about smelling or discarding a rose, or about this behavior depending on person and context."
+        },
+        {
+          "claim": "There is no general biomedical basis to say a man would or would not smell a rose and then throw it away.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not discuss smelling a rose, throwing it away, or any biomedical basis for such behavior."
+        }
+      ],
+      "claim_counts": {
+        "supported": 0,
+        "unsupported": 2,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 1.0,
+      "groundedness": 0.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 700,
+      "output_tokens": 231
+    },
+    {
+      "question_id": "24160268",
+      "system": "basic_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "No. The evidence does not support that meaning; it discusses men's views about breast cancer, not smelling a rose and throwing it away.",
+      "claims": [
+        {
+          "claim": "The evidence does not support the meaning that a man would smell a rose and then throw it away.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "The gold evidence is about Jordanian men's perspectives on women's breast cancer and their roles in family breast health; it does not concern smelling a rose or throwing it away."
+        },
+        {
+          "claim": "The evidence discusses men's views about breast cancer.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 states the study explores Jordanian men's perspectives on women's breast cancer, and G3 reports themes from men's views and perceptions related to breast cancer."
+        },
+        {
+          "claim": "The evidence does not discuss smelling a rose and throwing it away.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "Across the provided gold evidence, the study concerns men's perspectives on breast cancer, with no mention of roses, smelling, or throwing one away."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 698,
+      "output_tokens": 400
+    },
+    {
+      "question_id": "24160268",
+      "system": "advanced_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "The evidence is unrelated to the question and does not support that statement.",
+      "claims": [
+        {
+          "claim": "The evidence is unrelated to the question.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "The gold evidence concerns Jordanian men's perspectives on women's breast cancer and family roles, not the scenario in the question about smelling a rose and throwing it away."
+        },
+        {
+          "claim": "The evidence does not support that statement.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "None of the gold evidence supports the statement implied by the question; all passages are about breast cancer-related attitudes and behaviors."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 685,
+      "output_tokens": 283
+    },
+    {
+      "question_id": "24160268",
+      "system": "gold_context_control",
+      "gold_decision": "maybe",
+      "generated_answer": "The evidence does not support that a man would smell a rose then throw it away; the passages are about men’s attitudes toward wives’ breast cancer and family health, not this action.",
+      "claims": [
+        {
+          "claim": "The evidence does not support that a man would smell a rose then throw it away.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "The supplied passages concern Jordanian men's perspectives on women's breast cancer, family health, and related cultural views, and provide no support for the described rose-related action."
+        },
+        {
+          "claim": "The passages are about men’s attitudes toward wives’ breast cancer and family health, not smelling a rose and then throwing it away.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 states the study explores Jordanian men's perspectives on women's breast cancer and their role in the breast health of females in their families. G3 describes themes about supporting one's wife, marital concerns, and cultural beliefs regarding breast cancer, not the rose-related action."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 708,
+      "output_tokens": 407
+    },
+    {
+      "question_id": "24946973",
+      "system": "baseline_llm",
+      "gold_decision": "maybe",
+      "generated_answer": "No. Oncoplastic surgery is not an absolute contraindication to accelerated partial breast irradiation with interstitial multicatheter brachytherapy, though it may make target definition and catheter placement more challenging.",
+      "claims": [
+        {
+          "claim": "Oncoplastic surgery is not an absolute contraindication to accelerated partial breast irradiation (APBI).",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "The study specifically evaluated APBI in patients after oncoplastic surgery, and these patients received adjuvant APBI, which supports that oncoplastic surgery was not treated as an absolute contraindication in this cohort."
+        },
+        {
+          "claim": "The APBI discussed was delivered using interstitial multicatheter brachytherapy.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence states that APBI was delivered with pulse dose rate or high-dose rate dosing, but it does not explicitly state the interstitial multicatheter brachytherapy method."
+        },
+        {
+          "claim": "Oncoplastic surgery may make target definition more challenging.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence describes how target volume definition was performed, but it does not state that oncoplastic surgery made this process more challenging."
+        },
+        {
+          "claim": "Oncoplastic surgery may make catheter placement more challenging.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence does not discuss catheter placement difficulty or compare it with non-oncoplastic cases."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 3,
+        "contradicted": 0,
+        "total": 4
+      },
+      "hallucination_rate": 0.75,
+      "groundedness": 0.25,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 758,
+      "output_tokens": 699
+    },
+    {
+      "question_id": "24946973",
+      "system": "basic_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "No. The evidence shows accelerated partial breast irradiation with brachytherapy was used after oncoplastic surgery, so oncoplastic surgery is not presented as a contraindication here.",
+      "claims": [
+        {
+          "claim": "Oncoplastic surgery is not a contraindication for accelerated partial breast radiation here.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "The study specifically evaluated and treated patients with APBI after oncoplastic surgery, which supports that oncoplastic surgery was not treated as a contraindication in this context."
+        },
+        {
+          "claim": "Accelerated partial breast irradiation with brachytherapy was used after oncoplastic surgery.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence states that patients received APBI after oncoplastic surgery and gives pulse dose rate and high-dose rate dosing, but it does not explicitly state 'brachytherapy' in the provided passages."
+        },
+        {
+          "claim": "Oncoplastic surgery is not presented as a contraindication in the provided evidence.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "The purpose and methods describe APBI being evaluated and delivered after oncoplastic surgery, not excluded because of it."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.3333333333333333,
+      "groundedness": 0.6666666666666666,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 755,
+      "output_tokens": 682
+    },
+    {
+      "question_id": "24946973",
+      "system": "advanced_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "No. The evidence describes accelerated partial breast irradiation after oncoplastic surgery, indicating it was used in such patients rather than being a contraindication.",
+      "claims": [
+        {
+          "claim": "Oncoplastic surgery is not a contraindication for accelerated partial breast irradiation.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "The evidence reports evaluation and use of APBI in patients after oncoplastic surgery, which is incompatible with oncoplastic surgery being a contraindication in this context."
+        },
+        {
+          "claim": "The evidence describes accelerated partial breast irradiation after oncoplastic surgery.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "G1 states the purpose was to evaluate APBI in patients after oncoplastic surgery, and G2 describes patients who underwent oncoplastic surgery followed by adjuvant APBI."
+        },
+        {
+          "claim": "Accelerated partial breast irradiation was used in patients after oncoplastic surgery rather than being excluded because of it.",
+          "label": "supported",
+          "evidence_labels": [
+            "G2"
+          ],
+          "rationale": "G2 explicitly states that patients received breast-conserving oncoplastic surgery followed by adjuvant APBI."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 748,
+      "output_tokens": 486
+    },
+    {
+      "question_id": "24946973",
+      "system": "gold_context_control",
+      "gold_decision": "maybe",
+      "generated_answer": "No. The evidence describes accelerated partial breast irradiation after oncoplastic surgery as feasible, so oncoplastic surgery is not presented as a contraindication for interstitial multicatheter APBI.",
+      "claims": [
+        {
+          "claim": "Accelerated partial breast irradiation after oncoplastic surgery is feasible.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2",
+            "G3"
+          ],
+          "rationale": "The evidence describes evaluation and actual administration of APBI after oncoplastic surgery in 136 breasts, with reported follow-up and outcomes, which supports feasibility."
+        },
+        {
+          "claim": "Oncoplastic surgery is not presented as a contraindication for APBI.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G2"
+          ],
+          "rationale": "The study specifically evaluates and administers APBI to patients after oncoplastic surgery, which is incompatible with oncoplastic surgery being presented as a contraindication in the supplied evidence."
+        },
+        {
+          "claim": "This conclusion specifically concerns the interstitial multicatheter brachytherapy method.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The supplied gold evidence discusses APBI with pulse dose rate or high-dose rate regimens but does not explicitly state the interstitial multicatheter brachytherapy method."
+        }
+      ],
+      "claim_counts": {
+        "supported": 2,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.3333333333333333,
+      "groundedness": 0.6666666666666666,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 758,
+      "output_tokens": 743
+    },
+    {
+      "question_id": "22706226",
+      "system": "baseline_llm",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes, different follow-up modalities can play a role in detecting asymptomatic endometrial cancer relapse, but the extent of benefit depends on the modality and clinical context.",
+      "claims": [
+        {
+          "claim": "Different follow-up modalities can play a role in detecting asymptomatic endometrial cancer relapse.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 discusses assessing routine follow-up procedures to identify asymptomatic recurrences, and G3 shows that among asymptomatic patients, recurrence detection was initiated by different procedures including clinical visit, imaging, and cytologic examination."
+        },
+        {
+          "claim": "The extent of benefit of different follow-up modalities depends on the modality and clinical context.",
+          "label": "unsupported",
+          "evidence_labels": [],
+          "rationale": "The gold evidence reports which procedures first led to further examinations in asymptomatic patients, but it does not directly assess comparative benefit by modality or specify that benefit depends on clinical context."
+        }
+      ],
+      "claim_counts": {
+        "supported": 1,
+        "unsupported": 1,
+        "contradicted": 0,
+        "total": 2
+      },
+      "hallucination_rate": 0.5,
+      "groundedness": 0.5,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 805,
+      "output_tokens": 180
+    },
+    {
+      "question_id": "22706226",
+      "system": "basic_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. The evidence indicates that routine follow-up procedures and different follow-up modalities are being evaluated for their ability to identify asymptomatic endometrial cancer recurrences, suggesting they can play a role in diagnosis.",
+      "claims": [
+        {
+          "claim": "Routine follow-up procedures are being evaluated for their ability to identify asymptomatic endometrial cancer recurrences.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1"
+          ],
+          "rationale": "G1 states the objective was to assess the value of routine follow-up procedures and discuss whether such procedures are feasible and effective to identify asymptomatic recurrences."
+        },
+        {
+          "claim": "Different follow-up modalities are being evaluated for their ability to identify asymptomatic endometrial cancer recurrences.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 discusses procedures used to identify asymptomatic recurrences, and G3 reports which first procedures led to further examinations among asymptomatic patients: clinical visit, imaging, and cytologic examination."
+        },
+        {
+          "claim": "Routine follow-up procedures and different follow-up modalities can play a role in the diagnosis of asymptomatic endometrial cancer relapses.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 frames follow-up procedures as potentially identifying asymptomatic recurrences, and G3 shows that in asymptomatic patients the diagnostic path was initiated by planned visits or examinations, including clinical visit, imaging, and cytology."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 813,
+      "output_tokens": 393
+    },
+    {
+      "question_id": "22706226",
+      "system": "advanced_rag",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. The evidence shows that asymptomatic recurrences were detected through different follow-up modalities, including clinical visit alone, imaging, and cytologic examination, suggesting that multiple modalities can contribute to diagnosing asymptomatic endometrial cancer relapses.",
+      "claims": [
+        {
+          "claim": "Asymptomatic recurrences were detected through different follow-up modalities.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that 165 asymptomatic patients had the diagnostic path introduced by a planned visit or examination, and specifies different first procedures leading to further examinations."
+        },
+        {
+          "claim": "Among asymptomatic recurrences, clinical visit alone was one modality through which recurrence was detected.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that among asymptomatic patients, the first procedure leading to further examinations was clinical visit alone for 60 of 165 patients."
+        },
+        {
+          "claim": "Among asymptomatic recurrences, imaging was one modality through which recurrence was detected.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that among asymptomatic patients, imaging was the first procedure leading to further examinations for 103 patients."
+        },
+        {
+          "claim": "Among asymptomatic recurrences, cytologic examination was one modality through which recurrence was detected.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that among asymptomatic patients, cytologic examination was the first procedure leading to further examinations for 2 patients."
+        },
+        {
+          "claim": "Multiple follow-up modalities can contribute to diagnosing asymptomatic endometrial cancer relapses.",
+          "label": "supported",
+          "evidence_labels": [
+            "G1",
+            "G3"
+          ],
+          "rationale": "G1 frames the study as assessing whether routine follow-up procedures can identify asymptomatic recurrences, and G3 shows that different procedures (clinical visit, imaging, cytology) were involved in initiating diagnosis among asymptomatic patients."
+        }
+      ],
+      "claim_counts": {
+        "supported": 5,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 5
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 819,
+      "output_tokens": 488
+    },
+    {
+      "question_id": "22706226",
+      "system": "gold_context_control",
+      "gold_decision": "maybe",
+      "generated_answer": "Yes. In this study, asymptomatic recurrences were identified through different follow-up modalities, mainly clinical visit alone and imaging, with cytologic examination playing a minor role.",
+      "claims": [
+        {
+          "claim": "In this study, asymptomatic recurrences were identified through different follow-up modalities.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that 165 asymptomatic patients had the diagnostic path introduced by a planned visit or examination, indicating detection through follow-up procedures."
+        },
+        {
+          "claim": "The main follow-up modalities identifying asymptomatic recurrences were clinical visit alone and imaging.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 reports that among asymptomatic patients, the first procedure leading to further examinations was clinical visit alone for 60 patients (36.4%) and imaging for 103 patients (62.4%)."
+        },
+        {
+          "claim": "Cytologic examination played a minor role in identifying asymptomatic recurrences.",
+          "label": "supported",
+          "evidence_labels": [
+            "G3"
+          ],
+          "rationale": "G3 states that cytologic examination was the first procedure in only 2 of 165 asymptomatic patients (1.2%), which supports a minor role."
+        }
+      ],
+      "claim_counts": {
+        "supported": 3,
+        "unsupported": 0,
+        "contradicted": 0,
+        "total": 3
+      },
+      "hallucination_rate": 0.0,
+      "groundedness": 1.0,
+      "contradiction_rate": 0.0,
+      "invalid_evidence_labels": [],
+      "input_tokens": 806,
+      "output_tokens": 361
+    }
+  ]
+}

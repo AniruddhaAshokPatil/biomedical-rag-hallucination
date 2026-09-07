@@ -1,0 +1,20 @@
+{
+  "retriever": "Dense",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "number_of_questions": 500,
+  "number_of_documents": 3358,
+  "source_hit_at_k": {
+    "1": 0.974,
+    "3": 0.99,
+    "5": 0.992,
+    "10": 0.998
+  },
+  "gold_context_recall_at_k": {
+    "1": 0.3111,
+    "3": 0.7095333333333333,
+    "5": 0.7836047619047618,
+    "10": 0.8360880952380952
+  },
+  "mrr_at_10": 0.9827666666666667,
+  "queries_without_gold_in_top_10": 1
+}

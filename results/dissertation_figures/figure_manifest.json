@@ -1,0 +1,32 @@
+{
+  "analysis": "dissertation_figures",
+  "presentation_only": true,
+  "new_metrics": false,
+  "new_statistical_tests": false,
+  "figures": {
+    "figure_1_decision_performance": {
+      "title": "Final test decision performance",
+      "role": "confirmatory"
+    },
+    "figure_2_v3_hallucination_rate": {
+      "title": "Frozen V3 hallucination rate",
+      "role": "confirmatory"
+    },
+    "figure_3_human_calibrated_hallucination": {
+      "title": "Human-calibrated hallucination sensitivity analysis",
+      "role": "sensitivity"
+    },
+    "figure_4_source_hit_at_k": {
+      "title": "Correct-source retrieval",
+      "role": "confirmatory"
+    },
+    "figure_5_gold_context_recall_at_k": {
+      "title": "Gold-context evidence coverage",
+      "role": "confirmatory"
+    },
+    "figure_6_exploratory_residual_errors": {
+      "title": "Exploratory residual-error patterns",
+      "role": "exploratory"
+    }
+  }
+}

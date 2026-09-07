@@ -1,0 +1,140 @@
+{
+  "split": "test",
+  "analysis": "final_frozen_retrieval_evaluation",
+  "questions": 500,
+  "evaluated_k": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "primary_retrieval_metrics": [
+    "source_hit_at_k",
+    "mrr_at_10"
+  ],
+  "supplementary_retrieval_metric": "gold_context_recall_at_k",
+  "system_summaries": {
+    "basic_rag": {
+      "system": "basic_rag",
+      "questions": 500,
+      "candidate_count": {
+        "min": 10,
+        "max": 10,
+        "mean": 10.0
+      },
+      "source_hit_counts": {
+        "hit_at_1": 484,
+        "hit_at_3": 492,
+        "hit_at_5": 495,
+        "hit_at_10": 497
+      },
+      "source_hit_rates": {
+        "hit_at_1": 0.968,
+        "hit_at_3": 0.984,
+        "hit_at_5": 0.99,
+        "hit_at_10": 0.994
+      },
+      "mrr_at_10": 0.9769333333333334,
+      "source_misses_at_10": 3,
+      "source_miss_question_ids_at_10": [
+        "11570976",
+        "18359123",
+        "26548832"
+      ],
+      "gold_context_recall": {
+        "recall_at_1": 0.30810793650793633,
+        "recall_at_3": 0.6983666666666676,
+        "recall_at_5": 0.7747000000000005,
+        "recall_at_10": 0.8281484126984133
+      }
+    },
+    "advanced_rag": {
+      "system": "advanced_rag",
+      "questions": 500,
+      "candidate_count": {
+        "min": 11,
+        "max": 20,
+        "mean": 16.398
+      },
+      "source_hit_counts": {
+        "hit_at_1": 483,
+        "hit_at_3": 495,
+        "hit_at_5": 495,
+        "hit_at_10": 496
+      },
+      "source_hit_rates": {
+        "hit_at_1": 0.966,
+        "hit_at_3": 0.99,
+        "hit_at_5": 0.99,
+        "hit_at_10": 0.992
+      },
+      "mrr_at_10": 0.9768888888888889,
+      "source_misses_at_10": 4,
+      "source_miss_question_ids_at_10": [
+        "11570976",
+        "12221908",
+        "18359123",
+        "20064872"
+      ],
+      "gold_context_recall": {
+        "recall_at_1": 0.3059412698412696,
+        "recall_at_3": 0.703694444444445,
+        "recall_at_5": 0.775357936507937,
+        "recall_at_10": 0.8340563492063501
+      }
+    }
+  },
+  "paired_source_hit_complementarity": {
+    "hit_at_1": {
+      "both_hit": 478,
+      "basic_only": 6,
+      "advanced_only": 5,
+      "neither": 11
+    },
+    "hit_at_3": {
+      "both_hit": 491,
+      "basic_only": 1,
+      "advanced_only": 4,
+      "neither": 4
+    },
+    "hit_at_5": {
+      "both_hit": 493,
+      "basic_only": 2,
+      "advanced_only": 2,
+      "neither": 3
+    },
+    "hit_at_10": {
+      "both_hit": 495,
+      "basic_only": 2,
+      "advanced_only": 1,
+      "neither": 2
+    }
+  },
+  "advanced_minus_basic": {
+    "source_hit_rates": {
+      "hit_at_1": -0.0020000000000000018,
+      "hit_at_3": 0.006000000000000005,
+      "hit_at_5": 0.0,
+      "hit_at_10": -0.0020000000000000018
+    },
+    "gold_context_recall": {
+      "recall_at_1": -0.0021666666666667056,
+      "recall_at_3": 0.005327777777777376,
+      "recall_at_5": 0.0006579365079365518,
+      "recall_at_10": 0.005907936507936751
+    },
+    "mrr_at_10": -4.4444444444513564e-05
+  },
+  "frozen_input_hashes": {
+    "results/test/retrieval/basic_dense_test_results.json": "b0f134cc8d2bd51a1ab05124cb2afafdb8d322df3e116d226061b4fdadf77105",
+    "results/test/retrieval/advanced_reranked_test_results.json": "74b97511cc8a2bd6a4930d1ac0adb36e214b7a5dbd8ebf592833a4b60c86d7dd",
+    "data/processed/retrieval_corpus.json": "0c0ae00391ebedc814dbf7ebda06b90390b51f5a32cf0ee384eb801975307d4e",
+    "data/processed/evaluation_ground_truth.json": "2d89890dd448cb7fa49e11b7a6383acc59951130fd784c7348b277d4281930ef"
+  },
+  "notes": [
+    "Basic RAG generation used the top five passages from the frozen Dense ranking.",
+    "Advanced RAG generation used the top five passages after frozen cross-encoder reranking.",
+    "Retrieval evaluation additionally reports the frozen ranking through rank 10 for both systems.",
+    "No retrieval model, weighting, reranker, or hyperparameter was changed after opening test labels."
+  ]
+}

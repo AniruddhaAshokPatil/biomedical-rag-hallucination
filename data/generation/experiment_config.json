@@ -1,0 +1,29 @@
+{
+  "task": "Biomedical question answering with hallucination reduction",
+  "development_questions": 500,
+  "test_questions": 500,
+  "generation_top_k": 5,
+  "systems": {
+    "baseline_llm": {
+      "retrieval": null
+    },
+    "basic_rag": {
+      "retrieval": "dense",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "top_k": 5
+    },
+    "advanced_rag": {
+      "retrieval": "BM25 + Dense + Weighted RRF + Cross-Encoder",
+      "bm25_weight": 0.75,
+      "dense_weight": 1.0,
+      "rrf_k": 60,
+      "reranker": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "top_k": 5
+    },
+    "gold_context_control": {
+      "retrieval": "gold contexts",
+      "purpose": "Estimate generation performance when correct evidence is available."
+    }
+  },
+  "frozen": true
+}

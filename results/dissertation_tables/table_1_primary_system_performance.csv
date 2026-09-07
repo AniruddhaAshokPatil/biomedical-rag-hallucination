@@ -1,0 +1,5 @@
+System,Decision accuracy,Macro-F1,V3 hallucination rate,Groundedness,Contradiction rate,Human-calibrated hallucination,Calibration 95% CI
+Baseline LLM,32.20%,0.2888,61.08%,38.92%,5.82%,32.49%,18.32%–46.65%
+Basic RAG,62.20%,0.5385,8.49%,91.51%,1.82%,2.97%,1.27%–4.67%
+Advanced RAG,60.60%,0.5147,7.85%,92.15%,1.70%,3.53%,1.96%–5.10%
+Gold-context control,72.20%,0.5791,4.30%,95.70%,0.13%,1.51%,0.65%–2.37%

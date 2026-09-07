@@ -1,0 +1,185 @@
+{
+  "split": "development",
+  "questions": 500,
+  "system_judgments": 2000,
+  "judge_version": "v3_final",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "reasoning_effort": "low",
+  "max_output_tokens": 3500,
+  "random_seed": 42,
+  "metric_definition": {
+    "hallucination": "(unsupported claims + contradicted claims) / scored factual claims",
+    "groundedness": "supported claims / scored factual claims",
+    "zero_claim_answers": "Answers containing no scored biomedical/research factual claims"
+  },
+  "validation": {
+    "invalid_evidence_cases": 0,
+    "zero_claim_answers_all_systems": 83,
+    "excluded_statements_all_systems": 616
+  },
+  "system_summaries": {
+    "baseline_llm": {
+      "answers_total": 500,
+      "answers_with_scored_claims": 436,
+      "zero_claim_answers": 64,
+      "zero_claim_rate": 0.128,
+      "total_claims": 1062,
+      "supported_claims": 378,
+      "unsupported_claims": 611,
+      "contradicted_claims": 73,
+      "excluded_statements": 280,
+      "abstention_exclusions": 110,
+      "evidence_meta_exclusions": 103,
+      "non_factual_exclusions": 67,
+      "mean_answer_hallucination_rate": 0.6032956531236348,
+      "mean_answer_groundedness": 0.39670434687636524,
+      "micro_claim_hallucination_rate": 0.6440677966101694,
+      "micro_claim_groundedness": 0.3559322033898305,
+      "micro_claim_contradiction_rate": 0.0687382297551789
+    },
+    "basic_rag": {
+      "answers_total": 500,
+      "answers_with_scored_claims": 492,
+      "zero_claim_answers": 8,
+      "zero_claim_rate": 0.016,
+      "total_claims": 1535,
+      "supported_claims": 1396,
+      "unsupported_claims": 115,
+      "contradicted_claims": 24,
+      "excluded_statements": 150,
+      "abstention_exclusions": 6,
+      "evidence_meta_exclusions": 88,
+      "non_factual_exclusions": 56,
+      "mean_answer_hallucination_rate": 0.08478271389856755,
+      "mean_answer_groundedness": 0.9152172861014324,
+      "micro_claim_hallucination_rate": 0.09055374592833876,
+      "micro_claim_groundedness": 0.9094462540716612,
+      "micro_claim_contradiction_rate": 0.015635179153094463
+    },
+    "advanced_rag": {
+      "answers_total": 500,
+      "answers_with_scored_claims": 491,
+      "zero_claim_answers": 9,
+      "zero_claim_rate": 0.018,
+      "total_claims": 1548,
+      "supported_claims": 1405,
+      "unsupported_claims": 123,
+      "contradicted_claims": 20,
+      "excluded_statements": 125,
+      "abstention_exclusions": 10,
+      "evidence_meta_exclusions": 69,
+      "non_factual_exclusions": 46,
+      "mean_answer_hallucination_rate": 0.08885494455759221,
+      "mean_answer_groundedness": 0.9111450554424078,
+      "micro_claim_hallucination_rate": 0.09237726098191215,
+      "micro_claim_groundedness": 0.9076227390180879,
+      "micro_claim_contradiction_rate": 0.012919896640826873
+    },
+    "gold_context_control": {
+      "answers_total": 500,
+      "answers_with_scored_claims": 498,
+      "zero_claim_answers": 2,
+      "zero_claim_rate": 0.004,
+      "total_claims": 1602,
+      "supported_claims": 1511,
+      "unsupported_claims": 87,
+      "contradicted_claims": 4,
+      "excluded_statements": 61,
+      "abstention_exclusions": 1,
+      "evidence_meta_exclusions": 14,
+      "non_factual_exclusions": 46,
+      "mean_answer_hallucination_rate": 0.05185982023331421,
+      "mean_answer_groundedness": 0.9481401797666857,
+      "micro_claim_hallucination_rate": 0.0568039950062422,
+      "micro_claim_groundedness": 0.9431960049937578,
+      "micro_claim_contradiction_rate": 0.0024968789013732834
+    }
+  },
+  "gold_label_summaries": {
+    "baseline_llm": {
+      "yes": {
+        "answers_with_claims": 239,
+        "total_claims": 575,
+        "hallucinated_claims": 352,
+        "micro_hallucination_rate": 0.6121739130434782
+      },
+      "no": {
+        "answers_with_claims": 150,
+        "total_claims": 355,
+        "hallucinated_claims": 249,
+        "micro_hallucination_rate": 0.7014084507042253
+      },
+      "maybe": {
+        "answers_with_claims": 47,
+        "total_claims": 132,
+        "hallucinated_claims": 83,
+        "micro_hallucination_rate": 0.6287878787878788
+      }
+    },
+    "basic_rag": {
+      "yes": {
+        "answers_with_claims": 271,
+        "total_claims": 850,
+        "hallucinated_claims": 66,
+        "micro_hallucination_rate": 0.07764705882352942
+      },
+      "no": {
+        "answers_with_claims": 167,
+        "total_claims": 501,
+        "hallucinated_claims": 57,
+        "micro_hallucination_rate": 0.11377245508982035
+      },
+      "maybe": {
+        "answers_with_claims": 54,
+        "total_claims": 184,
+        "hallucinated_claims": 16,
+        "micro_hallucination_rate": 0.08695652173913043
+      }
+    },
+    "advanced_rag": {
+      "yes": {
+        "answers_with_claims": 270,
+        "total_claims": 886,
+        "hallucinated_claims": 78,
+        "micro_hallucination_rate": 0.08803611738148984
+      },
+      "no": {
+        "answers_with_claims": 167,
+        "total_claims": 490,
+        "hallucinated_claims": 46,
+        "micro_hallucination_rate": 0.09387755102040816
+      },
+      "maybe": {
+        "answers_with_claims": 54,
+        "total_claims": 172,
+        "hallucinated_claims": 19,
+        "micro_hallucination_rate": 0.11046511627906977
+      }
+    },
+    "gold_context_control": {
+      "yes": {
+        "answers_with_claims": 275,
+        "total_claims": 890,
+        "hallucinated_claims": 54,
+        "micro_hallucination_rate": 0.060674157303370786
+      },
+      "no": {
+        "answers_with_claims": 169,
+        "total_claims": 531,
+        "hallucinated_claims": 25,
+        "micro_hallucination_rate": 0.047080979284369114
+      },
+      "maybe": {
+        "answers_with_claims": 54,
+        "total_claims": 181,
+        "hallucinated_claims": 12,
+        "micro_hallucination_rate": 0.06629834254143646
+      }
+    }
+  },
+  "token_usage": {
+    "input": 814979,
+    "output": 522595,
+    "total": 1337574
+  }
+}

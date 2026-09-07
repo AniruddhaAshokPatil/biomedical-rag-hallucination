@@ -1,0 +1,1341 @@
+{
+  "pilot_size": 25,
+  "random_seed": 42,
+  "model": "gpt-5.4-mini-2026-03-17",
+  "requests": 100,
+  "token_usage": {
+    "input": 60272,
+    "output": 6753,
+    "total": 67025
+  },
+  "estimated_cost_usd": 0.0755925,
+  "invalid_citation_cases": [],
+  "baseline_citation_cases": [],
+  "results": [
+    {
+      "question_id": "23588461",
+      "system": "baseline_llm",
+      "question": "Should ascitis volume and anthropometric measurements be estimated in hospitalized alcoholic cirrotics?",
+      "decision": "yes",
+      "answer": "Yes. In hospitalized alcoholic cirrhotic patients, ascites volume and anthropometric measurements are commonly estimated to assess fluid status and nutritional state.",
+      "citations": [],
+      "input_tokens": 277,
+      "output_tokens": 50,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "23588461",
+      "system": "basic_rag",
+      "question": "Should ascitis volume and anthropometric measurements be estimated in hospitalized alcoholic cirrotics?",
+      "decision": "yes",
+      "answer": "Yes. In hospitalized alcoholic cirrhotics with ascites, estimating ascites volume and anthropometric measurements can be useful, as these variables were assessed and found to relate to outcomes such as mortality and rehospitalization.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 898,
+      "output_tokens": 75,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "23588461",
+      "system": "advanced_rag",
+      "question": "Should ascitis volume and anthropometric measurements be estimated in hospitalized alcoholic cirrotics?",
+      "decision": "yes",
+      "answer": "Yes. In hospitalized alcoholic cirrhotics with uncomplicated ascites, ascites volume and anthropometric measurements were assessed and found relevant for prognostic evaluation, though they are not routinely documented.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 726,
+      "output_tokens": 69,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "23588461",
+      "system": "gold_context_control",
+      "question": "Should ascitis volume and anthropometric measurements be estimated in hospitalized alcoholic cirrotics?",
+      "decision": "yes",
+      "answer": "Yes. In hospitalized alcoholic cirrhotics with uncomplicated ascites, estimating ascites volume and anthropometric measurements may be useful for prognostic assessment, since ascites volume, dry BMI, and arm circumference were associated with outcomes in the study.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 611,
+      "output_tokens": 80,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "14655021",
+      "system": "baseline_llm",
+      "question": "Juvenile ankylosing spondylitis--is it the same disease as adult ankylosing spondylitis?",
+      "decision": "maybe",
+      "answer": "Juvenile ankylosing spondylitis is generally considered part of the same disease spectrum as adult ankylosing spondylitis, but it can have different early clinical features and may not present identically.",
+      "citations": [],
+      "input_tokens": 286,
+      "output_tokens": 66,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "14655021",
+      "system": "basic_rag",
+      "question": "Juvenile ankylosing spondylitis--is it the same disease as adult ankylosing spondylitis?",
+      "decision": "maybe",
+      "answer": "Not exactly the same clinically: juvenile and adult ankylosing spondylitis can have different clinical presentation and outcome. The evidence does not say they are different diseases, only that they may differ by age of onset and presentation.",
+      "citations": [
+        "C1",
+        "C4"
+      ],
+      "input_tokens": 775,
+      "output_tokens": 74,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "14655021",
+      "system": "advanced_rag",
+      "question": "Juvenile ankylosing spondylitis--is it the same disease as adult ankylosing spondylitis?",
+      "decision": "no",
+      "answer": "No. Juvenile and adult ankylosing spondylitis are described as having different clinical presentation and outcome, so they are not simply the same disease in all respects.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 819,
+      "output_tokens": 63,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "14655021",
+      "system": "gold_context_control",
+      "question": "Juvenile ankylosing spondylitis--is it the same disease as adult ankylosing spondylitis?",
+      "decision": "no",
+      "answer": "No. The evidence indicates juvenile and adult ankylosing spondylitis can have different clinical presentation and outcomes, and juvenile AS showed distinct features in this study.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 474,
+      "output_tokens": 61,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10783841",
+      "system": "baseline_llm",
+      "question": "Is there a relationship between rheumatoid arthritis and periodontal disease?",
+      "decision": "yes",
+      "answer": "Yes. Rheumatoid arthritis and periodontal disease are associated, with evidence suggesting a relationship between the two conditions.",
+      "citations": [],
+      "input_tokens": 271,
+      "output_tokens": 43,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10783841",
+      "system": "basic_rag",
+      "question": "Is there a relationship between rheumatoid arthritis and periodontal disease?",
+      "decision": "yes",
+      "answer": "Yes. The evidence suggests an association: rheumatoid arthritis was more prevalent among patients referred for periodontal treatment, and many of those RA patients had advanced periodontal disease.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 763,
+      "output_tokens": 59,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10783841",
+      "system": "advanced_rag",
+      "question": "Is there a relationship between rheumatoid arthritis and periodontal disease?",
+      "decision": "yes",
+      "answer": "Yes. The evidence shows rheumatoid arthritis was more common in patients referred for periodontal treatment, and many of those RA patients had advanced periodontal disease, indicating an association between rheumatoid arthritis and periodontal disease.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 750,
+      "output_tokens": 66,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10783841",
+      "system": "gold_context_control",
+      "question": "Is there a relationship between rheumatoid arthritis and periodontal disease?",
+      "decision": "yes",
+      "answer": "Yes. The evidence reports a significantly higher prevalence of rheumatoid arthritis among patients referred for periodontal treatment, and many of those patients had advanced periodontal disease, suggesting an association between the two.",
+      "citations": [
+        "C2"
+      ],
+      "input_tokens": 476,
+      "output_tokens": 61,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24964725",
+      "system": "baseline_llm",
+      "question": "Recovery Outcome Measures: Is There a Place for Culture, Attitudes, and Faith?",
+      "decision": "maybe",
+      "answer": "Yes, there can be a place for culture, attitudes, and faith in recovery outcome measures, but this is context-dependent and not universally established.",
+      "citations": [],
+      "input_tokens": 277,
+      "output_tokens": 51,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24964725",
+      "system": "basic_rag",
+      "question": "Recovery Outcome Measures: Is There a Place for Culture, Attitudes, and Faith?",
+      "decision": "maybe",
+      "answer": "The evidence suggests that culture, attitudes, and faith may have a place in supporting recovery, but it does not establish a definitive outcome. The passage raises questions about links between attitudes, faith, and culture in the recovery journey, especially in secular multicultural societies.",
+      "citations": [
+        "C1"
+      ],
+      "input_tokens": 469,
+      "output_tokens": 76,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24964725",
+      "system": "advanced_rag",
+      "question": "Recovery Outcome Measures: Is There a Place for Culture, Attitudes, and Faith?",
+      "decision": "maybe",
+      "answer": "The evidence suggests there may be a place to consider culture, attitudes, and faith in recovery-oriented measures, but it does not establish this definitively. It raises questions about links between attitudes, faith, and culture in supporting recovery, especially in secular multicultural societies.",
+      "citations": [
+        "C1"
+      ],
+      "input_tokens": 504,
+      "output_tokens": 83,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24964725",
+      "system": "gold_context_control",
+      "question": "Recovery Outcome Measures: Is There a Place for Culture, Attitudes, and Faith?",
+      "decision": "yes",
+      "answer": "Yes. The evidence indicates that culture, attitudes, and faith are relevant to supporting the recovery journey, and that their role is important in secular multicultural societies.",
+      "citations": [
+        "C1"
+      ],
+      "input_tokens": 343,
+      "output_tokens": 56,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17502203",
+      "system": "baseline_llm",
+      "question": "Cholestasis associated with small bowel atresia: do we always need to investigate?",
+      "decision": "no",
+      "answer": "No. Cholestasis can occur with small bowel atresia and does not always require an extensive additional investigation if it is otherwise explained and improves with time; evaluation should be guided by the clinical context.",
+      "citations": [],
+      "input_tokens": 279,
+      "output_tokens": 63,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17502203",
+      "system": "basic_rag",
+      "question": "Cholestasis associated with small bowel atresia: do we always need to investigate?",
+      "decision": "no",
+      "answer": "No. In this cohort, cholestasis after small bowel atresia was common and resolved spontaneously in all survivors; no patient had biliary atresia. The authors suggest that extensive/invasive investigation may be unnecessary in many cases.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 738,
+      "output_tokens": 76,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17502203",
+      "system": "advanced_rag",
+      "question": "Cholestasis associated with small bowel atresia: do we always need to investigate?",
+      "decision": "no",
+      "answer": "No. In this study, cholestasis was common and resolved spontaneously in all survivors; no patient had biliary atresia, suggesting that routine intensive/invasive investigation is often unnecessary unless other features warrant it.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 728,
+      "output_tokens": 71,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17502203",
+      "system": "gold_context_control",
+      "question": "Cholestasis associated with small bowel atresia: do we always need to investigate?",
+      "decision": "no",
+      "answer": "No. In this cohort, cholestasis after small bowel atresia resolved spontaneously in all survivors, no patient had biliary atresia, and the authors suggest that intensive or invasive investigation may be unnecessary in many cases.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 626,
+      "output_tokens": 74,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17259061",
+      "system": "baseline_llm",
+      "question": "Cigarettes and cinema: does parental restriction of R-rated movie viewing reduce adolescent smoking susceptibility?",
+      "decision": "maybe",
+      "answer": "Parental restriction of R-rated movie viewing may reduce adolescent smoking susceptibility, but without provided evidence I can’t confirm a causal effect.",
+      "citations": [],
+      "input_tokens": 279,
+      "output_tokens": 48,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17259061",
+      "system": "basic_rag",
+      "question": "Cigarettes and cinema: does parental restriction of R-rated movie viewing reduce adolescent smoking susceptibility?",
+      "decision": "yes",
+      "answer": "Yes. The evidence shows that full parental restriction of R-rated movie viewing was associated with lower adolescent smoking susceptibility; partial or no restriction was linked to higher odds of being susceptible to smoking.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 670,
+      "output_tokens": 65,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17259061",
+      "system": "advanced_rag",
+      "question": "Cigarettes and cinema: does parental restriction of R-rated movie viewing reduce adolescent smoking susceptibility?",
+      "decision": "yes",
+      "answer": "Yes. The evidence reports that stronger parental restriction of R-rated movie viewing was associated with lower adolescent smoking susceptibility; compared with full restriction, partial or no restriction was associated with higher odds of susceptibility.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 866,
+      "output_tokens": 67,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17259061",
+      "system": "gold_context_control",
+      "question": "Cigarettes and cinema: does parental restriction of R-rated movie viewing reduce adolescent smoking susceptibility?",
+      "decision": "yes",
+      "answer": "Yes. The study found that greater parental restriction of R-rated movie viewing was associated with lower adolescent smoking susceptibility; students with partial or no restriction were more likely to be susceptible to smoking than those with full restriction.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 607,
+      "output_tokens": 70,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17008699",
+      "system": "baseline_llm",
+      "question": "Do patients with localized prostate cancer treatment really want more aggressive treatment?",
+      "decision": "maybe",
+      "answer": "Not necessarily. In general, patient preferences vary, and some patients with localized prostate cancer may prefer less aggressive treatment because of concerns about side effects and quality of life. Without evidence, this cannot be answered definitively.",
+      "citations": [],
+      "input_tokens": 273,
+      "output_tokens": 65,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17008699",
+      "system": "basic_rag",
+      "question": "Do patients with localized prostate cancer treatment really want more aggressive treatment?",
+      "decision": "yes",
+      "answer": "Yes. In the cited study, patients with localized prostate cancer were offered a more aggressive radiotherapy option (74 Gy) that had more cure but more toxicity, and many who chose their own treatment preferred the more aggressive option.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 627,
+      "output_tokens": 79,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17008699",
+      "system": "advanced_rag",
+      "question": "Do patients with localized prostate cancer treatment really want more aggressive treatment?",
+      "decision": "no",
+      "answer": "The evidence does not show that patients with localized prostate cancer generally want more aggressive treatment. In the study described, patients were informed that the higher-dose option had more cure but also more toxicity, and the question was whether they wanted to choose; this suggests preferences vary and are being assessed rather than assuming a desire for more aggressive therapy. The evidence is inconclusive about a general preference for aggression.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 730,
+      "output_tokens": 112,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17008699",
+      "system": "gold_context_control",
+      "question": "Do patients with localized prostate cancer treatment really want more aggressive treatment?",
+      "decision": "no",
+      "answer": "No. In this study, most patients who chose between two prostate radiotherapy options preferred the less aggressive lower-dose treatment (70 Gy) rather than the more aggressive 74 Gy option.",
+      "citations": [
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 551,
+      "output_tokens": 65,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "15280782",
+      "system": "baseline_llm",
+      "question": "Is unsafe sexual behaviour increasing among HIV-infected individuals?",
+      "decision": "maybe",
+      "answer": "It may be increasing in some HIV-infected populations, but without evidence here I can’t confirm a general trend.",
+      "citations": [],
+      "input_tokens": 271,
+      "output_tokens": 45,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "15280782",
+      "system": "basic_rag",
+      "question": "Is unsafe sexual behaviour increasing among HIV-infected individuals?",
+      "decision": "no",
+      "answer": "No. The evidence reports no increase in unsafe sexual behaviour over time among HIV-infected individuals.",
+      "citations": [
+        "C2"
+      ],
+      "input_tokens": 676,
+      "output_tokens": 44,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "15280782",
+      "system": "advanced_rag",
+      "question": "Is unsafe sexual behaviour increasing among HIV-infected individuals?",
+      "decision": "no",
+      "answer": "No. The evidence reports no increase in unsafe sex over time among HIV-infected individuals (OR 1.0, 95% CI 0.96-1.05).",
+      "citations": [
+        "C2"
+      ],
+      "input_tokens": 984,
+      "output_tokens": 63,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "15280782",
+      "system": "gold_context_control",
+      "question": "Is unsafe sexual behaviour increasing among HIV-infected individuals?",
+      "decision": "no",
+      "answer": "No. The study found no evidence of an increase in reported unsafe sex over time among HIV-infected individuals.",
+      "citations": [
+        "C5"
+      ],
+      "input_tokens": 640,
+      "output_tokens": 47,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24947183",
+      "system": "baseline_llm",
+      "question": "Does delaying surgery in immature adolescent idiopathic scoliosis patients with progressive curve, lead to addition of fusion levels?",
+      "decision": "maybe",
+      "answer": "Delaying surgery in immature adolescents with progressive idiopathic scoliosis can sometimes allow the curve to worsen before fusion, which may increase the number of fusion levels needed, but this is not guaranteed.",
+      "citations": [],
+      "input_tokens": 282,
+      "output_tokens": 60,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24947183",
+      "system": "basic_rag",
+      "question": "Does delaying surgery in immature adolescent idiopathic scoliosis patients with progressive curve, lead to addition of fusion levels?",
+      "decision": "yes",
+      "answer": "Yes. In the provided AIS study of immature patients with progressive curves, delayed surgery was used to assess changes in curve extent/pattern and fusion levels, and the question implies that delay can lead to additional fusion levels.",
+      "citations": [
+        "C5",
+        "C1"
+      ],
+      "input_tokens": 650,
+      "output_tokens": 71,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24947183",
+      "system": "advanced_rag",
+      "question": "Does delaying surgery in immature adolescent idiopathic scoliosis patients with progressive curve, lead to addition of fusion levels?",
+      "decision": "yes",
+      "answer": "Yes. In this study of immature AIS patients with progressive curves, delaying surgery was associated with increased fusion levels; the mean number of levels requiring fusion increased at final follow-up across all planning guidelines.",
+      "citations": [
+        "C1",
+        "C2",
+        "C5"
+      ],
+      "input_tokens": 776,
+      "output_tokens": 70,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24947183",
+      "system": "gold_context_control",
+      "question": "Does delaying surgery in immature adolescent idiopathic scoliosis patients with progressive curve, lead to addition of fusion levels?",
+      "decision": "yes",
+      "answer": "Yes. In this study of immature AIS patients with progressive curves, delaying surgery was associated with changes in fusion levels, and the mean number of levels requiring fusion increased at final follow-up.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 641,
+      "output_tokens": 68,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12913347",
+      "system": "baseline_llm",
+      "question": "Do microbiological factors account for poor pregnancy outcome among unmarried pregnant women in Poland?",
+      "decision": "maybe",
+      "answer": "I can’t determine that from the information provided. Without study data on unmarried pregnant women in Poland, it is not possible to say whether microbiological factors account for poor pregnancy outcome.",
+      "citations": [],
+      "input_tokens": 276,
+      "output_tokens": 58,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12913347",
+      "system": "basic_rag",
+      "question": "Do microbiological factors account for poor pregnancy outcome among unmarried pregnant women in Poland?",
+      "decision": "yes",
+      "answer": "Yes. In this study of unmarried pregnant women in Poland, microbiological factors were associated with poorer pregnancy outcome risk: unmarried status was borderline associated with bacterial vaginosis, and unmarried women had higher risk of several pathological microflora, with a significant finding for Mycoplasma hominis.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 921,
+      "output_tokens": 86,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12913347",
+      "system": "advanced_rag",
+      "question": "Do microbiological factors account for poor pregnancy outcome among unmarried pregnant women in Poland?",
+      "decision": "maybe",
+      "answer": "Microbiological factors may contribute, but the evidence does not show they fully account for poor pregnancy outcome among unmarried pregnant women in Poland. The study found unmarried status was only a borderline risk factor for bacterial vaginosis, and the only significant microbiological difference was higher risk of Mycoplasma hominis; other findings were not significant.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 798,
+      "output_tokens": 96,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12913347",
+      "system": "gold_context_control",
+      "question": "Do microbiological factors account for poor pregnancy outcome among unmarried pregnant women in Poland?",
+      "decision": "maybe",
+      "answer": "Microbiological factors may contribute, but the evidence does not show that they fully account for poor pregnancy outcome in unmarried pregnant women in Poland. The study found a higher risk of some pathological microflora, significant only for Mycoplasma hominis, but it does not directly link these microbiological findings to the poor pregnancy outcomes themselves.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 635,
+      "output_tokens": 95,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24172579",
+      "system": "baseline_llm",
+      "question": "Does sex influence the response to intravenous thrombolysis in ischemic stroke?",
+      "decision": "yes",
+      "answer": "Sex can influence response to intravenous thrombolysis in ischemic stroke, with some studies showing sex-related differences in treatment outcomes.",
+      "citations": [],
+      "input_tokens": 275,
+      "output_tokens": 47,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24172579",
+      "system": "basic_rag",
+      "question": "Does sex influence the response to intravenous thrombolysis in ischemic stroke?",
+      "decision": "no",
+      "answer": "The evidence does not show a clear sex effect on response to intravenous thrombolysis in ischemic stroke. Across the cited studies, sex was not associated with recanalization or adjusted functional outcome after IV rt-PA, though one study found unadjusted differences in independence and mortality that disappeared after adjustment.",
+      "citations": [
+        "C3",
+        "C4"
+      ],
+      "input_tokens": 1008,
+      "output_tokens": 89,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24172579",
+      "system": "advanced_rag",
+      "question": "Does sex influence the response to intravenous thrombolysis in ischemic stroke?",
+      "decision": "no",
+      "answer": "In this study, sex did not influence the response to intravenous thrombolysis in ischemic stroke; men and women had similar recanalization rates and 3-month outcomes.",
+      "citations": [
+        "C4"
+      ],
+      "input_tokens": 849,
+      "output_tokens": 60,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "24172579",
+      "system": "gold_context_control",
+      "question": "Does sex influence the response to intravenous thrombolysis in ischemic stroke?",
+      "decision": "yes",
+      "answer": "Sex influences some outcomes after intravenous thrombolysis in ischemic stroke, but adjusted functional outcome did not differ by sex. In this study, men had higher unadjusted functional independence, and after adjustment male sex was associated with higher mortality and symptomatic intracerebral hemorrhage.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 650,
+      "output_tokens": 83,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "27448572",
+      "system": "baseline_llm",
+      "question": "Is duration of psychological treatment for depression related to return into treatment?",
+      "decision": "maybe",
+      "answer": "Possibly, but there is no provided evidence here to determine whether psychological treatment duration for depression is related to return to treatment.",
+      "citations": [],
+      "input_tokens": 273,
+      "output_tokens": 47,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "27448572",
+      "system": "basic_rag",
+      "question": "Is duration of psychological treatment for depression related to return into treatment?",
+      "decision": "yes",
+      "answer": "Yes. In this study, shorter treatment duration was associated with a slightly higher likelihood of returning to mental health care compared with durations >1000 minutes.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 730,
+      "output_tokens": 58,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "27448572",
+      "system": "advanced_rag",
+      "question": "Is duration of psychological treatment for depression related to return into treatment?",
+      "decision": "yes",
+      "answer": "Yes. In this study, shorter treatment duration was associated with a slightly higher likelihood of returning into mental health care compared with longer treatment (>1000 min).",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 702,
+      "output_tokens": 63,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "27448572",
+      "system": "gold_context_control",
+      "question": "Is duration of psychological treatment for depression related to return into treatment?",
+      "decision": "yes",
+      "answer": "Yes. In this study, shorter duration of psychological treatment for depression was associated with a slightly higher likelihood of returning into mental health care.",
+      "citations": [
+        "C3"
+      ],
+      "input_tokens": 573,
+      "output_tokens": 52,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22303473",
+      "system": "baseline_llm",
+      "question": "Does a family meetings intervention prevent depression and anxiety in family caregivers of dementia patients?",
+      "decision": "maybe",
+      "answer": "Evidence is insufficient to conclude that a family meetings intervention prevents depression and anxiety in family caregivers of dementia patients.",
+      "citations": [],
+      "input_tokens": 276,
+      "output_tokens": 43,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22303473",
+      "system": "basic_rag",
+      "question": "Does a family meetings intervention prevent depression and anxiety in family caregivers of dementia patients?",
+      "decision": "no",
+      "answer": "No. In this randomized trial, the family meetings intervention was not superior to usual care in preventing onset of depressive or anxiety disorders, or in reducing depressive or anxiety symptoms in family caregivers of dementia patients.",
+      "citations": [
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 733,
+      "output_tokens": 68,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22303473",
+      "system": "advanced_rag",
+      "question": "Does a family meetings intervention prevent depression and anxiety in family caregivers of dementia patients?",
+      "decision": "no",
+      "answer": "No. In this randomized trial, the family meetings intervention was not superior to usual care in preventing onset of depressive or anxiety disorder or in reducing depressive or anxiety symptoms in caregivers.",
+      "citations": [
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 745,
+      "output_tokens": 63,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22303473",
+      "system": "gold_context_control",
+      "question": "Does a family meetings intervention prevent depression and anxiety in family caregivers of dementia patients?",
+      "decision": "no",
+      "answer": "No. In this randomized trial, the family meetings intervention did not reduce the onset of depressive or anxiety disorders, nor did it improve depressive or anxiety symptoms compared with usual care.",
+      "citations": [
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 647,
+      "output_tokens": 63,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12607120",
+      "system": "baseline_llm",
+      "question": "Does anastomotic leakage affect functional outcome after rectal resection for cancer?",
+      "decision": "yes",
+      "answer": "Yes. Anastomotic leakage after rectal resection for cancer is generally associated with worse functional outcome.",
+      "citations": [],
+      "input_tokens": 277,
+      "output_tokens": 43,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12607120",
+      "system": "basic_rag",
+      "question": "Does anastomotic leakage affect functional outcome after rectal resection for cancer?",
+      "decision": "no",
+      "answer": "In this study, anastomotic leakage did not significantly worsen continence or sphincter function after rectal cancer resection; only minor, non-significant differences were seen in some manometry measures.",
+      "citations": [
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 706,
+      "output_tokens": 70,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12607120",
+      "system": "advanced_rag",
+      "question": "Does anastomotic leakage affect functional outcome after rectal resection for cancer?",
+      "decision": "no",
+      "answer": "In this study, anastomotic leakage did not significantly worsen continence or sphincter function after rectal cancer resection; only slight, non-significant differences were seen in some manometry measures.",
+      "citations": [
+        "C2",
+        "C4"
+      ],
+      "input_tokens": 638,
+      "output_tokens": 70,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12607120",
+      "system": "gold_context_control",
+      "question": "Does anastomotic leakage affect functional outcome after rectal resection for cancer?",
+      "decision": "no",
+      "answer": "In this study, anastomotic leakage did not significantly worsen functional outcome after rectal resection for cancer; continence and sphincter function were similar between patients with leakage and those without complications.",
+      "citations": [
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 521,
+      "output_tokens": 69,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22990761",
+      "system": "baseline_llm",
+      "question": "Cardiovascular risk in a rural adult West African population: is resting heart rate also relevant?",
+      "decision": "maybe",
+      "answer": "Possibly. In general, resting heart rate can be associated with cardiovascular risk, but without study data for this rural West African population, relevance cannot be confirmed.",
+      "citations": [],
+      "input_tokens": 279,
+      "output_tokens": 54,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22990761",
+      "system": "basic_rag",
+      "question": "Cardiovascular risk in a rural adult West African population: is resting heart rate also relevant?",
+      "decision": "yes",
+      "answer": "Yes. In this rural West African population, elevated resting heart rate was common and was significantly associated with cardiovascular risk factors, including age, waist circumference, and blood pressure; elevated RHR was also linked to higher odds of high blood pressure.",
+      "citations": [
+        "C5"
+      ],
+      "input_tokens": 739,
+      "output_tokens": 73,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22990761",
+      "system": "advanced_rag",
+      "question": "Cardiovascular risk in a rural adult West African population: is resting heart rate also relevant?",
+      "decision": "maybe",
+      "answer": "The evidence only shows that elevated resting heart rate was investigated as a cardiovascular risk marker in a rural Ghanaian population, but it does not provide the study’s results or confirm that resting heart rate was relevant/associated with risk.",
+      "citations": [
+        "C1"
+      ],
+      "input_tokens": 655,
+      "output_tokens": 70,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22990761",
+      "system": "gold_context_control",
+      "question": "Cardiovascular risk in a rural adult West African population: is resting heart rate also relevant?",
+      "decision": "yes",
+      "answer": "Yes. In this rural West African adult population, elevated resting heart rate was common (19%) and was significantly associated with cardiovascular risk factors, especially higher blood pressure. Those with elevated RHR had a higher risk of casual high BP.",
+      "citations": [
+        "C1",
+        "C4"
+      ],
+      "input_tokens": 624,
+      "output_tokens": 75,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "19931500",
+      "system": "baseline_llm",
+      "question": "Can the condition of the cell microenvironment of mediastinal lymph nodes help predict the risk of metastases in non-small cell lung cancer?",
+      "decision": "maybe",
+      "answer": "There is no provided evidence here to confirm whether the cell microenvironment of mediastinal lymph nodes can predict metastasis risk in non-small cell lung cancer.",
+      "citations": [],
+      "input_tokens": 288,
+      "output_tokens": 53,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "19931500",
+      "system": "basic_rag",
+      "question": "Can the condition of the cell microenvironment of mediastinal lymph nodes help predict the risk of metastases in non-small cell lung cancer?",
+      "decision": "yes",
+      "answer": "Yes. The evidence indicates that changes in the lymph node immune microenvironment are associated with metastasis status in non-small cell lung cancer, and these microenvironmental changes were observed even in nearby nodes without overt metastases, suggesting potential predictive value.",
+      "citations": [
+        "C4"
+      ],
+      "input_tokens": 850,
+      "output_tokens": 74,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "19931500",
+      "system": "advanced_rag",
+      "question": "Can the condition of the cell microenvironment of mediastinal lymph nodes help predict the risk of metastases in non-small cell lung cancer?",
+      "decision": "yes",
+      "answer": "Yes. The evidence indicates that changes in the mediastinal lymph node microenvironment, such as reduced CD11c(+) dendritic cells and TCR zeta downregulation, are associated with LN metastases and may help predict metastatic risk in non-small cell lung cancer.",
+      "citations": [
+        "C1"
+      ],
+      "input_tokens": 875,
+      "output_tokens": 81,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "19931500",
+      "system": "gold_context_control",
+      "question": "Can the condition of the cell microenvironment of mediastinal lymph nodes help predict the risk of metastases in non-small cell lung cancer?",
+      "decision": "yes",
+      "answer": "Yes. In this study, changes in the mediastinal/regional lymph node microenvironment—especially reduced TCR zeta expression and fewer myeloid CD11c(+) dendritic cells—were associated with the presence of metastases in NSCLC, suggesting these features may help predict metastasis risk.",
+      "citations": [
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 571,
+      "output_tokens": 90,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10966337",
+      "system": "baseline_llm",
+      "question": "A short stay or 23-hour ward in a general and academic children's hospital: are they effective?",
+      "decision": "maybe",
+      "answer": "Possibly, but I can’t confirm effectiveness from the information provided because no evidence was supplied.",
+      "citations": [],
+      "input_tokens": 280,
+      "output_tokens": 41,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10966337",
+      "system": "basic_rag",
+      "question": "A short stay or 23-hour ward in a general and academic children's hospital: are they effective?",
+      "decision": "yes",
+      "answer": "Yes. The short stay/23-hour ward appeared effective, increasing efficiency, keeping most stays under 23 hours, with low transfer and unscheduled revisit rates, no reported adverse events, high parental satisfaction, and substantial cost savings.",
+      "citations": [
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 867,
+      "output_tokens": 80,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10966337",
+      "system": "advanced_rag",
+      "question": "A short stay or 23-hour ward in a general and academic children's hospital: are they effective?",
+      "decision": "yes",
+      "answer": "Yes. The short stay/23-hour ward appears effective and useful, with efficient bed use, low in-hospital admission and unscheduled return rates, no adverse events, high parental satisfaction, and estimated cost savings.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 898,
+      "output_tokens": 80,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10966337",
+      "system": "gold_context_control",
+      "question": "A short stay or 23-hour ward in a general and academic children's hospital: are they effective?",
+      "decision": "yes",
+      "answer": "Yes. The short stay/23-hour ward appeared effective, improving efficiency with short average stays, low rates of transfer to inpatient beds and unscheduled returns, no reported adverse events, high parental satisfaction, and estimated cost savings.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 765,
+      "output_tokens": 76,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10927144",
+      "system": "baseline_llm",
+      "question": "Can p53 alterations be used to predict tumour response to pre-operative chemo-radiotherapy in locally advanced rectal cancer?",
+      "decision": "maybe",
+      "answer": "p53 alterations have been investigated as a possible predictor of response to pre-operative chemo-radiotherapy in locally advanced rectal cancer, but the evidence has been inconsistent and they are not established as a reliable predictor.",
+      "citations": [],
+      "input_tokens": 284,
+      "output_tokens": 64,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10927144",
+      "system": "basic_rag",
+      "question": "Can p53 alterations be used to predict tumour response to pre-operative chemo-radiotherapy in locally advanced rectal cancer?",
+      "decision": "no",
+      "answer": "The evidence does not show that p53 alterations can predict tumour response to pre-operative chemo-radiotherapy in locally advanced rectal cancer. The study was designed to test this, but the provided results do not report a predictive association between p53 status and response.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 744,
+      "output_tokens": 80,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10927144",
+      "system": "advanced_rag",
+      "question": "Can p53 alterations be used to predict tumour response to pre-operative chemo-radiotherapy in locally advanced rectal cancer?",
+      "decision": "no",
+      "answer": "No. In this study, p53 alterations did not significantly predict tumour size reduction or local failure after pre-operative chemo-radiotherapy in locally advanced rectal cancer.",
+      "citations": [
+        "C3"
+      ],
+      "input_tokens": 853,
+      "output_tokens": 58,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10927144",
+      "system": "gold_context_control",
+      "question": "Can p53 alterations be used to predict tumour response to pre-operative chemo-radiotherapy in locally advanced rectal cancer?",
+      "decision": "no",
+      "answer": "No. In this study, p53 alterations did not significantly predict tumour size reduction or local failure after pre-operative chemo-radiotherapy in locally advanced rectal cancer.",
+      "citations": [
+        "C3"
+      ],
+      "input_tokens": 652,
+      "output_tokens": 58,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12626177",
+      "system": "baseline_llm",
+      "question": "Can the Internet be used to improve sexual health awareness in web-wise young people?",
+      "decision": "yes",
+      "answer": "Yes. The Internet can be used to improve sexual health awareness in web-wise young people by providing accessible, engaging, and age-appropriate information.",
+      "citations": [],
+      "input_tokens": 276,
+      "output_tokens": 51,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12626177",
+      "system": "basic_rag",
+      "question": "Can the Internet be used to improve sexual health awareness in web-wise young people?",
+      "decision": "yes",
+      "answer": "Yes. In the study, web-wise young people had Internet access and most said they would use a genitourinary medicine website; many were also interested in an online question line, suggesting the Internet could be used to improve sexual health awareness.",
+      "citations": [
+        "C1",
+        "C5"
+      ],
+      "input_tokens": 834,
+      "output_tokens": 83,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12626177",
+      "system": "advanced_rag",
+      "question": "Can the Internet be used to improve sexual health awareness in web-wise young people?",
+      "decision": "yes",
+      "answer": "Yes. The evidence suggests the Internet is a practical way to provide sex education and sexual health information to young people, and many participants said they would use a sexual health website or ask questions online.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 624,
+      "output_tokens": 67,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "12626177",
+      "system": "gold_context_control",
+      "question": "Can the Internet be used to improve sexual health awareness in web-wise young people?",
+      "decision": "yes",
+      "answer": "Yes. The evidence suggests the Internet could be a practical way to provide sex education and sexual health information to young people, and many participants said they would use a GUM website.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 522,
+      "output_tokens": 64,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "16956164",
+      "system": "baseline_llm",
+      "question": "Do all ethnic groups in New Zealand exhibit socio-economic mortality gradients?",
+      "decision": "no",
+      "answer": "No. Socio-economic mortality gradients are not necessarily present in all ethnic groups in New Zealand.",
+      "citations": [],
+      "input_tokens": 273,
+      "output_tokens": 41,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "16956164",
+      "system": "basic_rag",
+      "question": "Do all ethnic groups in New Zealand exhibit socio-economic mortality gradients?",
+      "decision": "yes",
+      "answer": "Yes. The evidence states that all four ethnic groups in New Zealand show deprivation (socio-economic) gradients in all-cause mortality, though the slopes differ by group.",
+      "citations": [
+        "C1"
+      ],
+      "input_tokens": 996,
+      "output_tokens": 59,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "16956164",
+      "system": "advanced_rag",
+      "question": "Do all ethnic groups in New Zealand exhibit socio-economic mortality gradients?",
+      "decision": "yes",
+      "answer": "Yes. The evidence states that all four ethnic groups in New Zealand exhibit deprivation gradients in all-cause mortality, i.e., socio-economic mortality gradients.",
+      "citations": [
+        "C2"
+      ],
+      "input_tokens": 851,
+      "output_tokens": 55,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "16956164",
+      "system": "gold_context_control",
+      "question": "Do all ethnic groups in New Zealand exhibit socio-economic mortality gradients?",
+      "decision": "yes",
+      "answer": "Yes. The evidence states that all four ethnic groups (Asian, Pacific, Maori, and European) exhibit deprivation gradients in all-cause mortality, though the steepness differs by group.",
+      "citations": [
+        "C3"
+      ],
+      "input_tokens": 536,
+      "output_tokens": 68,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17105833",
+      "system": "baseline_llm",
+      "question": "Empiric treatment of uncomplicated urinary tract infection with fluoroquinolones in older women in Israel: another lost treatment option?",
+      "decision": "maybe",
+      "answer": "Fluoroquinolones can treat uncomplicated urinary tract infection, but whether they should be used empirically in older women in Israel depends on local resistance patterns and safety concerns; without evidence here, this cannot be determined.",
+      "citations": [],
+      "input_tokens": 286,
+      "output_tokens": 66,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17105833",
+      "system": "basic_rag",
+      "question": "Empiric treatment of uncomplicated urinary tract infection with fluoroquinolones in older women in Israel: another lost treatment option?",
+      "decision": "yes",
+      "answer": "Yes. In this study, ofloxacin resistance in E. coli was low in women aged 41-50, but rose with age and reached about 20% in women aged 56-75, suggesting fluoroquinolones may no longer be appropriate for empiric UTI treatment in older women.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "input_tokens": 700,
+      "output_tokens": 96,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17105833",
+      "system": "advanced_rag",
+      "question": "Empiric treatment of uncomplicated urinary tract infection with fluoroquinolones in older women in Israel: another lost treatment option?",
+      "decision": "maybe",
+      "answer": "The evidence suggests that fluoroquinolone empiric treatment for uncomplicated UTI may no longer be appropriate in some older women if local E. coli resistance exceeds the recommended threshold, but the provided passages do not give the actual resistance results.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 739,
+      "output_tokens": 78,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "17105833",
+      "system": "gold_context_control",
+      "question": "Empiric treatment of uncomplicated urinary tract infection with fluoroquinolones in older women in Israel: another lost treatment option?",
+      "decision": "yes",
+      "answer": "Yes. The study found that ofloxacin resistance in E. coli uncomplicated UTI was much higher in older women, reaching about 19.9% in women aged 56–75 years, suggesting fluoroquinolones may no longer be appropriate for empiric treatment in that age group.",
+      "citations": [
+        "C1",
+        "C2",
+        "C4"
+      ],
+      "input_tokens": 665,
+      "output_tokens": 90,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "21669959",
+      "system": "baseline_llm",
+      "question": "Secondhand smoke risk in infants discharged from an NICU: potential for significant health disparities?",
+      "decision": "yes",
+      "answer": "Yes. Infants discharged from an NICU may still be exposed to secondhand smoke at home, and this exposure can contribute to worse respiratory and overall health outcomes. Because smoking exposure is more common in some socially disadvantaged households, it can also contribute to health disparities.",
+      "citations": [],
+      "input_tokens": 278,
+      "output_tokens": 75,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "21669959",
+      "system": "basic_rag",
+      "question": "Secondhand smoke risk in infants discharged from an NICU: potential for significant health disparities?",
+      "decision": "yes",
+      "answer": "Yes. The evidence suggests secondhand smoke exposure is a risk for vulnerable infants discharged from a NICU, and that the burden may be unevenly distributed: lower-income families were less likely to have smoking bans, and smoking-ban rates differed by race/ethnicity, indicating potential health disparities.",
+      "citations": [
+        "C1",
+        "C4"
+      ],
+      "input_tokens": 744,
+      "output_tokens": 86,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "21669959",
+      "system": "advanced_rag",
+      "question": "Secondhand smoke risk in infants discharged from an NICU: potential for significant health disparities?",
+      "decision": "yes",
+      "answer": "Yes. The evidence suggests secondhand smoke exposure is a concern for fragile infants discharged from the NICU and may reflect disparities: lower-income families were less likely to have total smoking bans, and African American and Caucasian families were less likely to have bans than Hispanic families.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 744,
+      "output_tokens": 88,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "21669959",
+      "system": "gold_context_control",
+      "question": "Secondhand smoke risk in infants discharged from an NICU: potential for significant health disparities?",
+      "decision": "yes",
+      "answer": "Yes. The evidence suggests potential health disparities: in this NICU high-risk infant sample, lower-income families were less likely to have total home/car smoking bans, and African American and Caucasian families were less likely to have a smoking ban than Hispanic families.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 586,
+      "output_tokens": 79,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "23096188",
+      "system": "baseline_llm",
+      "question": "Juvenile osteochondritis dissecans: is it a growth disturbance of the secondary physis of the epiphysis?",
+      "decision": "yes",
+      "answer": "Yes. Juvenile osteochondritis dissecans is generally considered a growth disturbance affecting the epiphyseal/secondary ossification center (secondary physis) rather than the primary physis.",
+      "citations": [],
+      "input_tokens": 286,
+      "output_tokens": 60,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "23096188",
+      "system": "basic_rag",
+      "question": "Juvenile osteochondritis dissecans: is it a growth disturbance of the secondary physis of the epiphysis?",
+      "decision": "yes",
+      "answer": "Yes. The evidence supports juvenile osteochondritis dissecans as involving disruption of the secondary physis of the epiphysis and an insult to endochondral ossification in skeletally immature children.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 827,
+      "output_tokens": 75,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "23096188",
+      "system": "advanced_rag",
+      "question": "Juvenile osteochondritis dissecans: is it a growth disturbance of the secondary physis of the epiphysis?",
+      "decision": "maybe",
+      "answer": "Juvenile osteochondritis dissecans may involve a disturbance of the secondary physis of the epiphysis, but the evidence is not definitive; the study hypothesizes this mechanism and reports significant secondary physeal disruption in affected condyles.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 969,
+      "output_tokens": 78,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "23096188",
+      "system": "gold_context_control",
+      "question": "Juvenile osteochondritis dissecans: is it a growth disturbance of the secondary physis of the epiphysis?",
+      "decision": "maybe",
+      "answer": "The evidence suggests juvenile osteochondritis dissecans may involve a disturbance of the secondary physis/endochondral ossification in the epiphysis, but it is not definitive enough to say it is proven to be a growth disturbance.",
+      "citations": [
+        "C1",
+        "C3"
+      ],
+      "input_tokens": 734,
+      "output_tokens": 77,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10808977",
+      "system": "baseline_llm",
+      "question": "Can tailored interventions increase mammography use among HMO women?",
+      "decision": "yes",
+      "answer": "Yes. Tailored interventions can increase mammography use among HMO women.",
+      "citations": [],
+      "input_tokens": 272,
+      "output_tokens": 37,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10808977",
+      "system": "basic_rag",
+      "question": "Can tailored interventions increase mammography use among HMO women?",
+      "decision": "yes",
+      "answer": "Yes. In this study, tailored interventions—especially telephone counseling, and to a lesser extent tailored print materials—improved mammography adherence compared with usual care in HMO women.",
+      "citations": [
+        "C1",
+        "C2"
+      ],
+      "input_tokens": 674,
+      "output_tokens": 64,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10808977",
+      "system": "advanced_rag",
+      "question": "Can tailored interventions increase mammography use among HMO women?",
+      "decision": "yes",
+      "answer": "Yes. In this trial among HMO women, tailored interventions increased mammography use compared with usual care, with telephone counseling showing the clearest benefit and tailored print also improving on-schedule mammography in some periods.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 680,
+      "output_tokens": 74,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "10808977",
+      "system": "gold_context_control",
+      "question": "Can tailored interventions increase mammography use among HMO women?",
+      "decision": "yes",
+      "answer": "Yes. In this HMO trial, tailored interventions increased mammography adherence compared with usual care, with tailored telephone counseling showing the clearest benefit and tailored print also improving screening modestly.",
+      "citations": [
+        "C1",
+        "C3",
+        "C4",
+        "C6"
+      ],
+      "input_tokens": 571,
+      "output_tokens": 71,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22519710",
+      "system": "baseline_llm",
+      "question": "Will clinical studies elucidate the connection between the length of storage of transfused red blood cells and clinical outcomes?",
+      "decision": "yes",
+      "answer": "Yes. Clinical studies are intended to clarify whether the storage duration of transfused red blood cells affects clinical outcomes.",
+      "citations": [],
+      "input_tokens": 282,
+      "output_tokens": 44,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22519710",
+      "system": "basic_rag",
+      "question": "Will clinical studies elucidate the connection between the length of storage of transfused red blood cells and clinical outcomes?",
+      "decision": "maybe",
+      "answer": "Clinical studies may help, but the evidence here suggests that standard randomized trials could have low power to detect an association unless the storage-effect pattern and storage-age categorization are well matched. So they may not reliably elucidate the connection in many trial designs.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 772,
+      "output_tokens": 81,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22519710",
+      "system": "advanced_rag",
+      "question": "Will clinical studies elucidate the connection between the length of storage of transfused red blood cells and clinical outcomes?",
+      "decision": "yes",
+      "answer": "Yes. The evidence indicates that clinical studies can address this question, but detecting a true association depends heavily on trial design, the assumed biologic effect pattern, and the age distribution of stored RBCs. In many simulated RCT scenarios, power was below 80%, so some studies may still fail to clearly show the link.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 934,
+      "output_tokens": 96,
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "question_id": "22519710",
+      "system": "gold_context_control",
+      "question": "Will clinical studies elucidate the connection between the length of storage of transfused red blood cells and clinical outcomes?",
+      "decision": "maybe",
+      "answer": "Clinical studies may help, but this evidence suggests their ability to elucidate the connection is uncertain and often underpowered, depending on trial design and the underlying biological timing.",
+      "citations": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "input_tokens": 547,
+      "output_tokens": 64,
+      "model": "gpt-5.4-mini-2026-03-17"
+    }
+  ]
+}

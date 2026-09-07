@@ -1,0 +1,23 @@
+{
+  "retriever": "BM25",
+  "number_of_questions": 500,
+  "number_of_documents": 3358,
+  "parameters": {
+    "k1": 1.5,
+    "b": 0.75
+  },
+  "source_hit_at_k": {
+    "1": 0.942,
+    "3": 0.972,
+    "5": 0.978,
+    "10": 0.98
+  },
+  "gold_context_recall_at_k": {
+    "1": 0.3005333333333333,
+    "3": 0.6176476190476191,
+    "5": 0.6891261904761905,
+    "10": 0.7392857142857142
+  },
+  "mrr_at_10": 0.9576,
+  "queries_without_gold_in_top_10": 10
+}

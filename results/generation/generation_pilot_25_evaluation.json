@@ -1,0 +1,174 @@
+{
+  "pilot_questions": 25,
+  "gold_distribution": {
+    "yes": 15,
+    "no": 8,
+    "maybe": 2
+  },
+  "systems": {
+    "baseline_llm": {
+      "accuracy": 0.32,
+      "macro_f1": 0.27499999999999997,
+      "class_metrics": {
+        "yes": {
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "f1": 0.5,
+          "support": 15
+        },
+        "no": {
+          "precision": 0.5,
+          "recall": 0.125,
+          "f1": 0.2,
+          "support": 8
+        },
+        "maybe": {
+          "precision": 0.07142857142857142,
+          "recall": 0.5,
+          "f1": 0.125,
+          "support": 2
+        }
+      },
+      "confusion_matrix": {
+        "yes": {
+          "yes": 6,
+          "no": 1,
+          "maybe": 8
+        },
+        "no": {
+          "yes": 2,
+          "no": 1,
+          "maybe": 5
+        },
+        "maybe": {
+          "yes": 1,
+          "no": 0,
+          "maybe": 1
+        }
+      }
+    },
+    "basic_rag": {
+      "accuracy": 0.72,
+      "macro_f1": 0.5176651305683564,
+      "class_metrics": {
+        "yes": {
+          "precision": 0.8125,
+          "recall": 0.8666666666666667,
+          "f1": 0.8387096774193549,
+          "support": 15
+        },
+        "no": {
+          "precision": 0.8333333333333334,
+          "recall": 0.625,
+          "f1": 0.7142857142857143,
+          "support": 8
+        },
+        "maybe": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      },
+      "confusion_matrix": {
+        "yes": {
+          "yes": 13,
+          "no": 1,
+          "maybe": 1
+        },
+        "no": {
+          "yes": 1,
+          "no": 5,
+          "maybe": 2
+        },
+        "maybe": {
+          "yes": 2,
+          "no": 0,
+          "maybe": 0
+        }
+      }
+    },
+    "advanced_rag": {
+      "accuracy": 0.72,
+      "macro_f1": 0.6338183421516755,
+      "class_metrics": {
+        "yes": {
+          "precision": 0.8333333333333334,
+          "recall": 0.6666666666666666,
+          "f1": 0.7407407407407408,
+          "support": 15
+        },
+        "no": {
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1": 0.875,
+          "support": 8
+        },
+        "maybe": {
+          "precision": 0.2,
+          "recall": 0.5,
+          "f1": 0.28571428571428575,
+          "support": 2
+        }
+      },
+      "confusion_matrix": {
+        "yes": {
+          "yes": 10,
+          "no": 1,
+          "maybe": 4
+        },
+        "no": {
+          "yes": 1,
+          "no": 7,
+          "maybe": 0
+        },
+        "maybe": {
+          "yes": 1,
+          "no": 0,
+          "maybe": 1
+        }
+      }
+    },
+    "gold_context_control": {
+      "accuracy": 0.8,
+      "macro_f1": 0.6,
+      "class_metrics": {
+        "yes": {
+          "precision": 0.8666666666666667,
+          "recall": 0.8666666666666667,
+          "f1": 0.8666666666666667,
+          "support": 15
+        },
+        "no": {
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.9333333333333333,
+          "support": 8
+        },
+        "maybe": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      },
+      "confusion_matrix": {
+        "yes": {
+          "yes": 13,
+          "no": 0,
+          "maybe": 2
+        },
+        "no": {
+          "yes": 0,
+          "no": 7,
+          "maybe": 1
+        },
+        "maybe": {
+          "yes": 2,
+          "no": 0,
+          "maybe": 0
+        }
+      }
+    }
+  }
+}

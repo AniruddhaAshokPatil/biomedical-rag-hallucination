@@ -1,0 +1,31 @@
+{
+  "status": "FROZEN_BEFORE_HALLUCINATION_STATISTICS",
+  "split": "test",
+  "questions": 500,
+  "system_judgments": 2000,
+  "judge_version": "v3_final",
+  "judge_model": "gpt-5.4-2026-03-05",
+  "reasoning_effort": "low",
+  "max_output_tokens": 3500,
+  "random_seed": 42,
+  "evidence_design": "same gold evidence for all four systems",
+  "blinding": "deterministic anonymous A/B/C/D",
+  "metric_definition": {
+    "hallucination": "(unsupported + contradicted) / scored factual claims",
+    "groundedness": "supported / scored factual claims"
+  },
+  "statistical_tests_run": false,
+  "human_calibration_applied": false,
+  "rules_after_freeze": [
+    "Do not rerun individual judge calls based on results.",
+    "Do not alter claim labels or exclusions.",
+    "Do not change the V3 prompt, schema, judge model, or metric definition.",
+    "Subsequent statistical analysis must use these frozen judgments."
+  ],
+  "sha256": {
+    "results/test/evaluation/final_test_hallucination_v3_results.json": "72af12920da0a61d3c666ff3f26d5b00f610d6ba44ee7955d9362e1567c3e488",
+    "results/test/evaluation/final_test_hallucination_v3_summary.json": "aeab80d52f40fb69c46f78a0bdb8dc8d3524a2d946f94622979a4ffe2fd1b2a5",
+    "src/40_final_test_hallucination_evaluation.py": "0f7a8ecb1e16791164b052fb921a58370a71a2aa01103a9b0cf545f0a690fae1",
+    "src/22_full_hallucination_evaluation.py": "a86a20e7506a41d58bfae476b43222797bc1c2ab9f0c14fad7ee8a80b1614d56"
+  }
+}

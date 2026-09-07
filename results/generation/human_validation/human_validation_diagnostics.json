@@ -1,0 +1,96 @@
+{
+  "sample_size": 120,
+  "overall_binary": {
+    "human_grounded": 72,
+    "human_hallucinated": 48,
+    "true_positive": 46,
+    "false_positive": 34,
+    "true_negative": 38,
+    "false_negative": 2,
+    "hallucination_recall": 0.9583333333333334,
+    "grounded_specificity": 0.5277777777777778,
+    "false_positive_rate": 0.4722222222222222,
+    "false_negative_rate": 0.041666666666666664
+  },
+  "automatic_label_confirmation": {
+    "supported": {
+      "sample": 40,
+      "human_supported": 38,
+      "human_unsupported": 0,
+      "human_contradicted": 2,
+      "human_hallucinated": 2,
+      "binary_hallucination_confirmation": 0.05
+    },
+    "unsupported": {
+      "sample": 40,
+      "human_supported": 23,
+      "human_unsupported": 15,
+      "human_contradicted": 2,
+      "human_hallucinated": 17,
+      "binary_hallucination_confirmation": 0.425
+    },
+    "contradicted": {
+      "sample": 40,
+      "human_supported": 11,
+      "human_unsupported": 26,
+      "human_contradicted": 3,
+      "human_hallucinated": 29,
+      "binary_hallucination_confirmation": 0.725
+    }
+  },
+  "system_diagnostics": {
+    "baseline_llm": {
+      "claims": 53,
+      "human_grounded": 15,
+      "human_hallucinated": 38,
+      "automatic_hallucinated": 53,
+      "binary_agreement": 0.7169811320754716,
+      "false_positives": 15,
+      "false_negatives": 0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0
+    },
+    "basic_rag": {
+      "claims": 30,
+      "human_grounded": 24,
+      "human_hallucinated": 6,
+      "automatic_hallucinated": 13,
+      "binary_agreement": 0.7,
+      "false_positives": 8,
+      "false_negatives": 1,
+      "false_positive_rate": 0.3333333333333333,
+      "false_negative_rate": 0.16666666666666666
+    },
+    "advanced_rag": {
+      "claims": 20,
+      "human_grounded": 19,
+      "human_hallucinated": 1,
+      "automatic_hallucinated": 9,
+      "binary_agreement": 0.6,
+      "false_positives": 8,
+      "false_negatives": 0,
+      "false_positive_rate": 0.42105263157894735,
+      "false_negative_rate": 0.0
+    },
+    "gold_context_control": {
+      "claims": 17,
+      "human_grounded": 14,
+      "human_hallucinated": 3,
+      "automatic_hallucinated": 5,
+      "binary_agreement": 0.7647058823529411,
+      "false_positives": 3,
+      "false_negatives": 1,
+      "false_positive_rate": 0.21428571428571427,
+      "false_negative_rate": 0.3333333333333333
+    }
+  },
+  "three_class_disagreement_types": {
+    "unsupported -> supported": 23,
+    "contradicted -> unsupported": 26,
+    "contradicted -> supported": 11,
+    "unsupported -> contradicted": 2,
+    "supported -> contradicted": 2
+  },
+  "three_class_disagreements": 64,
+  "binary_disagreements": 36
+}

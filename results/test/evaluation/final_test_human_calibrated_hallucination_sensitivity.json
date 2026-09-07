@@ -1,0 +1,97 @@
+{
+  "split": "test",
+  "analysis": "pre-specified human-calibrated sensitivity analysis",
+  "method": "Post-stratified human calibration of frozen automatic V3 hallucination rates. Within each system, the final-test claim population is divided into automatic grounded and automatic hallucinated strata. Human hallucination prevalence measured in the frozen 20-claim development validation sample from each stratum is applied to the final-test population stratum weight.",
+  "primary_v3_results_replaced": false,
+  "inference_performed": false,
+  "important_limitation": "These calibrated estimates correct only automatic evidence-label classification. They do not validate or correct the V3 claim extraction/exclusion stage.",
+  "bootstrap": {
+    "iterations": 10000,
+    "seed": 42,
+    "resampling": "human validation claims separately within automatic grounded and hallucinated strata"
+  },
+  "development_calibration_source": "results/generation/human_validation_system_balanced/human_calibrated_hallucination_rates.json",
+  "human_validation_hashes": {
+    "annotations_sha256": "573b2ad8b2cb4ec4a3d00a55e2a8ff2b6d57732448cf615a8ceacaf263ed1da5",
+    "key_sha256": "89658eda2b287361e7748193d2439de239eb7752b2767dad2894763d46f123b3",
+    "development_calibration_sha256": "878ccd5fbdf5bca27b24455b38c6653ec64070740606ad5e1724a96e750b4249",
+    "section_29_sha256": "f589454510ae8aa209813b476fbefdcb16b7fcdd80702432a620dc28300685ba"
+  },
+  "systems": {
+    "baseline_llm": {
+      "total_claim_count": 997,
+      "automatic_grounded_count": 388,
+      "automatic_hallucinated_count": 609,
+      "automatic_hallucination_rate": 0.6108324974924775,
+      "automatic_grounded_weight": 0.3891675025075226,
+      "automatic_hallucinated_weight": 0.6108324974924775,
+      "human_hallucination_rate_given_auto_grounded": 0.05,
+      "human_hallucination_rate_given_auto_hallucinated": 0.5,
+      "human_calibrated_hallucination_rate": 0.32487462387161486,
+      "bootstrap_95_ci": {
+        "lower": 0.18324974924774323,
+        "upper": 0.46649949849548644,
+        "iterations": 10000,
+        "seed": 42
+      }
+    },
+    "basic_rag": {
+      "total_claim_count": 1484,
+      "automatic_grounded_count": 1358,
+      "automatic_hallucinated_count": 126,
+      "automatic_hallucination_rate": 0.08490566037735849,
+      "automatic_grounded_weight": 0.9150943396226415,
+      "automatic_hallucinated_weight": 0.08490566037735849,
+      "human_hallucination_rate_given_auto_grounded": 0.0,
+      "human_hallucination_rate_given_auto_hallucinated": 0.35,
+      "human_calibrated_hallucination_rate": 0.02971698113207547,
+      "bootstrap_95_ci": {
+        "lower": 0.012735849056603774,
+        "upper": 0.04669811320754717,
+        "iterations": 10000,
+        "seed": 42
+      },
+      "calibrated_absolute_reduction_vs_baseline": 0.29515764273953937,
+      "calibrated_relative_reduction_vs_baseline": 0.9085278475187426
+    },
+    "advanced_rag": {
+      "total_claim_count": 1414,
+      "automatic_grounded_count": 1303,
+      "automatic_hallucinated_count": 111,
+      "automatic_hallucination_rate": 0.0785007072135785,
+      "automatic_grounded_weight": 0.9214992927864215,
+      "automatic_hallucinated_weight": 0.0785007072135785,
+      "human_hallucination_rate_given_auto_grounded": 0.0,
+      "human_hallucination_rate_given_auto_hallucinated": 0.45,
+      "human_calibrated_hallucination_rate": 0.03532531824611033,
+      "bootstrap_95_ci": {
+        "lower": 0.019625176803394626,
+        "upper": 0.05102545968882603,
+        "iterations": 10000,
+        "seed": 42
+      },
+      "calibrated_absolute_reduction_vs_baseline": 0.2895493056255045,
+      "calibrated_relative_reduction_vs_baseline": 0.8912647660037912
+    },
+    "gold_context_control": {
+      "total_claim_count": 1581,
+      "automatic_grounded_count": 1513,
+      "automatic_hallucinated_count": 68,
+      "automatic_hallucination_rate": 0.043010752688172046,
+      "automatic_grounded_weight": 0.956989247311828,
+      "automatic_hallucinated_weight": 0.043010752688172046,
+      "human_hallucination_rate_given_auto_grounded": 0.0,
+      "human_hallucination_rate_given_auto_hallucinated": 0.35,
+      "human_calibrated_hallucination_rate": 0.015053763440860216,
+      "bootstrap_95_ci": {
+        "lower": 0.0064516129032258064,
+        "upper": 0.023655913978494626,
+        "iterations": 10000,
+        "seed": 42
+      },
+      "calibrated_absolute_reduction_vs_baseline": 0.30982086043075463,
+      "calibrated_relative_reduction_vs_baseline": 0.953662852267559
+    }
+  },
+  "advanced_minus_basic_calibrated_difference": 0.005608337114034859
+}

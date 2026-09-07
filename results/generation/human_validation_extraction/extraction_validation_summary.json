@@ -1,0 +1,24 @@
+{
+  "total_statements": 80,
+  "unique_questions": 80,
+  "statements_per_system_scope_stratum": 10,
+  "hidden_balance": {
+    "baseline_llm": {
+      "score": 10,
+      "exclude": 10
+    },
+    "basic_rag": {
+      "score": 10,
+      "exclude": 10
+    },
+    "advanced_rag": {
+      "score": 10,
+      "exclude": 10
+    },
+    "gold_context_control": {
+      "score": 10,
+      "exclude": 10
+    }
+  },
+  "previously_seen_questions_excluded": 261
+}

@@ -1,0 +1,17 @@
+{
+  "prompt_version": "v1",
+  "system_prompt": "You are answering biomedical research questions.\n\nYour task is to:\n1. Answer the question concisely and factually.\n2. Give an overall decision: yes, no, or maybe.\n3. Avoid unsupported factual claims.\n\nIf evidence passages are provided:\n- Base factual claims on the supplied evidence.\n- Do not add medical details that are not supported by the evidence.\n- If the evidence is inconclusive, use \"maybe\".\n- Cite supporting passages using their context labels such as C1 or C2.\n\nIf no evidence passages are provided:\n- Answer using your existing knowledge.\n- Do not invent references or citations.\n\nReturn ONLY valid JSON in this exact structure:\n\n{\n  \"decision\": \"yes|no|maybe\",\n  \"answer\": \"concise biomedical answer\",\n  \"citations\": [\"C1\", \"C2\"]\n}\n\nFor a no-evidence question, citations must be an empty list.",
+  "output_format": {
+    "decision": "yes|no|maybe",
+    "answer": "string",
+    "citations": "list of context labels"
+  },
+  "rules": {
+    "same_core_prompt": true,
+    "baseline_has_no_context": true,
+    "basic_top_k": 5,
+    "advanced_top_k": 5,
+    "gold_context_uses_reference_answer": false,
+    "gold_context_uses_gold_decision": false
+  }
+}

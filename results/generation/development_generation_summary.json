@@ -1,0 +1,44 @@
+{
+  "split": "development",
+  "questions": 500,
+  "systems": [
+    "baseline_llm",
+    "basic_rag",
+    "advanced_rag",
+    "gold_context_control"
+  ],
+  "expected_responses": 2000,
+  "completed_responses": 2000,
+  "model": "gpt-5.4-mini-2026-03-17",
+  "reasoning_effort": "none",
+  "max_output_tokens": 300,
+  "token_usage": {
+    "input": 1187895,
+    "output": 137464,
+    "total": 1325359
+  },
+  "invalid_citation_records": 0,
+  "baseline_citation_records": 0,
+  "decision_distributions": {
+    "baseline_llm": {
+      "yes": 202,
+      "no": 58,
+      "maybe": 240
+    },
+    "basic_rag": {
+      "yes": 257,
+      "no": 113,
+      "maybe": 130
+    },
+    "advanced_rag": {
+      "yes": 267,
+      "no": 109,
+      "maybe": 124
+    },
+    "gold_context_control": {
+      "yes": 276,
+      "no": 144,
+      "maybe": 80
+    }
+  }
+}

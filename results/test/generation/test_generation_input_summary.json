@@ -1,0 +1,35 @@
+{
+  "split": "test",
+  "number_of_questions": 500,
+  "number_of_systems": 4,
+  "total_generation_inputs": 2000,
+  "prompt_source": "src/12_prepare_llm_inputs.py",
+  "prompt_sha256": "c43ebd01d150667768fb044973611505d1b0b2fc7972eb26e0f04d0ec22d37dc",
+  "conditions": {
+    "baseline_llm": {
+      "questions": 500,
+      "context_count": 0
+    },
+    "basic_rag": {
+      "questions": 500,
+      "context_count_per_question": 5
+    },
+    "advanced_rag": {
+      "questions": 500,
+      "context_count_per_question": 5
+    },
+    "gold_context_control": {
+      "questions": 500,
+      "minimum_contexts": 2,
+      "maximum_contexts": 9,
+      "mean_contexts": 3.378
+    }
+  },
+  "evaluation_access": {
+    "gold_context_ids": true,
+    "gold_decision": false,
+    "reference_answer": false,
+    "retrieval_metrics": false,
+    "decision_metrics": false
+  }
+}

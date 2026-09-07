@@ -1,0 +1,180 @@
+{
+  "design_note": "Balanced human validation of V3 claim extraction/exclusion decisions. Each system contributes 10 automatic SCORE and 10 automatic EXCLUDE statements. Therefore overall accuracy is a balanced challenge-set metric, not natural population accuracy.",
+  "sample_size": 80,
+  "overall": {
+    "n": 80,
+    "accuracy": 0.7,
+    "cohens_kappa": 0.3999999999999999,
+    "confusion": {
+      "tp": 35,
+      "fp": 5,
+      "tn": 21,
+      "fn": 19
+    },
+    "score": {
+      "precision": 0.875,
+      "recall": 0.6481481481481481,
+      "f1": 0.7446808510638299
+    },
+    "exclude": {
+      "precision": 0.525,
+      "recall": 0.8076923076923077,
+      "f1": 0.6363636363636364
+    },
+    "macro_f1": 0.690522243713733
+  },
+  "system_results": {
+    "baseline_llm": {
+      "n": 20,
+      "accuracy": 0.8,
+      "cohens_kappa": 0.6000000000000001,
+      "confusion": {
+        "tp": 10,
+        "fp": 0,
+        "tn": 6,
+        "fn": 4
+      },
+      "score": {
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "f1": 0.8333333333333333
+      },
+      "exclude": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.7499999999999999
+      },
+      "macro_f1": 0.7916666666666665
+    },
+    "basic_rag": {
+      "n": 20,
+      "accuracy": 0.7,
+      "cohens_kappa": 0.3999999999999999,
+      "confusion": {
+        "tp": 7,
+        "fp": 3,
+        "tn": 7,
+        "fn": 3
+      },
+      "score": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1": 0.7
+      },
+      "exclude": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1": 0.7
+      },
+      "macro_f1": 0.7
+    },
+    "advanced_rag": {
+      "n": 20,
+      "accuracy": 0.7,
+      "cohens_kappa": 0.3999999999999999,
+      "confusion": {
+        "tp": 8,
+        "fp": 2,
+        "tn": 6,
+        "fn": 4
+      },
+      "score": {
+        "precision": 0.8,
+        "recall": 0.6666666666666666,
+        "f1": 0.7272727272727272
+      },
+      "exclude": {
+        "precision": 0.6,
+        "recall": 0.75,
+        "f1": 0.6666666666666665
+      },
+      "macro_f1": 0.6969696969696968
+    },
+    "gold_context_control": {
+      "n": 20,
+      "accuracy": 0.6,
+      "cohens_kappa": 0.19999999999999996,
+      "confusion": {
+        "tp": 10,
+        "fp": 0,
+        "tn": 2,
+        "fn": 8
+      },
+      "score": {
+        "precision": 1.0,
+        "recall": 0.5555555555555556,
+        "f1": 0.7142857142857143
+      },
+      "exclude": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      },
+      "macro_f1": 0.5238095238095238
+    }
+  },
+  "automatic_stratum_confirmation": {
+    "baseline_llm": {
+      "score": {
+        "sample": 10,
+        "confirmed": 10,
+        "confirmation_rate": 1.0
+      },
+      "exclude": {
+        "sample": 10,
+        "confirmed": 6,
+        "confirmation_rate": 0.6
+      }
+    },
+    "basic_rag": {
+      "score": {
+        "sample": 10,
+        "confirmed": 7,
+        "confirmation_rate": 0.7
+      },
+      "exclude": {
+        "sample": 10,
+        "confirmed": 7,
+        "confirmation_rate": 0.7
+      }
+    },
+    "advanced_rag": {
+      "score": {
+        "sample": 10,
+        "confirmed": 8,
+        "confirmation_rate": 0.8
+      },
+      "exclude": {
+        "sample": 10,
+        "confirmed": 6,
+        "confirmation_rate": 0.6
+      }
+    },
+    "gold_context_control": {
+      "score": {
+        "sample": 10,
+        "confirmed": 10,
+        "confirmation_rate": 1.0
+      },
+      "exclude": {
+        "sample": 10,
+        "confirmed": 2,
+        "confirmation_rate": 0.2
+      }
+    }
+  },
+  "false_score_rates": {
+    "baseline_llm": 0.0,
+    "basic_rag": 0.3,
+    "advanced_rag": 0.25,
+    "gold_context_control": 0.0
+  },
+  "false_exclude_rates": {
+    "baseline_llm": 0.2857142857142857,
+    "basic_rag": 0.3,
+    "advanced_rag": 0.3333333333333333,
+    "gold_context_control": 0.4444444444444444
+  },
+  "false_score_rate_range": 0.3,
+  "false_exclude_rate_range": 0.15873015873015872
+}

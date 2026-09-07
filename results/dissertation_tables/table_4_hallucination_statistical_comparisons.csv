@@ -1,0 +1,6 @@
+Comparison,Micro hallucination A,Micro hallucination B,Absolute difference B-A,Cluster bootstrap 95% CI,Relative reduction B vs A,Answer-level N,Answer-level mean difference,Answer-level 95% CI,Wilcoxon raw p,Wilcoxon Holm p,Zero-claim McNemar raw p,Zero-claim McNemar Holm p
+Basic RAG vs Baseline LLM,61.08%,8.49%,-52.59 pp,-56.05 pp to -49.04 pp,86.10%,414,-0.4899,-0.5285 to -0.4518,1.430e-50,7.151e-50,5.801e-13,2.900e-12
+Advanced RAG vs Baseline LLM,61.08%,7.85%,-53.23 pp,-56.56 pp to -49.72 pp,87.15%,412,-0.4896,-0.5287 to -0.4488,2.355e-50,9.419e-50,2.714e-12,1.085e-11
+Advanced RAG vs Basic RAG,8.49%,7.85%,-0.64 pp,-2.33 pp to +1.08 pp,7.54%,481,-0.0060,-0.0245 to +0.0121,0.464846,0.464846,1.000000,1.000000
+Gold-context control vs Advanced RAG,7.85%,4.30%,-3.55 pp,-5.19 pp to -1.96 pp,45.21%,486,-0.0364,-0.0534 to -0.0196,6.410e-05,1.282e-04,0.001831,0.003662
+Gold-context control vs Basic RAG,8.49%,4.30%,-4.19 pp,-5.96 pp to -2.46 pp,49.34%,487,-0.0402,-0.0581 to -0.0238,7.499e-06,2.250e-05,4.883e-04,0.001465
