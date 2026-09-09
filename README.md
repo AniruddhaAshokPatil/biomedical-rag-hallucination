@@ -40,7 +40,7 @@ The project uses a PubMedQA-style biomedical QA dataset containing **1,000 recor
 The data was split into:
 
 * **500 development questions**
-* **500 frozen final-test questions**
+* **500 frozen final test questions**
 
 The retrieval corpus contains **3,358 passages**.
 
@@ -116,7 +116,7 @@ cross-encoder/ms-marco-MiniLM-L6-v2
 
 ### Gold-Context Control
 
-Uses the same generator as the other systems but is supplied with the benchmark-attached evidence passages directly.
+Uses the same generator as the other systems but is supplied with the benchmark attached evidence passages directly.
 
 \---
 
@@ -156,7 +156,7 @@ Seed: 42
 The evaluator:
 
 1. extracts externally verifiable biomedical factual claims,
-2. excludes abstention, uncertainty, evidence-availability statements, citation-format commentary, and non-biomedical meta statements,
+2. excludes abstention, uncertainty, evidence availability statements, citation-format commentary, and non-biomedical meta statements,
 3. labels each scored claim as supported, unsupported, or contradicted,
 4. aggregates claim-level and answer-level metrics.
 
@@ -196,11 +196,11 @@ total scored biomedical factual claims
 
 The automated hallucination evaluator was assessed using:
 
-* claim-label validation
-* system-balanced binary validation
+* claim label validation
+* system balanced binary validation
 * claim extraction / exclusion validation
 
-The human-calibrated hallucination estimate is treated as a **sensitivity analysis only** and does not replace the frozen V3 primary results.
+The human calibrated hallucination estimate is treated as a **sensitivity analysis only** and does not replace the frozen V3 primary results.
 
 \---
 
@@ -262,7 +262,7 @@ The same 500 final-test questions were used for all four systems, enabling paire
 |Advanced RAG|7.85%|92.15%|1.70%|
 |Gold-context control|4.30%|95.70%|0.13%|
 
-### Human-Calibrated Sensitivity Analysis
+### Human Calibrated Sensitivity Analysis
 
 |System|Calibrated Hallucination|95% CI|
 |-|-:|-:|
@@ -291,7 +291,7 @@ The same 500 final-test questions were used for all four systems, enabling paire
 * Basic RAG reduced the V3 hallucination rate from **61.08% to 8.49%**.
 * Advanced RAG reduced it to **7.85%**.
 * Advanced RAG did **not** show a statistically detectable advantage over Basic RAG on the final test set.
-* Both RAG systems reached **99.0% Source Hit@5**, indicating near-ceiling correct-source retrieval at the generation cutoff.
+* Both RAG systems reached **99.0% Source Hit@5**, indicating near ceiling correct source retrieval at the generation cutoff.
 * The Gold-context control still made errors, showing that residual error cannot be explained by retrieval alone.
 
 \---
